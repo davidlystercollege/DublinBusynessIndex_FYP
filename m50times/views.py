@@ -1,3 +1,4 @@
+from __future__ import division
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -5,7 +6,6 @@ import json
 from pprint import pprint
 import requests
 from m50times.models import Route, Recording
-from __future__ import division
 
 def home(request):
     return HttpResponse("This'll be the m50 homepage")
