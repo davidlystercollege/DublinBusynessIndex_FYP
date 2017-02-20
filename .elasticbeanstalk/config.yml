@@ -1,0 +1,17 @@
+branch-defaults:
+  master:
+    environment: busyness-djpy-env
+    group_suffix: null
+environment-defaults:
+  busyness-djpy-env:
+    branch: master
+    repository: DublinBusynessIndex_FYP
+global:
+  application_name: busynessApp
+  branch: master
+  default_ec2_keyname: myFirstPair
+  default_platform: python2.7
+  default_region: us-west-2
+  profile: null
+  repository: DublinBusynessIndex_FYP
+  sc: git
