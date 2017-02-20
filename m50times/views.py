@@ -143,7 +143,7 @@ def m50times(request):
                     continue
                 
                 '''
-                data = data + z["M50_northBound"]['data'][i] + "<br><br/>"
+                data = data + str(z["M50_northBound"]['data'][i]) + "<br><br/>"
                 if(routenum!=10):
                     
                     if(routetime>rngeMax):
