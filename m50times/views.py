@@ -159,6 +159,7 @@ def m50times(request):
                     
                     busyness = busyness + busy                
                     
+                    data = data + "r(w,s) = " + str(rngeMax) + ", " + str(rngeSize)
                     data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + " - busynw = " +str(busy_nw)+ " - B: " + str(busy*100) + '<br><br/>'
                     
                     #data = data + "size, max, num := " + str(rngeSize) + ", "  + str(rngeMax) + ", " + str(rangeWeight) + "<br><br/>"
