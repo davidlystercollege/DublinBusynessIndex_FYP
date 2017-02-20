@@ -12,7 +12,7 @@ def home(request):
 def carParks(request):
     
     carpark_url = 'http://opendata.dublincity.ie/TrafficOpenData/CP_TR/CPDATA.xml'
-    file = request.urlretrieve(carpark_url)
+    file = requests.get(carpark_url)
 
     def createCarPark(request, namearg):
         cp = CP()
