@@ -101,7 +101,7 @@ def carParks(request):
         tree = et.parse(file)
         root = tree.getroot()
         spaces=0
-        count=0
+        count=1
         ans=''
         for child in root:
             for children in child:
@@ -135,7 +135,7 @@ def carParks(request):
                 #createCPCapacityLevel(request, cpRef, spaces, fullness)  
                 count=count+1  
                   
-        busyness = (busyness/count)
+        busyness = (busyness/count-1)
         return busyness
     
     #return HttpResponse(getCapacityDetails())
