@@ -70,7 +70,7 @@ def carParks(request):
     def getBusyness_Avg():
         busyness = 0.0
         fullness=0
-        tree = et.parse(response)
+        tree = et.parse(file)
         root = tree.getroot()
         spaces=0
         
@@ -142,7 +142,7 @@ def carParks(request):
                 #x = x + str(busyness) + ': ' + str(fullness) + ': ' + str(spaces) + '<br><br/>'    
                 #ans = ans + str(tempname) + ' : ' + str(spaces) +  " : fullness : " + str(fullness) + "<br><br/>"                
                 
-                ans=ans + cpRef.name + ": " + str(fullness) + "<br><br/>"    
+                ans=ans + cpRef.name + ": " + str(fullness) + " - sp:" + str(spaces) + "<br><br/>"    
                 #createCPCapacityLevel(request, cpRef, spaces, fullness)  
                 count=count+1  
                   
