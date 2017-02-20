@@ -130,9 +130,9 @@ def m50times(request):
             
             if(i < len(z["M50_northBound"]['data'])):
                 
-                routename = str(z["M50_northBound"]['data'][i]["u'from_name"] + ' -> ' + z["M50_northBound"]['data'][i]["u'to_name"])
+                routename = str(z["M50_northBound"]['data'][i]["from_name"] + ' -> ' + z["M50_northBound"]['data'][i]["to_name"])
                 routenum = routes.index(routename)
-                routetime = z["M50_northBound"]['data'][i]["u'current_travel_time"]
+                routetime = z["M50_northBound"]['data'][i]["current_travel_time"]
             
                 rngeMax=rangeMaxs[routenum]
                 rngeSize=rangeSizes[routenum]
