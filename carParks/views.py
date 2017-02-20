@@ -2,7 +2,7 @@
 from django.http import HttpResponse
 
 import xml.etree.ElementTree as et
-import urllib.request
+import urllib2
 from carParks.models import CP, CapacityLevel
 
 def home(request):
@@ -11,7 +11,7 @@ def home(request):
 def carParks(request):
     
     carpark_url = 'http://opendata.dublincity.ie/TrafficOpenData/CP_TR/CPDATA.xml'
-    file = request.get(carpark_url)
+    file = request.urlopen(carpark_url)
 
     def createCarPark(request, namearg):
         cp = CP()
