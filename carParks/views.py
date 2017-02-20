@@ -2,7 +2,7 @@
 from django.http import HttpResponse
 
 import xml.etree.ElementTree as et
-from urllib import request
+import requests
 from carParks.models import CP, CapacityLevel
 from _overlapped import NULL
 from cmath import sqrt
@@ -13,7 +13,7 @@ def home(request):
 def carParks(request):
     
     carpark_url = 'http://opendata.dublincity.ie/TrafficOpenData/CP_TR/CPDATA.xml'
-    file = request.urlopen(carpark_url)
+    file = requests.get(carpark_url)
 
     def createCarPark(request, namearg):
         cp = CP()
