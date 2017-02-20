@@ -130,9 +130,9 @@ def m50times(request):
             
             if(i < len(z["M50_northBound"]['data'])):
                 
-                routename = str(z["M50_northBound"]['data'][i]["from_name"] + ' -> ' + z["M50_northBound"]['data'][i]['to_name'])
+                routename = str(z["M50_northBound"]['data'][i]["u'from_name"] + ' -> ' + z["M50_northBound"]['data'][i]["u'to_name"])
                 routenum = routes.index(routename)
-                routetime = z["M50_northBound"]['data'][i]['current_travel_time']
+                routetime = z["M50_northBound"]['data'][i]["u'current_travel_time"]
             
                 rngeMax=rangeMaxs[routenum]
                 rngeSize=rangeSizes[routenum]
@@ -143,7 +143,7 @@ def m50times(request):
                     continue
                 
                 '''
-                data = data + str(z["M50_northBound"]['data'][i]) + "<br><br/>"
+                #data = data + str(z["M50_northBound"]['data'][i]) + "<br><br/>"
                 if(routenum!=10):
                     
                     if(routetime>rngeMax):
@@ -159,7 +159,7 @@ def m50times(request):
                     
                     busyness = busyness + busy                
                     
-                    #data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + " - busynw = " +str(busy_nw)+ " - B: " + str(busy*100) + '<br><br/>'
+                    data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + " - busynw = " +str(busy_nw)+ " - B: " + str(busy*100) + '<br><br/>'
                     
                     #data = data + "size, max, num := " + str(rngeSize) + ", "  + str(rngeMax) + ", " + str(rangeWeight) + "<br><br/>"
                     
