@@ -3,90 +3,6 @@ Retrieving logs...
 -------------------------------------
 /var/log/httpd/error_log
 -------------------------------------
-[Mon Feb 20 14:00:57.276508 2017] [:error] [pid 29485]     response = get_response(request)
-[Mon Feb 20 14:00:57.276509 2017] [:error] [pid 29485]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/utils/deprecation.py", line 138, in __call__
-[Mon Feb 20 14:00:57.276512 2017] [:error] [pid 29485]     response = self.process_response(request, response)
-[Mon Feb 20 14:00:57.276513 2017] [:error] [pid 29485]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/middleware/clickjacking.py", line 32, in process_response
-[Mon Feb 20 14:00:57.276516 2017] [:error] [pid 29485]     if response.get('X-Frame-Options') is not None:
-[Mon Feb 20 14:00:57.276517 2017] [:error] [pid 29485] AttributeError: 'float' object has no attribute 'get'
-[Mon Feb 20 14:02:32.410560 2017] [:error] [pid 29485] Internal Server Error: /m50/times
-[Mon Feb 20 14:02:32.410591 2017] [:error] [pid 29485] Traceback (most recent call last):
-[Mon Feb 20 14:02:32.410594 2017] [:error] [pid 29485]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
-[Mon Feb 20 14:02:32.410596 2017] [:error] [pid 29485]     response = get_response(request)
-[Mon Feb 20 14:02:32.410598 2017] [:error] [pid 29485]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/utils/deprecation.py", line 138, in __call__
-[Mon Feb 20 14:02:32.410600 2017] [:error] [pid 29485]     response = self.process_response(request, response)
-[Mon Feb 20 14:02:32.410602 2017] [:error] [pid 29485]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/middleware/clickjacking.py", line 32, in process_response
-[Mon Feb 20 14:02:32.410616 2017] [:error] [pid 29485]     if response.get('X-Frame-Options') is not None:
-[Mon Feb 20 14:02:32.410618 2017] [:error] [pid 29485] AttributeError: 'float' object has no attribute 'get'
-[Mon Feb 20 14:03:07.982527 2017] [:error] [pid 29485] Internal Server Error: /m50/times
-[Mon Feb 20 14:03:07.982568 2017] [:error] [pid 29485] Traceback (most recent call last):
-[Mon Feb 20 14:03:07.982571 2017] [:error] [pid 29485]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
-[Mon Feb 20 14:03:07.982573 2017] [:error] [pid 29485]     response = get_response(request)
-[Mon Feb 20 14:03:07.982575 2017] [:error] [pid 29485]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/utils/deprecation.py", line 138, in __call__
-[Mon Feb 20 14:03:07.982577 2017] [:error] [pid 29485]     response = self.process_response(request, response)
-[Mon Feb 20 14:03:07.982590 2017] [:error] [pid 29485]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/middleware/clickjacking.py", line 32, in process_response
-[Mon Feb 20 14:03:07.982592 2017] [:error] [pid 29485]     if response.get('X-Frame-Options') is not None:
-[Mon Feb 20 14:03:07.982594 2017] [:error] [pid 29485] AttributeError: 'float' object has no attribute 'get'
-[Mon Feb 20 14:03:32.283168 2017] [:error] [pid 29485] Internal Server Error: /busyness
-[Mon Feb 20 14:03:32.283197 2017] [:error] [pid 29485] Traceback (most recent call last):
-[Mon Feb 20 14:03:32.283199 2017] [:error] [pid 29485]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
-[Mon Feb 20 14:03:32.283201 2017] [:error] [pid 29485]     response = get_response(request)
-[Mon Feb 20 14:03:32.283202 2017] [:error] [pid 29485]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
-[Mon Feb 20 14:03:32.283204 2017] [:error] [pid 29485]     response = self.process_exception_by_middleware(e, request)
-[Mon Feb 20 14:03:32.283206 2017] [:error] [pid 29485]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
-[Mon Feb 20 14:03:32.283208 2017] [:error] [pid 29485]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-[Mon Feb 20 14:03:32.283210 2017] [:error] [pid 29485]   File "/opt/python/current/app/main/views.py", line 302, in mainBusyness
-[Mon Feb 20 14:03:32.283211 2017] [:error] [pid 29485]     return HttpResponse(getBusynessValues())
-[Mon Feb 20 14:03:32.283213 2017] [:error] [pid 29485]   File "/opt/python/current/app/main/views.py", line 287, in getBusynessValues
-[Mon Feb 20 14:03:32.283214 2017] [:error] [pid 29485]     cpVal = carParks.views.carParks(request)
-[Mon Feb 20 14:03:32.283216 2017] [:error] [pid 29485]   File "/opt/python/current/app/carParks/views.py", line 143, in carParks
-[Mon Feb 20 14:03:32.283217 2017] [:error] [pid 29485]     return getBusyness()
-[Mon Feb 20 14:03:32.283218 2017] [:error] [pid 29485]   File "/opt/python/current/app/carParks/views.py", line 101, in getBusyness
-[Mon Feb 20 14:03:32.283220 2017] [:error] [pid 29485]     tree = et.parse(file)
-[Mon Feb 20 14:03:32.283221 2017] [:error] [pid 29485]   File "/usr/lib64/python2.7/xml/etree/ElementTree.py", line 1182, in parse
-[Mon Feb 20 14:03:32.283223 2017] [:error] [pid 29485]     tree.parse(source, parser)
-[Mon Feb 20 14:03:32.283224 2017] [:error] [pid 29485]   File "/usr/lib64/python2.7/xml/etree/ElementTree.py", line 647, in parse
-[Mon Feb 20 14:03:32.283225 2017] [:error] [pid 29485]     source = open(source, "rb")
-[Mon Feb 20 14:03:32.283227 2017] [:error] [pid 29485] TypeError: coercing to Unicode: need string or buffer, Response found
-[Mon Feb 20 14:17:34.551375 2017] [mpm_prefork:notice] [pid 29480] AH00169: caught SIGTERM, shutting down
-[Mon Feb 20 14:17:35.655561 2017] [suexec:notice] [pid 30676] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
-[Mon Feb 20 14:17:35.667688 2017] [so:warn] [pid 30676] AH01574: module wsgi_module is already loaded, skipping
-[Mon Feb 20 14:17:35.670120 2017] [auth_digest:notice] [pid 30676] AH01757: generating secret for digest authentication ...
-[Mon Feb 20 14:17:35.670769 2017] [lbmethod_heartbeat:notice] [pid 30676] AH02282: No slotmem from mod_heartmonitor
-[Mon Feb 20 14:17:35.670819 2017] [:warn] [pid 30676] mod_wsgi: Compiled for Python/2.7.10.
-[Mon Feb 20 14:17:35.670825 2017] [:warn] [pid 30676] mod_wsgi: Runtime using Python/2.7.12.
-[Mon Feb 20 14:17:35.673035 2017] [mpm_prefork:notice] [pid 30676] AH00163: Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 configured -- resuming normal operations
-[Mon Feb 20 14:17:35.673051 2017] [core:notice] [pid 30676] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
-[Mon Feb 20 14:17:38.475868 2017] [:error] [pid 30681] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
-[Mon Feb 20 14:17:39.529245 2017] [:error] [pid 30681] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
-[Mon Feb 20 14:17:40.579001 2017] [:error] [pid 30681] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
-[Mon Feb 20 14:17:41.628384 2017] [:error] [pid 30681] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
-[Mon Feb 20 14:18:39.754723 2017] [:error] [pid 30681] Internal Server Error: /busyness
-[Mon Feb 20 14:18:39.754763 2017] [:error] [pid 30681] Traceback (most recent call last):
-[Mon Feb 20 14:18:39.754765 2017] [:error] [pid 30681]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
-[Mon Feb 20 14:18:39.754768 2017] [:error] [pid 30681]     response = get_response(request)
-[Mon Feb 20 14:18:39.754770 2017] [:error] [pid 30681]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
-[Mon Feb 20 14:18:39.754772 2017] [:error] [pid 30681]     response = self.process_exception_by_middleware(e, request)
-[Mon Feb 20 14:18:39.754774 2017] [:error] [pid 30681]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
-[Mon Feb 20 14:18:39.754776 2017] [:error] [pid 30681]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-[Mon Feb 20 14:18:39.754778 2017] [:error] [pid 30681]   File "/opt/python/current/app/main/views.py", line 302, in mainBusyness
-[Mon Feb 20 14:18:39.754780 2017] [:error] [pid 30681]     return HttpResponse(getBusynessValues())
-[Mon Feb 20 14:18:39.754782 2017] [:error] [pid 30681]   File "/opt/python/current/app/main/views.py", line 287, in getBusynessValues
-[Mon Feb 20 14:18:39.754784 2017] [:error] [pid 30681]     cpVal = carParks.views.carParks(request)
-[Mon Feb 20 14:18:39.754786 2017] [:error] [pid 30681]   File "/opt/python/current/app/carParks/views.py", line 143, in carParks
-[Mon Feb 20 14:18:39.754788 2017] [:error] [pid 30681]     return getBusyness()
-[Mon Feb 20 14:18:39.754789 2017] [:error] [pid 30681]   File "/opt/python/current/app/carParks/views.py", line 101, in getBusyness
-[Mon Feb 20 14:18:39.754791 2017] [:error] [pid 30681]     tree = et.parse(file)
-[Mon Feb 20 14:18:39.754793 2017] [:error] [pid 30681]   File "/usr/lib64/python2.7/xml/etree/ElementTree.py", line 1182, in parse
-[Mon Feb 20 14:18:39.754795 2017] [:error] [pid 30681]     tree.parse(source, parser)
-[Mon Feb 20 14:18:39.754796 2017] [:error] [pid 30681]   File "/usr/lib64/python2.7/xml/etree/ElementTree.py", line 647, in parse
-[Mon Feb 20 14:18:39.754798 2017] [:error] [pid 30681]     source = open(source, "rb")
-[Mon Feb 20 14:18:39.754800 2017] [:error] [pid 30681] TypeError: coercing to Unicode: need string or buffer, Response found
-[Mon Feb 20 14:18:57.655007 2017] [:error] [pid 30681] Internal Server Error: /busyness
-[Mon Feb 20 14:18:57.655037 2017] [:error] [pid 30681] Traceback (most recent call last):
-[Mon Feb 20 14:18:57.655039 2017] [:error] [pid 30681]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
-[Mon Feb 20 14:18:57.655042 2017] [:error] [pid 30681]     response = get_response(request)
-[Mon Feb 20 14:18:57.655044 2017] [:error] [pid 30681]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
 [Mon Feb 20 14:18:57.655046 2017] [:error] [pid 30681]     response = self.process_exception_by_middleware(e, request)
 [Mon Feb 20 14:18:57.655048 2017] [:error] [pid 30681]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
 [Mon Feb 20 14:18:57.655051 2017] [:error] [pid 30681]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
@@ -103,6 +19,90 @@ Retrieving logs...
 [Mon Feb 20 14:18:57.655080 2017] [:error] [pid 30681]   File "/usr/lib64/python2.7/xml/etree/ElementTree.py", line 647, in parse
 [Mon Feb 20 14:18:57.655082 2017] [:error] [pid 30681]     source = open(source, "rb")
 [Mon Feb 20 14:18:57.655084 2017] [:error] [pid 30681] TypeError: coercing to Unicode: need string or buffer, Response found
+[Mon Feb 20 14:37:01.705940 2017] [:error] [pid 30681] Invalid HTTP_HOST header: '35.161.36.151'. You may need to add u'35.161.36.151' to ALLOWED_HOSTS.
+[Mon Feb 20 14:41:33.661037 2017] [mpm_prefork:notice] [pid 30676] AH00169: caught SIGTERM, shutting down
+[Mon Feb 20 14:41:34.765307 2017] [suexec:notice] [pid 31688] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Feb 20 14:41:34.777261 2017] [so:warn] [pid 31688] AH01574: module wsgi_module is already loaded, skipping
+[Mon Feb 20 14:41:34.779640 2017] [auth_digest:notice] [pid 31688] AH01757: generating secret for digest authentication ...
+[Mon Feb 20 14:41:34.780279 2017] [lbmethod_heartbeat:notice] [pid 31688] AH02282: No slotmem from mod_heartmonitor
+[Mon Feb 20 14:41:34.780328 2017] [:warn] [pid 31688] mod_wsgi: Compiled for Python/2.7.10.
+[Mon Feb 20 14:41:34.780332 2017] [:warn] [pid 31688] mod_wsgi: Runtime using Python/2.7.12.
+[Mon Feb 20 14:41:34.782490 2017] [mpm_prefork:notice] [pid 31688] AH00163: Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 configured -- resuming normal operations
+[Mon Feb 20 14:41:34.782505 2017] [core:notice] [pid 31688] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Feb 20 14:41:37.582151 2017] [:error] [pid 31693] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Mon Feb 20 14:41:38.632738 2017] [:error] [pid 31693] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Mon Feb 20 14:41:39.681424 2017] [:error] [pid 31693] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Mon Feb 20 14:41:40.729514 2017] [:error] [pid 31693] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Mon Feb 20 14:42:25.994326 2017] [:error] [pid 31693] Internal Server Error: /
+[Mon Feb 20 14:42:25.994343 2017] [:error] [pid 31693] Traceback (most recent call last):
+[Mon Feb 20 14:42:25.994345 2017] [:error] [pid 31693]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+[Mon Feb 20 14:42:25.994347 2017] [:error] [pid 31693]     response = get_response(request)
+[Mon Feb 20 14:42:25.994349 2017] [:error] [pid 31693]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in _get_response
+[Mon Feb 20 14:42:25.994351 2017] [:error] [pid 31693]     resolver_match = resolver.resolve(request.path_info)
+[Mon Feb 20 14:42:25.994353 2017] [:error] [pid 31693]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/resolvers.py", line 270, in resolve
+[Mon Feb 20 14:42:25.994355 2017] [:error] [pid 31693]     for pattern in self.url_patterns:
+[Mon Feb 20 14:42:25.994357 2017] [:error] [pid 31693]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Mon Feb 20 14:42:25.994359 2017] [:error] [pid 31693]     res = instance.__dict__[self.name] = self.func(instance)
+[Mon Feb 20 14:42:25.994361 2017] [:error] [pid 31693]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+[Mon Feb 20 14:42:25.994367 2017] [:error] [pid 31693]     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+[Mon Feb 20 14:42:25.994369 2017] [:error] [pid 31693]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Mon Feb 20 14:42:25.994371 2017] [:error] [pid 31693]     res = instance.__dict__[self.name] = self.func(instance)
+[Mon Feb 20 14:42:25.994373 2017] [:error] [pid 31693]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+[Mon Feb 20 14:42:25.994374 2017] [:error] [pid 31693]     return import_module(self.urlconf_name)
+[Mon Feb 20 14:42:25.994376 2017] [:error] [pid 31693]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Mon Feb 20 14:42:25.994377 2017] [:error] [pid 31693]     __import__(name)
+[Mon Feb 20 14:42:25.994379 2017] [:error] [pid 31693]   File "/opt/python/current/app/DjangoDB/urls.py", line 20, in <module>
+[Mon Feb 20 14:42:25.994380 2017] [:error] [pid 31693]     url(r'^carParks/', include('carParks.urls')),
+[Mon Feb 20 14:42:25.994382 2017] [:error] [pid 31693]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+[Mon Feb 20 14:42:25.994384 2017] [:error] [pid 31693]     urlconf_module = import_module(urlconf_module)
+[Mon Feb 20 14:42:25.994385 2017] [:error] [pid 31693]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Mon Feb 20 14:42:25.994387 2017] [:error] [pid 31693]     __import__(name)
+[Mon Feb 20 14:42:25.994388 2017] [:error] [pid 31693]   File "/opt/python/current/app/carParks/urls.py", line 3, in <module>
+[Mon Feb 20 14:42:25.994390 2017] [:error] [pid 31693]     from . import views
+[Mon Feb 20 14:42:25.994391 2017] [:error] [pid 31693]   File "/opt/python/current/app/carParks/views.py", line 5, in <module>
+[Mon Feb 20 14:42:25.994393 2017] [:error] [pid 31693]     import urllib.request
+[Mon Feb 20 14:42:25.994394 2017] [:error] [pid 31693] ImportError: No module named request
+[Mon Feb 20 14:49:07.990626 2017] [mpm_prefork:notice] [pid 31688] AH00169: caught SIGTERM, shutting down
+[Mon Feb 20 14:49:09.088257 2017] [suexec:notice] [pid 32151] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Feb 20 14:49:09.100517 2017] [so:warn] [pid 32151] AH01574: module wsgi_module is already loaded, skipping
+[Mon Feb 20 14:49:09.103318 2017] [auth_digest:notice] [pid 32151] AH01757: generating secret for digest authentication ...
+[Mon Feb 20 14:49:09.103991 2017] [lbmethod_heartbeat:notice] [pid 32151] AH02282: No slotmem from mod_heartmonitor
+[Mon Feb 20 14:49:09.104044 2017] [:warn] [pid 32151] mod_wsgi: Compiled for Python/2.7.10.
+[Mon Feb 20 14:49:09.104048 2017] [:warn] [pid 32151] mod_wsgi: Runtime using Python/2.7.12.
+[Mon Feb 20 14:49:09.106244 2017] [mpm_prefork:notice] [pid 32151] AH00163: Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 configured -- resuming normal operations
+[Mon Feb 20 14:49:09.106265 2017] [core:notice] [pid 32151] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Feb 20 14:49:11.903877 2017] [:error] [pid 32156] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Mon Feb 20 14:49:12.954341 2017] [:error] [pid 32156] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Mon Feb 20 14:49:14.001618 2017] [:error] [pid 32156] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Mon Feb 20 14:49:15.048248 2017] [:error] [pid 32156] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Mon Feb 20 14:50:29.737860 2017] [:error] [pid 32156] Internal Server Error: /busyness
+[Mon Feb 20 14:50:29.737879 2017] [:error] [pid 32156] Traceback (most recent call last):
+[Mon Feb 20 14:50:29.737893 2017] [:error] [pid 32156]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+[Mon Feb 20 14:50:29.737896 2017] [:error] [pid 32156]     response = get_response(request)
+[Mon Feb 20 14:50:29.737903 2017] [:error] [pid 32156]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+[Mon Feb 20 14:50:29.737905 2017] [:error] [pid 32156]     response = self.process_exception_by_middleware(e, request)
+[Mon Feb 20 14:50:29.737907 2017] [:error] [pid 32156]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+[Mon Feb 20 14:50:29.737908 2017] [:error] [pid 32156]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Mon Feb 20 14:50:29.737910 2017] [:error] [pid 32156]   File "/opt/python/current/app/main/views.py", line 302, in mainBusyness
+[Mon Feb 20 14:50:29.737912 2017] [:error] [pid 32156]     return HttpResponse(getBusynessValues())
+[Mon Feb 20 14:50:29.737913 2017] [:error] [pid 32156]   File "/opt/python/current/app/main/views.py", line 287, in getBusynessValues
+[Mon Feb 20 14:50:29.737915 2017] [:error] [pid 32156]     cpVal = carParks.views.carParks(request)
+[Mon Feb 20 14:50:29.737916 2017] [:error] [pid 32156]   File "/opt/python/current/app/carParks/views.py", line 14, in carParks
+[Mon Feb 20 14:50:29.737918 2017] [:error] [pid 32156]     file = request.urlopen(carpark_url)
+[Mon Feb 20 14:50:29.737919 2017] [:error] [pid 32156] AttributeError: 'WSGIRequest' object has no attribute 'urlopen'
+[Mon Feb 20 14:54:22.482527 2017] [mpm_prefork:notice] [pid 32151] AH00169: caught SIGTERM, shutting down
+[Mon Feb 20 14:54:23.587989 2017] [suexec:notice] [pid 32541] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Mon Feb 20 14:54:23.600123 2017] [so:warn] [pid 32541] AH01574: module wsgi_module is already loaded, skipping
+[Mon Feb 20 14:54:23.602541 2017] [auth_digest:notice] [pid 32541] AH01757: generating secret for digest authentication ...
+[Mon Feb 20 14:54:23.603175 2017] [lbmethod_heartbeat:notice] [pid 32541] AH02282: No slotmem from mod_heartmonitor
+[Mon Feb 20 14:54:23.603220 2017] [:warn] [pid 32541] mod_wsgi: Compiled for Python/2.7.10.
+[Mon Feb 20 14:54:23.603225 2017] [:warn] [pid 32541] mod_wsgi: Runtime using Python/2.7.12.
+[Mon Feb 20 14:54:23.605327 2017] [mpm_prefork:notice] [pid 32541] AH00163: Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 configured -- resuming normal operations
+[Mon Feb 20 14:54:23.605345 2017] [core:notice] [pid 32541] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Feb 20 14:54:26.413712 2017] [:error] [pid 32546] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Mon Feb 20 14:54:27.464661 2017] [:error] [pid 32546] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Mon Feb 20 14:54:28.513301 2017] [:error] [pid 32546] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Mon Feb 20 14:54:29.560396 2017] [:error] [pid 32546] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
 
 
 
@@ -142,42 +142,21 @@ Retrieving logs...
 2017-02-20 14:17:34,611 INFO stopped: httpd (exit status 0)
 2017-02-20 14:17:35,615 INFO spawned: 'httpd' with pid 30676
 2017-02-20 14:17:36,655 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 14:41:33,720 INFO stopped: httpd (exit status 0)
+2017-02-20 14:41:34,724 INFO spawned: 'httpd' with pid 31688
+2017-02-20 14:41:35,765 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 14:49:08,050 INFO stopped: httpd (exit status 0)
+2017-02-20 14:49:09,055 INFO spawned: 'httpd' with pid 32151
+2017-02-20 14:49:10,088 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 14:54:22,541 INFO stopped: httpd (exit status 0)
+2017-02-20 14:54:23,546 INFO spawned: 'httpd' with pid 32541
+2017-02-20 14:54:24,588 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 
 
 
 -------------------------------------
 /var/log/httpd/access_log
 -------------------------------------
-127.0.0.1 (-) - - [20/Feb/2017:13:48:01 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
-127.0.0.1 (-) - - [20/Feb/2017:13:48:02 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
-172.31.13.212 (193.1.164.173) - - [20/Feb/2017:13:48:29 +0000] "GET / HTTP/1.1" 500 111066 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-::1 (-) - - [20/Feb/2017:13:49:29 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
-::1 (-) - - [20/Feb/2017:13:49:30 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
-::1 (-) - - [20/Feb/2017:13:49:54 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
-127.0.0.1 (-) - - [20/Feb/2017:13:50:46 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
-127.0.0.1 (-) - - [20/Feb/2017:13:50:47 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
-127.0.0.1 (-) - - [20/Feb/2017:13:50:48 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
-127.0.0.1 (-) - - [20/Feb/2017:13:50:49 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
-172.31.31.113 (193.1.164.173) - - [20/Feb/2017:13:52:24 +0000] "GET / HTTP/1.1" 200 105 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-172.31.31.113 (193.1.164.173) - - [20/Feb/2017:13:52:38 +0000] "GET /busyness HTTP/1.1" 500 84187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-::1 (-) - - [20/Feb/2017:13:53:38 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
-::1 (-) - - [20/Feb/2017:13:53:39 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
-::1 (-) - - [20/Feb/2017:13:53:46 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
-::1 (-) - - [20/Feb/2017:13:53:47 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
-172.31.13.212 (193.1.164.173) - - [20/Feb/2017:13:56:15 +0000] "GET /admin HTTP/1.1" 301 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-172.31.13.212 (193.1.164.173) - - [20/Feb/2017:13:56:15 +0000] "GET /admin/ HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-172.31.13.212 (193.1.164.173) - - [20/Feb/2017:13:56:15 +0000] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1653 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-172.31.13.212 (193.1.164.173) - - [20/Feb/2017:13:56:15 +0000] "GET /static/admin/css/base.css HTTP/1.1" 404 223 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-172.31.13.212 (193.1.164.173) - - [20/Feb/2017:13:56:15 +0000] "GET /static/admin/css/login.css HTTP/1.1" 404 224 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-172.31.13.212 (193.1.164.173) - - [20/Feb/2017:13:56:23 +0000] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 - "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-172.31.13.212 (193.1.164.173) - - [20/Feb/2017:13:56:23 +0000] "GET /admin/ HTTP/1.1" 200 11270 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-172.31.13.212 (193.1.164.173) - - [20/Feb/2017:13:56:23 +0000] "GET /static/admin/css/base.css HTTP/1.1" 404 223 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-172.31.13.212 (193.1.164.173) - - [20/Feb/2017:13:56:23 +0000] "GET /static/admin/css/dashboard.css HTTP/1.1" 404 228 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
-::1 (-) - - [20/Feb/2017:13:57:16 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
-172.31.13.212 (31.13.113.95) - - [20/Feb/2017:13:57:17 +0000] "GET /admin/ HTTP/1.1" 302 - "-" "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)"
-::1 (-) - - [20/Feb/2017:13:57:17 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
-172.31.13.212 (31.13.113.76) - - [20/Feb/2017:13:57:17 +0000] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1653 "-" "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)"
-172.31.31.113 (31.13.113.130) - - [20/Feb/2017:13:57:17 +0000] "GET /admin HTTP/1.1" 301 - "-" "facebookexternalhit/1.1"
 ::1 (-) - - [20/Feb/2017:13:57:18 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
 172.31.31.113 (66.220.145.246) - - [20/Feb/2017:13:57:19 +0000] "GET /admin HTTP/1.1" 301 - "http://l.facebook.com/l.php?u=http%3A%2F%2Fbusyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com%2Fadmin&h=ATPhOq_ZyxrKrouLe-exbFYHbglp90ZS305i6Vv97MhO3nZ6vWK6eyWhEcTyfsTLGuDRVaW8BZNAvYziTbe7jSwb4Q32zp9Jm7-bzv-zDZdr8uHhuMFcvQ" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
 172.31.31.113 (66.220.145.246) - - [20/Feb/2017:13:57:19 +0000] "GET /admin/ HTTP/1.1" 302 - "http://l.facebook.com/l.php?u=http%3A%2F%2Fbusyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com%2Fadmin&h=ATPhOq_ZyxrKrouLe-exbFYHbglp90ZS305i6Vv97MhO3nZ6vWK6eyWhEcTyfsTLGuDRVaW8BZNAvYziTbe7jSwb4Q32zp9Jm7-bzv-zDZdr8uHhuMFcvQ" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
@@ -248,12 +227,54 @@ Retrieving logs...
 ::1 (-) - - [20/Feb/2017:14:19:33 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
 ::1 (-) - - [20/Feb/2017:14:19:57 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
 172.31.13.212 (193.1.164.173) - - [20/Feb/2017:14:28:11 +0000] "GET /main HTTP/1.1" 200 882 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.212 (194.140.250.70) - - [20/Feb/2017:14:37:01 +0000] "GET / HTTP/1.1" 400 58805 "-" "curl/7.17.1 (mips-unknown-linux-gnu) libcurl/7.17.1 OpenSSL/0.9.8i zlib/1.2.3"
+127.0.0.1 (-) - - [20/Feb/2017:14:41:37 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [20/Feb/2017:14:41:38 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [20/Feb/2017:14:41:39 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [20/Feb/2017:14:41:40 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+172.31.13.212 (193.1.164.173) - - [20/Feb/2017:14:42:25 +0000] "GET / HTTP/1.1" 500 111029 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+::1 (-) - - [20/Feb/2017:14:43:25 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [20/Feb/2017:14:43:26 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [20/Feb/2017:14:43:31 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+127.0.0.1 (-) - - [20/Feb/2017:14:49:11 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [20/Feb/2017:14:49:12 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [20/Feb/2017:14:49:14 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [20/Feb/2017:14:49:15 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+172.31.31.113 (193.1.164.173) - - [20/Feb/2017:14:50:13 +0000] "GET / HTTP/1.1" 200 105 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.31.113 (193.1.164.173) - - [20/Feb/2017:14:50:23 +0000] "GET /busyness HTTP/1.1" 500 73047 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+::1 (-) - - [20/Feb/2017:14:51:23 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [20/Feb/2017:14:51:30 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [20/Feb/2017:14:51:31 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+127.0.0.1 (-) - - [20/Feb/2017:14:54:26 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [20/Feb/2017:14:54:27 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [20/Feb/2017:14:54:28 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [20/Feb/2017:14:54:29 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+172.31.13.212 (193.1.164.173) - - [20/Feb/2017:14:55:15 +0000] "GET / HTTP/1.1" 200 105 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+::1 (-) - - [20/Feb/2017:14:56:19 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [20/Feb/2017:14:56:21 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [20/Feb/2017:14:56:22 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [20/Feb/2017:14:56:23 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [20/Feb/2017:14:57:43 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [20/Feb/2017:14:57:44 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [20/Feb/2017:14:58:43 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
 
 
 
 -------------------------------------
 /var/log/eb-activity.log
 -------------------------------------
+    inflating: /opt/python/ondeck/app/eb_virt/tcl/tk8.6/demos/images/ouster.png  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/auth/__pycache__/signals.cpython-35.pyc  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/flatpages/locale/fy/LC_MESSAGES/django.po  
+    inflating: /opt/python/ondeck/app/eb_virt/tcl/tcl8.6/tzdata/Pacific/Rarotonga  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/admindocs/tests/test_fields.py  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/admin/locale/mk/LC_MESSAGES/django.mo  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/core/checks/database.py  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/bin/django-admin.py  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/redirects/locale/ca/LC_MESSAGES/django.po  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/humanize/locale/ja/LC_MESSAGES/django.po  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/sessions/locale/az/LC_MESSAGES/django.po  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/encodings/idna.py  
     inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/template/loaders/app_directories.py  
     inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/template/backends/__pycache__/jinja2.cpython-35.pyc  
     inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/admindocs/locale/eo/LC_MESSAGES/django.po  
@@ -276,8 +297,8 @@ Retrieving logs...
     inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/gis/locale/cy/LC_MESSAGES/django.mo  
     inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/core/mail/backends/filebased.py  
     inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/db/backends/base/__pycache__/validation.cpython-35.pyc  
-[2017-02-20T14:17:31.754Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0/AppDeployPreHook/03deploy.py] : Starting activity...
-[2017-02-20T14:17:32.167Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0/AppDeployPreHook/03deploy.py] : Completed activity. Result:
+[2017-02-20T14:54:19.708Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0/AppDeployPreHook/03deploy.py] : Starting activity...
+[2017-02-20T14:54:20.122Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0/AppDeployPreHook/03deploy.py] : Completed activity. Result:
   Requirement already satisfied (use --upgrade to upgrade): appdirs==1.4.0 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 1))
   Requirement already satisfied (use --upgrade to upgrade): Django==1.10.3 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 2))
   Requirement already satisfied (use --upgrade to upgrade): packaging==16.8 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 3))
@@ -286,180 +307,168 @@ Retrieving logs...
   Requirement already satisfied (use --upgrade to upgrade): six==1.10.0 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 6))
   You are using pip version 7.1.2, however version 9.0.1 is available.
   You should consider upgrading via the 'pip install --upgrade pip' command.
-[2017-02-20T14:17:32.167Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0/AppDeployPreHook/04configen.py] : Starting activity...
-[2017-02-20T14:17:33.521Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0/AppDeployPreHook/04configen.py] : Completed activity.
-[2017-02-20T14:17:33.521Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0/AppDeployPreHook] : Completed activity. Result:
+[2017-02-20T14:54:20.122Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0/AppDeployPreHook/04configen.py] : Starting activity...
+[2017-02-20T14:54:21.472Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0/AppDeployPreHook/04configen.py] : Completed activity.
+[2017-02-20T14:54:21.472Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0/AppDeployPreHook] : Completed activity. Result:
   Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/pre.
-[2017-02-20T14:17:33.521Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0/EbExtensionPostBuild] : Starting activity...
-[2017-02-20T14:17:33.822Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Starting activity...
-[2017-02-20T14:17:33.822Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Completed activity.
-[2017-02-20T14:17:33.837Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0/EbExtensionPostBuild] : Completed activity.
-[2017-02-20T14:17:33.837Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0/InfraCleanEbextension] : Starting activity...
-[2017-02-20T14:17:33.864Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0/InfraCleanEbextension] : Completed activity. Result:
+[2017-02-20T14:54:21.472Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0/EbExtensionPostBuild] : Starting activity...
+[2017-02-20T14:54:21.762Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Starting activity...
+[2017-02-20T14:54:21.763Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Completed activity.
+[2017-02-20T14:54:21.777Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0/EbExtensionPostBuild] : Completed activity.
+[2017-02-20T14:54:21.777Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0/InfraCleanEbextension] : Starting activity...
+[2017-02-20T14:54:21.803Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0/InfraCleanEbextension] : Completed activity. Result:
   Cleaned ebextensions subdirectories from /opt/python/ondeck/app.
-[2017-02-20T14:17:33.864Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage0] : Completed activity. Result:
+[2017-02-20T14:54:21.803Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage0] : Completed activity. Result:
   Application update - Command CMD-AppDeploy stage 0 completed
-[2017-02-20T14:17:33.864Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage1] : Starting activity...
-[2017-02-20T14:17:33.864Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage1/AppDeployEnactHook] : Starting activity...
-[2017-02-20T14:17:33.864Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage1/AppDeployEnactHook/01flip.py] : Starting activity...
-[2017-02-20T14:17:42.682Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage1/AppDeployEnactHook/01flip.py] : Completed activity. Result:
+[2017-02-20T14:54:21.803Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage1] : Starting activity...
+[2017-02-20T14:54:21.804Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage1/AppDeployEnactHook] : Starting activity...
+[2017-02-20T14:54:21.804Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage1/AppDeployEnactHook/01flip.py] : Starting activity...
+[2017-02-20T14:54:30.613Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage1/AppDeployEnactHook/01flip.py] : Completed activity. Result:
   httpd: stopped
   httpd: started
-  httpd                            RUNNING   pid 30676, uptime 0:00:03
-  2017-02-20 14:17:42,676 INFO     Apache is running, but root page is not responding in 3 seconds.
-[2017-02-20T14:17:42.682Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage1/AppDeployEnactHook/02create_pids_for_monitoring.sh] : Starting activity...
-[2017-02-20T14:17:42.782Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage1/AppDeployEnactHook/02create_pids_for_monitoring.sh] : Completed activity. Result:
+  httpd                            RUNNING   pid 32541, uptime 0:00:03
+  2017-02-20 14:54:30,607 INFO     Apache is running, but root page is not responding in 3 seconds.
+[2017-02-20T14:54:30.613Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage1/AppDeployEnactHook/02create_pids_for_monitoring.sh] : Starting activity...
+[2017-02-20T14:54:30.712Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage1/AppDeployEnactHook/02create_pids_for_monitoring.sh] : Completed activity. Result:
   + chmod 0755 /var/run/httpd
   + /opt/elasticbeanstalk/bin/healthd-track-pidfile --proxy httpd
   + /opt/elasticbeanstalk/bin/healthd-track-pidfile --name application --location /opt/python/run/supervisord.pid
-[2017-02-20T14:17:42.782Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage1/AppDeployEnactHook] : Completed activity. Result:
+[2017-02-20T14:54:30.713Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage1/AppDeployEnactHook] : Completed activity. Result:
   Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/enact.
-[2017-02-20T14:17:42.782Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage1/AppDeployPostHook] : Starting activity...
-[2017-02-20T14:17:42.782Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage1/AppDeployPostHook] : Completed activity. Result:
+[2017-02-20T14:54:30.713Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage1/AppDeployPostHook] : Starting activity...
+[2017-02-20T14:54:30.713Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage1/AppDeployPostHook] : Completed activity. Result:
   Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/post.
-[2017-02-20T14:17:42.782Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AppDeployStage1] : Completed activity. Result:
+[2017-02-20T14:54:30.713Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AppDeployStage1] : Completed activity. Result:
   Application version switch - Command CMD-AppDeploy stage 1 completed
-[2017-02-20T14:17:42.782Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AddonsAfter] : Starting activity...
-[2017-02-20T14:17:42.783Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AddonsAfter/ConfigLogRotation] : Starting activity...
-[2017-02-20T14:17:42.783Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AddonsAfter/ConfigLogRotation/10-config.sh] : Starting activity...
-[2017-02-20T14:17:42.861Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AddonsAfter/ConfigLogRotation/10-config.sh] : Completed activity. Result:
+[2017-02-20T14:54:30.713Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AddonsAfter] : Starting activity...
+[2017-02-20T14:54:30.713Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AddonsAfter/ConfigLogRotation] : Starting activity...
+[2017-02-20T14:54:30.713Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AddonsAfter/ConfigLogRotation/10-config.sh] : Starting activity...
+[2017-02-20T14:54:30.787Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AddonsAfter/ConfigLogRotation/10-config.sh] : Completed activity. Result:
   Disabled forced hourly log rotation.
-[2017-02-20T14:17:42.863Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AddonsAfter/ConfigLogRotation] : Completed activity. Result:
+[2017-02-20T14:54:30.787Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AddonsAfter/ConfigLogRotation] : Completed activity. Result:
   Successfully execute hooks in directory /opt/elasticbeanstalk/addons/logpublish/hooks/config.
-[2017-02-20T14:17:42.863Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AddonsAfter/ConfigCWLAgent] : Starting activity...
-[2017-02-20T14:17:42.863Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AddonsAfter/ConfigCWLAgent/10-config.sh] : Starting activity...
-[2017-02-20T14:17:42.979Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AddonsAfter/ConfigCWLAgent/10-config.sh] : Completed activity. Result:
+[2017-02-20T14:54:30.787Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AddonsAfter/ConfigCWLAgent] : Starting activity...
+[2017-02-20T14:54:30.788Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AddonsAfter/ConfigCWLAgent/10-config.sh] : Starting activity...
+[2017-02-20T14:54:30.904Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AddonsAfter/ConfigCWLAgent/10-config.sh] : Completed activity. Result:
   Log streaming option setting is not specified, ignore cloudwatch logs setup.
   
   Disabled log streaming.
-[2017-02-20T14:17:42.979Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AddonsAfter/ConfigCWLAgent] : Completed activity. Result:
+[2017-02-20T14:54:30.906Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AddonsAfter/ConfigCWLAgent] : Completed activity. Result:
   Successfully execute hooks in directory /opt/elasticbeanstalk/addons/logstreaming/hooks/config.
-[2017-02-20T14:17:42.979Z] INFO  [30540] - [Application update app-04a7-170220_141640@9/AddonsAfter] : Completed activity.
-[2017-02-20T14:17:42.979Z] INFO  [30540] - [Application update app-04a7-170220_141640@9] : Completed activity. Result:
+[2017-02-20T14:54:30.906Z] INFO  [32404] - [Application update app-8318-170220_145330@12/AddonsAfter] : Completed activity.
+[2017-02-20T14:54:30.906Z] INFO  [32404] - [Application update app-8318-170220_145330@12] : Completed activity. Result:
   Application update - Command CMD-AppDeploy succeeded
-[2017-02-20T14:33:07.352Z] INFO  [31261] - [CMD-TailLogs] : Starting activity...
-[2017-02-20T14:33:07.352Z] INFO  [31261] - [CMD-TailLogs/AddonsBefore] : Starting activity...
-[2017-02-20T14:33:07.352Z] INFO  [31261] - [CMD-TailLogs/AddonsBefore] : Completed activity.
-[2017-02-20T14:33:07.352Z] INFO  [31261] - [CMD-TailLogs/TailLogs] : Starting activity...
-[2017-02-20T14:33:07.353Z] INFO  [31261] - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
-[2017-02-20T14:33:07.578Z] INFO  [31261] - [CMD-TailLogs/TailLogs/TailLogs] : Completed activity.
-[2017-02-20T14:33:07.579Z] INFO  [31261] - [CMD-TailLogs/TailLogs] : Completed activity. Result:
-  CMD-TailLogs - stage 0 - Command CMD-TailLogs stage 0 completed
-[2017-02-20T14:33:07.579Z] INFO  [31261] - [CMD-TailLogs/AddonsAfter] : Starting activity...
-[2017-02-20T14:33:07.579Z] INFO  [31261] - [CMD-TailLogs/AddonsAfter] : Completed activity.
-[2017-02-20T14:33:07.579Z] INFO  [31261] - [CMD-TailLogs] : Completed activity. Result:
-  CMD-TailLogs - Command CMD-TailLogs succeeded
-[2017-02-20T14:33:45.294Z] INFO  [31281] - [CMD-TailLogs] : Starting activity...
-[2017-02-20T14:33:45.294Z] INFO  [31281] - [CMD-TailLogs/AddonsBefore] : Starting activity...
-[2017-02-20T14:33:45.294Z] INFO  [31281] - [CMD-TailLogs/AddonsBefore] : Completed activity.
-[2017-02-20T14:33:45.294Z] INFO  [31281] - [CMD-TailLogs/TailLogs] : Starting activity...
-[2017-02-20T14:33:45.294Z] INFO  [31281] - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
+[2017-02-20T14:59:03.936Z] INFO  [328]   - [CMD-TailLogs] : Starting activity...
+[2017-02-20T14:59:03.936Z] INFO  [328]   - [CMD-TailLogs/AddonsBefore] : Starting activity...
+[2017-02-20T14:59:03.936Z] INFO  [328]   - [CMD-TailLogs/AddonsBefore] : Completed activity.
+[2017-02-20T14:59:03.936Z] INFO  [328]   - [CMD-TailLogs/TailLogs] : Starting activity...
+[2017-02-20T14:59:03.936Z] INFO  [328]   - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
 
 
 
 -------------------------------------
 /var/log/eb-commandprocessor.log
 -------------------------------------
-[2017-02-20T14:17:27.933Z] DEBUG [30540] : Storing current stage..
-[2017-02-20T14:17:27.933Z] DEBUG [30540] : Stage_num does not exist. Not saving null stage. Returning..
-[2017-02-20T14:17:27.933Z] DEBUG [30540] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
-[2017-02-20T14:17:27.933Z] DEBUG [30540] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
-[2017-02-20T14:17:27.935Z] DEBUG [30540] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
-[2017-02-20T14:17:27.935Z] INFO  [30540] : Found enabled addons: ["logpublish", "logstreaming"].
-[2017-02-20T14:17:27.936Z] INFO  [30540] : Updating Command definition of addon logpublish.
-[2017-02-20T14:17:27.936Z] INFO  [30540] : Updating Command definition of addon logstreaming.
-[2017-02-20T14:17:27.936Z] DEBUG [30540] : Refreshing metadata...
-[2017-02-20T14:17:28.189Z] DEBUG [30540] : Refreshed environment metadata.
-[2017-02-20T14:17:28.189Z] DEBUG [30540] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
-[2017-02-20T14:17:28.190Z] DEBUG [30540] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
-[2017-02-20T14:17:28.190Z] INFO  [30540] : Found enabled addons: ["logpublish", "logstreaming"].
-[2017-02-20T14:17:28.191Z] INFO  [30540] : Updating Command definition of addon logpublish.
-[2017-02-20T14:17:28.191Z] INFO  [30540] : Updating Command definition of addon logstreaming.
-[2017-02-20T14:17:28.191Z] DEBUG [30540] : Retrieving metadata for key: AWS::CloudFormation::Init||Infra-WriteApplication2||files..
-[2017-02-20T14:17:28.192Z] DEBUG [30540] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||ManifestFileS3Key..
-[2017-02-20T14:17:28.284Z] INFO  [30540] : Loading manifest from bucket 'elasticbeanstalk-us-west-2-964127915865' using computed S3 key 'resources/environments/e-iu8qiwkbpz/_runtime/versions/manifest_1487600245427'.
-[2017-02-20T14:17:28.392Z] INFO  [30540] : Updated manifest cache: deployment ID 9 and serial 9.
-[2017-02-20T14:17:28.392Z] DEBUG [30540] : Loaded definition of Command CMD-AppDeploy.
-[2017-02-20T14:17:28.392Z] INFO  [30540] : Executing Application update
-[2017-02-20T14:17:28.393Z] INFO  [30540] : Executing command: CMD-AppDeploy...
-[2017-02-20T14:17:28.393Z] INFO  [30540] : Executing command CMD-AppDeploy activities...
-[2017-02-20T14:17:28.393Z] DEBUG [30540] : Setting environment variables..
-[2017-02-20T14:17:28.393Z] INFO  [30540] : Running AddonsBefore for command CMD-AppDeploy...
-[2017-02-20T14:17:28.393Z] DEBUG [30540] : Running stages of Command CMD-AppDeploy from stage 0 to stage 1...
-[2017-02-20T14:17:28.393Z] INFO  [30540] : Running stage 0 of command CMD-AppDeploy...
-[2017-02-20T14:17:28.393Z] INFO  [30540] : Running leader election...
-[2017-02-20T14:17:28.643Z] INFO  [30540] : Instance is Leader.
-[2017-02-20T14:17:28.643Z] DEBUG [30540] : Loaded 6 actions for stage 0.
-[2017-02-20T14:17:28.643Z] INFO  [30540] : Running 1 of 6 actions: InfraWriteConfig...
-[2017-02-20T14:17:28.646Z] INFO  [30540] : Running 2 of 6 actions: DownloadSourceBundle...
-[2017-02-20T14:17:29.813Z] INFO  [30540] : Running 3 of 6 actions: EbExtensionPreBuild...
-[2017-02-20T14:17:30.104Z] INFO  [30540] : Running 4 of 6 actions: AppDeployPreHook...
-[2017-02-20T14:17:33.521Z] INFO  [30540] : Running 5 of 6 actions: EbExtensionPostBuild...
-[2017-02-20T14:17:33.837Z] INFO  [30540] : Running 6 of 6 actions: InfraCleanEbextension...
-[2017-02-20T14:17:33.864Z] INFO  [30540] : Running stage 1 of command CMD-AppDeploy...
-[2017-02-20T14:17:33.864Z] DEBUG [30540] : Loaded 2 actions for stage 1.
-[2017-02-20T14:17:33.864Z] INFO  [30540] : Running 1 of 2 actions: AppDeployEnactHook...
-[2017-02-20T14:17:42.782Z] INFO  [30540] : Running 2 of 2 actions: AppDeployPostHook...
-[2017-02-20T14:17:42.782Z] INFO  [30540] : Running AddonsAfter for command CMD-AppDeploy...
-[2017-02-20T14:17:42.979Z] INFO  [30540] : Command CMD-AppDeploy succeeded!
-[2017-02-20T14:17:42.979Z] INFO  [30540] : Command processor returning results: 
+[2017-02-20T14:49:01.727Z] INFO  [31998] : Executing command CMD-AppDeploy activities...
+[2017-02-20T14:49:01.727Z] DEBUG [31998] : Setting environment variables..
+[2017-02-20T14:49:01.727Z] INFO  [31998] : Running AddonsBefore for command CMD-AppDeploy...
+[2017-02-20T14:49:01.727Z] DEBUG [31998] : Running stages of Command CMD-AppDeploy from stage 0 to stage 1...
+[2017-02-20T14:49:01.727Z] INFO  [31998] : Running stage 0 of command CMD-AppDeploy...
+[2017-02-20T14:49:01.727Z] INFO  [31998] : Running leader election...
+[2017-02-20T14:49:01.977Z] INFO  [31998] : Instance is Leader.
+[2017-02-20T14:49:01.977Z] DEBUG [31998] : Loaded 6 actions for stage 0.
+[2017-02-20T14:49:01.977Z] INFO  [31998] : Running 1 of 6 actions: InfraWriteConfig...
+[2017-02-20T14:49:01.980Z] INFO  [31998] : Running 2 of 6 actions: DownloadSourceBundle...
+[2017-02-20T14:49:03.208Z] INFO  [31998] : Running 3 of 6 actions: EbExtensionPreBuild...
+[2017-02-20T14:49:03.489Z] INFO  [31998] : Running 4 of 6 actions: AppDeployPreHook...
+[2017-02-20T14:49:06.963Z] INFO  [31998] : Running 5 of 6 actions: EbExtensionPostBuild...
+[2017-02-20T14:49:07.271Z] INFO  [31998] : Running 6 of 6 actions: InfraCleanEbextension...
+[2017-02-20T14:49:07.298Z] INFO  [31998] : Running stage 1 of command CMD-AppDeploy...
+[2017-02-20T14:49:07.298Z] DEBUG [31998] : Loaded 2 actions for stage 1.
+[2017-02-20T14:49:07.298Z] INFO  [31998] : Running 1 of 2 actions: AppDeployEnactHook...
+[2017-02-20T14:49:16.200Z] INFO  [31998] : Running 2 of 2 actions: AppDeployPostHook...
+[2017-02-20T14:49:16.201Z] INFO  [31998] : Running AddonsAfter for command CMD-AppDeploy...
+[2017-02-20T14:49:16.399Z] INFO  [31998] : Command CMD-AppDeploy succeeded!
+[2017-02-20T14:49:16.399Z] INFO  [31998] : Command processor returning results: 
 {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[]}]}
-[2017-02-20T14:33:07.346Z] DEBUG [31261] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
-[2017-02-20T14:33:07.346Z] DEBUG [31261] : Checking if the command processor should execute...
-[2017-02-20T14:33:07.348Z] DEBUG [31261] : Checking whether the command is applicable to instance (i-0a8f315582bc1da2b)..
-[2017-02-20T14:33:07.348Z] INFO  [31261] : Command is applicable to this instance (i-0a8f315582bc1da2b)..
-[2017-02-20T14:33:07.348Z] DEBUG [31261] : Checking if the received command stage is valid..
-[2017-02-20T14:33:07.348Z] INFO  [31261] : No stage_num in command. Valid stage..
-[2017-02-20T14:33:07.348Z] INFO  [31261] : Received command CMD-TailLogs: {"execution_data":"{\"aws_access_key_id\":\"ASIAJIODOGGF36JJQT6Q\",\"signature\":\"YFZ44WkMSGtGZPpUWNv\\\/IsLH6M0=\",\"security_token\":\"FQoDYXdzEJD\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/wEaDNRA90dAzJpAuCWppCKVA0BfMwovSLaeNtsIGpxnUrK1KEhUvtYikzN6LiKNgPPiI1nnm8\\\/rEvouFDhQ2Y0P3QqDUD3ioEhrIl\\\/kWp6Pwy\\\/\\\/2O4Xzsz0gsZnGlp3I7rR3G8usWaNgJpNPXLoJn88pVRr8es6IWXnjzEo8GyN4M4R5KE5De3LqocC+1qVIyKDMrygvxRMHQLQFAoTOdTexeCpI+OkBhhs\\\/1R4LXZ8E9PxQreYNPR0\\\/jM+wevFD0ap5AcczIW+Fer1iuE5E9+mTVlTY8vXb1DW1esbeBkaTWy\\\/1\\\/kyqpnjN6M3qF6uoChYhmBgL2H0TU3oc3uPwhUGVeErwgrpUKWqmAGi\\\/jDk5MC3FPAkWpzFaD3oAUhRfztIa0HduDscyDikdsMyx5OQ0yx\\\/lPISQihBLQd2oUtKMDnLD+vkGCER0ymAA3DKDeqclG6yMhFt8+pZ6en3ndd5doD4dnlhDrCQD3Yazq4ewmhqYL8XaTYXlmZccNCM4xQozyAy09pOpicMxgsAbPFElU1VfK8zX4NUw4GFw2dmpdTO4AlUmSih\\\/KvFBQ==\",\"policy\":\"eyJleHBpcmF0aW9uIjoiMjAxNy0wMi0yMFQxNTowMzowNS4zNDhaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkeC1hbXotbWV0YS10aW1lX3N0YW1wIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLXB1Ymxpc2hfbWVjaGFuaXNtIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJyZXNvdXJjZXNcL2Vudmlyb25tZW50c1wvbG9nc1wvIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWJhdGNoX2lkIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWZpbGVfbmFtZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIkeC1hbXotc2VjdXJpdHktdG9rZW4iLCIiXSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsiZXEiLCIkYnVja2V0IiwiZWxhc3RpY2JlYW5zdGFsay11cy13ZXN0LTItOTY0MTI3OTE1ODY1Il0sWyJlcSIsIiRhY2wiLCJwcml2YXRlIl1dfQ==\"}","instance_ids":["i-0a8f315582bc1da2b"],"data":"7d9f63e9-f779-11e6-84c6-7943cc9adf4c","command_name":"CMD-TailLogs","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"7d9f63e9-f779-11e6-84c6-7943cc9adf4c","command_timeout":"600"}
-[2017-02-20T14:33:07.348Z] INFO  [31261] : Command processor should execute command.
-[2017-02-20T14:33:07.349Z] DEBUG [31261] : Storing current stage..
-[2017-02-20T14:33:07.349Z] DEBUG [31261] : Stage_num does not exist. Not saving null stage. Returning..
-[2017-02-20T14:33:07.349Z] DEBUG [31261] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
-[2017-02-20T14:33:07.349Z] DEBUG [31261] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
-[2017-02-20T14:33:07.350Z] DEBUG [31261] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
-[2017-02-20T14:33:07.351Z] INFO  [31261] : Found enabled addons: ["logpublish", "logstreaming"].
-[2017-02-20T14:33:07.352Z] INFO  [31261] : Updating Command definition of addon logpublish.
-[2017-02-20T14:33:07.352Z] INFO  [31261] : Updating Command definition of addon logstreaming.
-[2017-02-20T14:33:07.352Z] DEBUG [31261] : Loaded definition of Command CMD-TailLogs.
-[2017-02-20T14:33:07.352Z] INFO  [31261] : Executing CMD-TailLogs
-[2017-02-20T14:33:07.352Z] INFO  [31261] : Executing command: CMD-TailLogs...
-[2017-02-20T14:33:07.352Z] INFO  [31261] : Executing command CMD-TailLogs activities...
-[2017-02-20T14:33:07.352Z] DEBUG [31261] : Setting environment variables..
-[2017-02-20T14:33:07.352Z] INFO  [31261] : Running AddonsBefore for command CMD-TailLogs...
-[2017-02-20T14:33:07.352Z] DEBUG [31261] : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
-[2017-02-20T14:33:07.352Z] INFO  [31261] : Running stage 0 of command CMD-TailLogs...
-[2017-02-20T14:33:07.353Z] DEBUG [31261] : Loaded 1 actions for stage 0.
-[2017-02-20T14:33:07.353Z] INFO  [31261] : Running 1 of 1 actions: TailLogs...
-[2017-02-20T14:33:07.579Z] INFO  [31261] : Running AddonsAfter for command CMD-TailLogs...
-[2017-02-20T14:33:07.579Z] INFO  [31261] : Command CMD-TailLogs succeeded!
-[2017-02-20T14:33:07.579Z] INFO  [31261] : Command processor returning results: 
-{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[{"msg":"[Instance: i-0a8f315582bc1da2b] Successfully finished tailing 5 log(s)","severity":"INFO","timestamp":1487601187579}]}]}
-[2017-02-20T14:33:45.288Z] DEBUG [31281] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
-[2017-02-20T14:33:45.288Z] DEBUG [31281] : Checking if the command processor should execute...
-[2017-02-20T14:33:45.290Z] DEBUG [31281] : Checking whether the command is applicable to instance (i-0a8f315582bc1da2b)..
-[2017-02-20T14:33:45.290Z] INFO  [31281] : Command is applicable to this instance (i-0a8f315582bc1da2b)..
-[2017-02-20T14:33:45.290Z] DEBUG [31281] : Checking if the received command stage is valid..
-[2017-02-20T14:33:45.290Z] INFO  [31281] : No stage_num in command. Valid stage..
-[2017-02-20T14:33:45.290Z] INFO  [31281] : Received command CMD-TailLogs: {"execution_data":"{\"aws_access_key_id\":\"ASIAJE3W6I54LJBFKCWQ\",\"signature\":\"qUhDcOzL3h1LYxb6R1PeoYCTpJw=\",\"security_token\":\"FQoDYXdzEJD\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/wEaDPLYyg0GkgnMwJNTjiKVA2WVttlJZh6IiV9U\\\/KzfBbneshXNRW2kB11lO\\\/sJJEGZSiEXrua5PuOj3xqRJTQc2XiWXn3yJDJG5sgbuIuE1GXWRkVYHjjJXgmAnH9yJMoNw9t0Aypjas7SIdgtL5frUuao71F+Q+suQzHTKfElPAYIOQfcpJkiow8w1wcb0+CDfcO0gFEhwafiP7odzBYi77+GwPfAQs6tr2CQVYJrZwcR5jZur8m7q+87LciUzR7J79VUV7ht3ZfX8Mid9c3LChNSuK+ptcJh1k74ac16puK2WoIjHwhmih3yMNp7VDPKJH7G95THglftELHCGJwgiY1YBQzjVtvlAmpiBHNM2WORpRMp4paNgkeG7BlfJfxH2vPdp8iFVuDb5TvQGrc9gdgFom5WZ4N+GlQhL0l5hN31UkS3qgfgTz4rzoFPWm+aI1dVe5MleJh007VSeYdBVy1ESy9p30\\\/YOKKe1CwC6LyZx+cVILHvVExmNEwa+38ieIsEFF7lmYMOrlI1jy+BmOgtq6rjLdB6qC4j1NK0qRfuOBAPBCjH\\\/KvFBQ==\",\"policy\":\"eyJleHBpcmF0aW9uIjoiMjAxNy0wMi0yMFQxNTowMzo0My41NTVaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkeC1hbXotbWV0YS10aW1lX3N0YW1wIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLXB1Ymxpc2hfbWVjaGFuaXNtIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJyZXNvdXJjZXNcL2Vudmlyb25tZW50c1wvbG9nc1wvIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWJhdGNoX2lkIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWZpbGVfbmFtZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIkeC1hbXotc2VjdXJpdHktdG9rZW4iLCIiXSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsiZXEiLCIkYnVja2V0IiwiZWxhc3RpY2JlYW5zdGFsay11cy13ZXN0LTItOTY0MTI3OTE1ODY1Il0sWyJlcSIsIiRhY2wiLCJwcml2YXRlIl1dfQ==\"}","instance_ids":["i-0a8f315582bc1da2b"],"data":"9467e94e-f779-11e6-84c6-7943cc9adf4c","command_name":"CMD-TailLogs","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"9467e94e-f779-11e6-84c6-7943cc9adf4c","command_timeout":"600"}
-[2017-02-20T14:33:45.290Z] INFO  [31281] : Command processor should execute command.
-[2017-02-20T14:33:45.290Z] DEBUG [31281] : Storing current stage..
-[2017-02-20T14:33:45.290Z] DEBUG [31281] : Stage_num does not exist. Not saving null stage. Returning..
-[2017-02-20T14:33:45.290Z] DEBUG [31281] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
-[2017-02-20T14:33:45.290Z] DEBUG [31281] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
-[2017-02-20T14:33:45.291Z] DEBUG [31281] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
-[2017-02-20T14:33:45.292Z] INFO  [31281] : Found enabled addons: ["logpublish", "logstreaming"].
-[2017-02-20T14:33:45.293Z] INFO  [31281] : Updating Command definition of addon logpublish.
-[2017-02-20T14:33:45.293Z] INFO  [31281] : Updating Command definition of addon logstreaming.
-[2017-02-20T14:33:45.293Z] DEBUG [31281] : Loaded definition of Command CMD-TailLogs.
-[2017-02-20T14:33:45.293Z] INFO  [31281] : Executing CMD-TailLogs
-[2017-02-20T14:33:45.294Z] INFO  [31281] : Executing command: CMD-TailLogs...
-[2017-02-20T14:33:45.294Z] INFO  [31281] : Executing command CMD-TailLogs activities...
-[2017-02-20T14:33:45.294Z] DEBUG [31281] : Setting environment variables..
-[2017-02-20T14:33:45.294Z] INFO  [31281] : Running AddonsBefore for command CMD-TailLogs...
-[2017-02-20T14:33:45.294Z] DEBUG [31281] : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
-[2017-02-20T14:33:45.294Z] INFO  [31281] : Running stage 0 of command CMD-TailLogs...
-[2017-02-20T14:33:45.294Z] DEBUG [31281] : Loaded 1 actions for stage 0.
-[2017-02-20T14:33:45.294Z] INFO  [31281] : Running 1 of 1 actions: TailLogs...
+[2017-02-20T14:54:15.804Z] DEBUG [32404] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-02-20T14:54:15.804Z] DEBUG [32404] : Checking if the command processor should execute...
+[2017-02-20T14:54:15.806Z] DEBUG [32404] : Checking whether the command is applicable to instance (i-0a8f315582bc1da2b)..
+[2017-02-20T14:54:15.807Z] INFO  [32404] : Command is applicable to this instance (i-0a8f315582bc1da2b)..
+[2017-02-20T14:54:15.807Z] DEBUG [32404] : Checking if the received command stage is valid..
+[2017-02-20T14:54:15.807Z] INFO  [32404] : No stage_num in command. Valid stage..
+[2017-02-20T14:54:15.807Z] INFO  [32404] : Received command CMD-AppDeploy: {"execution_data":"{\"leader_election\":\"true\"}","instance_ids":["i-0a8f315582bc1da2b"],"data":"manifest_1487602452488","command_name":"CMD-AppDeploy","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"6c60d70d-f77c-11e6-9bba-0f8d7dfe72bf","command_timeout":"600"}
+[2017-02-20T14:54:15.807Z] INFO  [32404] : Command processor should execute command.
+[2017-02-20T14:54:15.807Z] DEBUG [32404] : Storing current stage..
+[2017-02-20T14:54:15.807Z] DEBUG [32404] : Stage_num does not exist. Not saving null stage. Returning..
+[2017-02-20T14:54:15.807Z] DEBUG [32404] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-02-20T14:54:15.807Z] DEBUG [32404] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2017-02-20T14:54:15.808Z] DEBUG [32404] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2017-02-20T14:54:15.809Z] INFO  [32404] : Found enabled addons: ["logpublish", "logstreaming"].
+[2017-02-20T14:54:15.810Z] INFO  [32404] : Updating Command definition of addon logpublish.
+[2017-02-20T14:54:15.810Z] INFO  [32404] : Updating Command definition of addon logstreaming.
+[2017-02-20T14:54:15.810Z] DEBUG [32404] : Refreshing metadata...
+[2017-02-20T14:54:16.065Z] DEBUG [32404] : Refreshed environment metadata.
+[2017-02-20T14:54:16.065Z] DEBUG [32404] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2017-02-20T14:54:16.066Z] DEBUG [32404] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2017-02-20T14:54:16.067Z] INFO  [32404] : Found enabled addons: ["logpublish", "logstreaming"].
+[2017-02-20T14:54:16.068Z] INFO  [32404] : Updating Command definition of addon logpublish.
+[2017-02-20T14:54:16.068Z] INFO  [32404] : Updating Command definition of addon logstreaming.
+[2017-02-20T14:54:16.068Z] DEBUG [32404] : Retrieving metadata for key: AWS::CloudFormation::Init||Infra-WriteApplication2||files..
+[2017-02-20T14:54:16.068Z] DEBUG [32404] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||ManifestFileS3Key..
+[2017-02-20T14:54:16.160Z] INFO  [32404] : Loading manifest from bucket 'elasticbeanstalk-us-west-2-964127915865' using computed S3 key 'resources/environments/e-iu8qiwkbpz/_runtime/versions/manifest_1487602452488'.
+[2017-02-20T14:54:16.244Z] INFO  [32404] : Updated manifest cache: deployment ID 12 and serial 12.
+[2017-02-20T14:54:16.244Z] DEBUG [32404] : Loaded definition of Command CMD-AppDeploy.
+[2017-02-20T14:54:16.244Z] INFO  [32404] : Executing Application update
+[2017-02-20T14:54:16.244Z] INFO  [32404] : Executing command: CMD-AppDeploy...
+[2017-02-20T14:54:16.244Z] INFO  [32404] : Executing command CMD-AppDeploy activities...
+[2017-02-20T14:54:16.244Z] DEBUG [32404] : Setting environment variables..
+[2017-02-20T14:54:16.244Z] INFO  [32404] : Running AddonsBefore for command CMD-AppDeploy...
+[2017-02-20T14:54:16.244Z] DEBUG [32404] : Running stages of Command CMD-AppDeploy from stage 0 to stage 1...
+[2017-02-20T14:54:16.244Z] INFO  [32404] : Running stage 0 of command CMD-AppDeploy...
+[2017-02-20T14:54:16.244Z] INFO  [32404] : Running leader election...
+[2017-02-20T14:54:16.497Z] INFO  [32404] : Instance is Leader.
+[2017-02-20T14:54:16.497Z] DEBUG [32404] : Loaded 6 actions for stage 0.
+[2017-02-20T14:54:16.497Z] INFO  [32404] : Running 1 of 6 actions: InfraWriteConfig...
+[2017-02-20T14:54:16.500Z] INFO  [32404] : Running 2 of 6 actions: DownloadSourceBundle...
+[2017-02-20T14:54:17.754Z] INFO  [32404] : Running 3 of 6 actions: EbExtensionPreBuild...
+[2017-02-20T14:54:18.048Z] INFO  [32404] : Running 4 of 6 actions: AppDeployPreHook...
+[2017-02-20T14:54:21.472Z] INFO  [32404] : Running 5 of 6 actions: EbExtensionPostBuild...
+[2017-02-20T14:54:21.777Z] INFO  [32404] : Running 6 of 6 actions: InfraCleanEbextension...
+[2017-02-20T14:54:21.803Z] INFO  [32404] : Running stage 1 of command CMD-AppDeploy...
+[2017-02-20T14:54:21.803Z] DEBUG [32404] : Loaded 2 actions for stage 1.
+[2017-02-20T14:54:21.804Z] INFO  [32404] : Running 1 of 2 actions: AppDeployEnactHook...
+[2017-02-20T14:54:30.713Z] INFO  [32404] : Running 2 of 2 actions: AppDeployPostHook...
+[2017-02-20T14:54:30.713Z] INFO  [32404] : Running AddonsAfter for command CMD-AppDeploy...
+[2017-02-20T14:54:30.906Z] INFO  [32404] : Command CMD-AppDeploy succeeded!
+[2017-02-20T14:54:30.906Z] INFO  [32404] : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[]}]}
+[2017-02-20T14:59:03.915Z] DEBUG [328]   : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-02-20T14:59:03.915Z] DEBUG [328]   : Checking if the command processor should execute...
+[2017-02-20T14:59:03.928Z] DEBUG [328]   : Checking whether the command is applicable to instance (i-0a8f315582bc1da2b)..
+[2017-02-20T14:59:03.928Z] INFO  [328]   : Command is applicable to this instance (i-0a8f315582bc1da2b)..
+[2017-02-20T14:59:03.928Z] DEBUG [328]   : Checking if the received command stage is valid..
+[2017-02-20T14:59:03.928Z] INFO  [328]   : No stage_num in command. Valid stage..
+[2017-02-20T14:59:03.929Z] INFO  [328]   : Received command CMD-TailLogs: {"execution_data":"{\"aws_access_key_id\":\"ASIAIFNPF4HFDWGDLDPA\",\"signature\":\"reMyrjQdx2IEbQu6FsdFnrutgSo=\",\"security_token\":\"FQoDYXdzEJD\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/wEaDMTKc6KcqZacZIvZ3SKVAw3PoPuCNf2rF3gBDIlJ8vxPV62L7m5M2OxffG7CKPmvXKZLNToOOxZSLTWBFRI2uvUqWSa9UjPHNAkXqBAJhVehnXZy\\\/ZT5jCrwwqc\\\/LZ\\\/eYCYrUJQK+NNldmArZvCmeCpFTZXdJUcyHASr4VoUP76tsYGUBQf+HREO0n6\\\/nYagVmmS4hWKRyqLBDIpZfPgE1SWTKeFdrvBNlsVHdkNukNEXYXiH5ZoIOCyDE3SXs3mArLoR10RTmClpzS4OW7jdKhJEaGFzYfAxJyZuS2B+PGq3W84PvPlilZ9a5Pu43PHnipaYfg7lOAd0dcVdtoWrbFI1C2Re31urb9GyCo9oJEjFMH0CJDJU7KwY2W1MkOLDDJcxQ+qdE8i0CrIm80etUykanvvuJnMqv9swoI0SCks3GF6mFFpWnbZ8iXPwO58jJx6Q4iq+tfA1HsQ7pJCnm7SN\\\/rZawuBezRS\\\/HCuDjVaLJsKVKDca4rHwJBaLi2B3yiQRkRRhMaW4ylvErNk1tLmWyg5u8GXJEw2w9GJPaVg2gutUyi1iKzFBQ==\",\"policy\":\"eyJleHBpcmF0aW9uIjoiMjAxNy0wMi0yMFQxNToyOTowMS43NzlaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkeC1hbXotbWV0YS10aW1lX3N0YW1wIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLXB1Ymxpc2hfbWVjaGFuaXNtIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJyZXNvdXJjZXNcL2Vudmlyb25tZW50c1wvbG9nc1wvIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWJhdGNoX2lkIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWZpbGVfbmFtZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIkeC1hbXotc2VjdXJpdHktdG9rZW4iLCIiXSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsiZXEiLCIkYnVja2V0IiwiZWxhc3RpY2JlYW5zdGFsay11cy13ZXN0LTItOTY0MTI3OTE1ODY1Il0sWyJlcSIsIiRhY2wiLCJwcml2YXRlIl1dfQ==\"}","instance_ids":["i-0a8f315582bc1da2b"],"data":"1d49d761-f77d-11e6-8621-5da356d43558","command_name":"CMD-TailLogs","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"1d49d761-f77d-11e6-8621-5da356d43558","command_timeout":"600"}
+[2017-02-20T14:59:03.929Z] INFO  [328]   : Command processor should execute command.
+[2017-02-20T14:59:03.929Z] DEBUG [328]   : Storing current stage..
+[2017-02-20T14:59:03.929Z] DEBUG [328]   : Stage_num does not exist. Not saving null stage. Returning..
+[2017-02-20T14:59:03.929Z] DEBUG [328]   : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-02-20T14:59:03.929Z] DEBUG [328]   : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2017-02-20T14:59:03.930Z] DEBUG [328]   : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2017-02-20T14:59:03.931Z] INFO  [328]   : Found enabled addons: ["logpublish", "logstreaming"].
+[2017-02-20T14:59:03.932Z] INFO  [328]   : Updating Command definition of addon logpublish.
+[2017-02-20T14:59:03.932Z] INFO  [328]   : Updating Command definition of addon logstreaming.
+[2017-02-20T14:59:03.935Z] DEBUG [328]   : Loaded definition of Command CMD-TailLogs.
+[2017-02-20T14:59:03.935Z] INFO  [328]   : Executing CMD-TailLogs
+[2017-02-20T14:59:03.936Z] INFO  [328]   : Executing command: CMD-TailLogs...
+[2017-02-20T14:59:03.936Z] INFO  [328]   : Executing command CMD-TailLogs activities...
+[2017-02-20T14:59:03.936Z] DEBUG [328]   : Setting environment variables..
+[2017-02-20T14:59:03.936Z] INFO  [328]   : Running AddonsBefore for command CMD-TailLogs...
+[2017-02-20T14:59:03.936Z] DEBUG [328]   : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
+[2017-02-20T14:59:03.936Z] INFO  [328]   : Running stage 0 of command CMD-TailLogs...
+[2017-02-20T14:59:03.936Z] DEBUG [328]   : Loaded 1 actions for stage 0.
+[2017-02-20T14:59:03.936Z] INFO  [328]   : Running 1 of 1 actions: TailLogs...
 
 
 

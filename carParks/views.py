@@ -2,7 +2,7 @@
 from django.http import HttpResponse
 
 import xml.etree.ElementTree as et
-import urllib
+import requests
 from carParks.models import CP, CapacityLevel
 
 def home(request):
@@ -98,7 +98,7 @@ def carParks(request):
     def getBusyness():
         busyness = 0.0
         fullness=0
-        tree = et.parse(file)
+        tree = et.parse(file, stream=True)
         root = tree.getroot()
         spaces=0
         count=1
