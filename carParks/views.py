@@ -121,6 +121,8 @@ def carParks(request):
                 if(spaces=="FULL"):
                     spaces = 0
                 
+            
+                
                 fullness = ( ( (int(cpRef.capacity) - int(spaces)) / cpRef.capacity) * 100)
                 
                 if(fullness > 100 or fullness < 0):

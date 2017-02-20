@@ -166,7 +166,7 @@ def mainHome(request):
         
         return data
     
-    return HttpResponse(getM50s())
+    return HttpResponse(getCPs())
 
 def mainBusyness(request):
     
