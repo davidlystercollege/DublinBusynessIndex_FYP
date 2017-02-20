@@ -147,7 +147,7 @@ def carParks(request):
                 count=count+1  
                   
         busyness = (busyness/count-1)
-        return ans
+        return busyness
     
     #return HttpResponse(getCapacityDetails())
     #return HttpResponse(getBusyness())
