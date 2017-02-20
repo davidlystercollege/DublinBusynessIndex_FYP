@@ -137,7 +137,7 @@ def m50times(request):
                 rngeMax=rangeMaxs[routenum]
                 rngeSize=rangeSizes[routenum]
                 
-                data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + '<br><br/>'
+                #data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + '<br><br/>'
                 
                 '''if(routename != 'J17 Shankill -> J3 M1/N32/DPT'):
                     continue
@@ -159,7 +159,7 @@ def m50times(request):
                     
                     busyness = busyness + busy                
                     
-                    #data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + " - busynw = " +str(busy_nw)+ " - B: " + str(busy*100) + '<br><br/>'
+                    data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + " - busynw = " +str(busy_nw)+ " - B: " + str(busy*100) + '<br><br/>'
                     
                     #data = data + "size, max, num := " + str(rngeSize) + ", "  + str(rngeMax) + ", " + str(rangeWeight) + "<br><br/>"
                     
