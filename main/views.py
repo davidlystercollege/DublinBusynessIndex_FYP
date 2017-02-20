@@ -280,6 +280,11 @@ def mainBusyness(request):
         
         weigths = [.40, .30, .20, .10]
         
+        noiseVal=0
+        m50Val=0
+        cpVal=0
+        bikeVal=0        
+        
         noiseVal = noiseLevels.views.noiseLevels(request)
         #createBusynessSub(request, nl_dso, noiseVal)
         
