@@ -4,6 +4,7 @@ from django.http import HttpResponse
 
 import xml.etree.ElementTree as et
 import requests
+import urllib.request
 from carParks.models import CP, CapacityLevel
 
 def home(request):
@@ -13,6 +14,7 @@ def carParks(request):
     
     carpark_url = 'http://opendata.dublincity.ie/TrafficOpenData/CP_TR/CPDATA.xml'
     file = requests.get(carpark_url)
+    response = urllib.request.urlopen(carpark_url)
 
     def createCarPark(request, namearg):
         cp = CP()
@@ -68,7 +70,7 @@ def carParks(request):
     def getBusyness_Avg():
         busyness = 0.0
         fullness=0
-        tree = et.parse(file.text)
+        tree = et.parse(response)
         root = tree.getroot()
         spaces=0
         
