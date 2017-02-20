@@ -284,17 +284,19 @@ def mainBusyness(request):
         m50Val = m50times.views.m50times(request)
         createBusynessSub(request, m50_dso, m50Val)
         
-        cpVal = carParks.views.carParks(request)
-        createBusynessSub(request, cp_dso, cpVal)
+        #cpVal = carParks.views.carParks(request)
+        #createBusynessSub(request, cp_dso, cpVal)
         
         bikeVal = dublinBikes.views.dubBikes(request)
         createBusynessSub(request, db_dso, bikeVal)
         
-        busynessIndex = ( (m50Val*weigths[0]) + (noiseVal*weigths[1]) + (cpVal*weigths[2]) + (bikeVal*weigths[3]) )
+        busynessIndex = ( (m50Val*weigths[0]) + (noiseVal*weigths[1]) + (bikeVal*weigths[3]) )
+        #busynessIndex = ( (m50Val*weigths[0]) + (noiseVal*weigths[1]) + (cpVal*weigths[2]) + (bikeVal*weigths[3]) )
         createBusynessIndex(request, busynessIndex)
         
         ans=' '
-        ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+", "+str(cpVal)+", "+str(bikeVal)
+        ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+",  "+str(bikeVal)
+        #ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+", "+str(cpVal)+", "+str(bikeVal)
         
         return ans
 
