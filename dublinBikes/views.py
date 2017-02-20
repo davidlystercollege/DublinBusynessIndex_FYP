@@ -1,3 +1,4 @@
+from __future__ import division
 #from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -84,7 +85,7 @@ def dubBikes(request):
         decoded_content = stations.content.decode('utf-8')
         jsonStation = json.loads(decoded_content)
         
-        count=1
+        count=0
         for e in jsonStation:
             
             pcFull = ( ( e['available_bikes']/e['bike_stands'] ) * 100 )            
