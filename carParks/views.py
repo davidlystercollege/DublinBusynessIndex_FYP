@@ -4,8 +4,6 @@ from django.http import HttpResponse
 import xml.etree.ElementTree as et
 import requests
 from carParks.models import CP, CapacityLevel
-from _overlapped import NULL
-from cmath import sqrt
 
 def home(request):
     return HttpResponse("This'll be the carParks homepage")
