@@ -290,14 +290,14 @@ def mainBusyness(request):
         bikeVal = dublinBikes.views.dubBikes(request)
         createBusynessSub(request, db_dso, bikeVal)
         
-        #busynessIndex = ( (m50Val*weigths[0]) + (noiseVal*weigths[1]) + (bikeVal*weigths[3]) )
+        busynessIndex = ( (m50Val*weigths[0]) + (noiseVal*weigths[1]) + (bikeVal*weigths[3]) )
         #busynessIndex = ( (m50Val*weigths[0]) + (noiseVal*weigths[1]) + (cpVal*weigths[2]) + (bikeVal*weigths[3]) )
         #createBusynessIndex(request, busynessIndex)
         
-        ans=' ' + str(noiseVal) + ", " + str(m50Val) + ", " + str(bikeVal) 
+        ans=str(noiseVal) + "- n, " + str(m50Val) + " - m50, " + str(bikeVal) + " - b"
         #ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+",  "+str(bikeVal)
         #ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+", "+str(cpVal)+", "+str(bikeVal)
-        
+        ans = ans+"<br>"+"Busyness: "+busynessIndex
         return ans
 
     #test = dublinBikes.views.dubBikes(request)
