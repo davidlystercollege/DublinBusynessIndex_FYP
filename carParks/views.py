@@ -99,7 +99,7 @@ def carParks(request):
     def getBusyness():
         busyness = 0.0
         fullness=0
-        tree = et.parse(file, stream=True)
+        tree = et.parse(file)
         root = tree.getroot()
         spaces=0
         count=1
