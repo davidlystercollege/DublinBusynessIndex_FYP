@@ -1,3 +1,5 @@
+from __future__ import division
+
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -166,7 +168,7 @@ def mainHome(request):
         
         return data
     
-    return HttpResponse(m50times.views.m50times(request))
+    return HttpResponse(carParks.views.carParks(request))
 
 def mainBusyness(request):
     

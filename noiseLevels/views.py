@@ -1,3 +1,4 @@
+from __future__ import division
 from django.http import HttpResponse
 import json
 import requests

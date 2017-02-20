@@ -1,3 +1,4 @@
+from __future__ import division
 #from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -138,7 +139,7 @@ def carParks(request):
                 count=count+1  
                   
         busyness = (busyness/count-1)
-        return busyness
+        return ans
     
     #return HttpResponse(getCapacityDetails())
     #return HttpResponse(getBusyness())
