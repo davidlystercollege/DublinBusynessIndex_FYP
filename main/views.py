@@ -166,7 +166,7 @@ def mainHome(request):
         
         return data
     
-    return HttpResponse(getM50s())
+    return HttpResponse(m50times.views.m50times(request))
 
 def mainBusyness(request):
     
