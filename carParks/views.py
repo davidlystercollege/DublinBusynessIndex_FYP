@@ -62,7 +62,7 @@ def carParks(request):
     def getBusyness_Avg():
         busyness = 0.0
         fullness=0
-        tree = et.parse(file)
+        tree = et.parse(file.text)
         root = tree.getroot()
         spaces=0
         
