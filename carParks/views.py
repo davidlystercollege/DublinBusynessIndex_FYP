@@ -29,8 +29,14 @@ def carParks(request):
     def getCapacityDetails():
         ans = ""
         fullness=0
+        
+        '''
         tree = et.parse(file)
         root = tree.getroot()
+        '''
+        
+        root= et.fromstring(file)
+        
         spaces=0
         for child in root:
             for children in child:
