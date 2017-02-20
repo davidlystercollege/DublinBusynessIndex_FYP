@@ -182,5 +182,6 @@ def m50times(request):
         data=data + "Busyness = " +str(busyness)
         busyness=(busyness*100)
         return busyness
-    return HttpResponse(getCurrTTBusyness())
-    #return getCurrTTBusyness()
+    
+    #return HttpResponse(getCurrTTBusyness())
+    return getCurrTTBusyness()
