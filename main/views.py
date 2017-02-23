@@ -8,7 +8,10 @@ from carParks.models import CP, CapacityLevel
 from m50times.models import Route, Recording
 from noiseLevels.models import Meter, Reading
 from main.models import DatasetObject, BusynessSub, BusynessIndex
+from apscheduler.scheduler import Scheduler
 
+import datetime
+import time
 import noiseLevels.views
 import m50times.views
 import dublinBikes.views
@@ -18,6 +21,12 @@ def home(request):
     return HttpResponse("This (for further development) should display a list of links(directories) to other pages in the web app.")
 
 def mainHome(request):
+    
+    sched = Scheduler()
+    sched.daemonic = False
+    sched.start()
+    
+    sched.add_cron_job(getBusynessValues(),  minute='0-59')
     
     def createBusynessSub(request, DatasetObject, busynessArg):
         bzSub = BusynessSub.objects.create(dataObj = DatasetObject, busynessFactor = busynessArg)
