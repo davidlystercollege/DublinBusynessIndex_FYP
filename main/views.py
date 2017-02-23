@@ -305,6 +305,11 @@ def mainBusyness(request):
         #ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+",  "+str(bikeVal)
         #ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+", "+str(cpVal)+", "+str(bikeVal)
         ans = ans+"<br>"+"Busyness: "+str(busynessIndex)
+        
+        busnisses = BusynessIndex.objects.all()
+        for i in range(1, 10):
+            ans = ans + "-" + str(i) + ": " + str(busnisses[i]) + "<br><br/>"
+        
         return ans
 
     #test = dublinBikes.views.dubBikes(request)
