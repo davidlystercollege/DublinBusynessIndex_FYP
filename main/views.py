@@ -286,13 +286,13 @@ def mainBusyness(request):
         bikeVal=0        
         
         noiseVal = noiseLevels.views.noiseLevels(request)
-        #createBusynessSub(request, nl_dso, noiseVal)
+        createBusynessSub(request, nl_dso, noiseVal)
         
         m50Val = m50times.views.m50times(request)
         createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
-        createBusynessSub(request, cp_dso, cpVal)
+        #createBusynessSub(request, cp_dso, cpVal)
         
         bikeVal = dublinBikes.views.dubBikes(request)
         createBusynessSub(request, db_dso, bikeVal)
