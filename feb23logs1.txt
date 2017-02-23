@@ -1,0 +1,532 @@
+Retrieving logs...
+============= i-0a8f315582bc1da2b ==============
+-------------------------------------
+/var/log/httpd/error_log
+-------------------------------------
+[Thu Feb 23 12:02:00.886671 2017] [so:warn] [pid 11414] AH01574: module wsgi_module is already loaded, skipping
+[Thu Feb 23 12:02:00.889369 2017] [auth_digest:notice] [pid 11414] AH01757: generating secret for digest authentication ...
+[Thu Feb 23 12:02:00.890062 2017] [lbmethod_heartbeat:notice] [pid 11414] AH02282: No slotmem from mod_heartmonitor
+[Thu Feb 23 12:02:00.890119 2017] [:warn] [pid 11414] mod_wsgi: Compiled for Python/2.7.10.
+[Thu Feb 23 12:02:00.890126 2017] [:warn] [pid 11414] mod_wsgi: Runtime using Python/2.7.12.
+[Thu Feb 23 12:02:00.892312 2017] [mpm_prefork:notice] [pid 11414] AH00163: Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 configured -- resuming normal operations
+[Thu Feb 23 12:02:00.892331 2017] [core:notice] [pid 11414] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Feb 23 12:02:03.694120 2017] [:error] [pid 11419] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Thu Feb 23 12:02:04.744084 2017] [:error] [pid 11419] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Thu Feb 23 12:02:05.791156 2017] [:error] [pid 11419] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Thu Feb 23 12:02:06.838624 2017] [:error] [pid 11419] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Thu Feb 23 12:43:23.178617 2017] [mpm_prefork:notice] [pid 11414] AH00169: caught SIGTERM, shutting down
+[Thu Feb 23 12:43:24.280431 2017] [suexec:notice] [pid 12891] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Feb 23 12:43:24.292321 2017] [so:warn] [pid 12891] AH01574: module wsgi_module is already loaded, skipping
+[Thu Feb 23 12:43:24.294848 2017] [auth_digest:notice] [pid 12891] AH01757: generating secret for digest authentication ...
+[Thu Feb 23 12:43:24.295476 2017] [lbmethod_heartbeat:notice] [pid 12891] AH02282: No slotmem from mod_heartmonitor
+[Thu Feb 23 12:43:24.295525 2017] [:warn] [pid 12891] mod_wsgi: Compiled for Python/2.7.10.
+[Thu Feb 23 12:43:24.295530 2017] [:warn] [pid 12891] mod_wsgi: Runtime using Python/2.7.12.
+[Thu Feb 23 12:43:24.297624 2017] [mpm_prefork:notice] [pid 12891] AH00163: Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 configured -- resuming normal operations
+[Thu Feb 23 12:43:24.297640 2017] [core:notice] [pid 12891] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Feb 23 12:43:27.099549 2017] [:error] [pid 12896] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Thu Feb 23 12:43:28.150416 2017] [:error] [pid 12896] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Thu Feb 23 12:43:29.198953 2017] [:error] [pid 12896] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Thu Feb 23 12:43:30.248269 2017] [:error] [pid 12896] Invalid HTTP_HOST header: 'localhost'. You may need to add u'localhost' to ALLOWED_HOSTS.
+[Thu Feb 23 12:43:50.083148 2017] [:error] [pid 12896] Internal Server Error: /busyness
+[Thu Feb 23 12:43:50.083165 2017] [:error] [pid 12896] Traceback (most recent call last):
+[Thu Feb 23 12:43:50.083173 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+[Thu Feb 23 12:43:50.083176 2017] [:error] [pid 12896]     response = get_response(request)
+[Thu Feb 23 12:43:50.083177 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/utils/deprecation.py", line 134, in __call__
+[Thu Feb 23 12:43:50.083179 2017] [:error] [pid 12896]     response = self.process_request(request)
+[Thu Feb 23 12:43:50.083181 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/middleware/common.py", line 62, in process_request
+[Thu Feb 23 12:43:50.083183 2017] [:error] [pid 12896]     if self.should_redirect_with_slash(request):
+[Thu Feb 23 12:43:50.083184 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/middleware/common.py", line 80, in should_redirect_with_slash
+[Thu Feb 23 12:43:50.083198 2017] [:error] [pid 12896]     not is_valid_path(request.path_info, urlconf) and
+[Thu Feb 23 12:43:50.083200 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/base.py", line 157, in is_valid_path
+[Thu Feb 23 12:43:50.083202 2017] [:error] [pid 12896]     resolve(path, urlconf)
+[Thu Feb 23 12:43:50.083203 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/base.py", line 27, in resolve
+[Thu Feb 23 12:43:50.083205 2017] [:error] [pid 12896]     return get_resolver(urlconf).resolve(path)
+[Thu Feb 23 12:43:50.083207 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/resolvers.py", line 270, in resolve
+[Thu Feb 23 12:43:50.083208 2017] [:error] [pid 12896]     for pattern in self.url_patterns:
+[Thu Feb 23 12:43:50.083210 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Thu Feb 23 12:43:50.083212 2017] [:error] [pid 12896]     res = instance.__dict__[self.name] = self.func(instance)
+[Thu Feb 23 12:43:50.083213 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+[Thu Feb 23 12:43:50.083215 2017] [:error] [pid 12896]     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+[Thu Feb 23 12:43:50.083217 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Thu Feb 23 12:43:50.083219 2017] [:error] [pid 12896]     res = instance.__dict__[self.name] = self.func(instance)
+[Thu Feb 23 12:43:50.083220 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+[Thu Feb 23 12:43:50.083222 2017] [:error] [pid 12896]     return import_module(self.urlconf_name)
+[Thu Feb 23 12:43:50.083224 2017] [:error] [pid 12896]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Thu Feb 23 12:43:50.083225 2017] [:error] [pid 12896]     __import__(name)
+[Thu Feb 23 12:43:50.083227 2017] [:error] [pid 12896]   File "/opt/python/current/app/DjangoDB/urls.py", line 23, in <module>
+[Thu Feb 23 12:43:50.083228 2017] [:error] [pid 12896]     url(r'^', include('main.urls')),
+[Thu Feb 23 12:43:50.083230 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+[Thu Feb 23 12:43:50.083232 2017] [:error] [pid 12896]     urlconf_module = import_module(urlconf_module)
+[Thu Feb 23 12:43:50.083233 2017] [:error] [pid 12896]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Thu Feb 23 12:43:50.083235 2017] [:error] [pid 12896]     __import__(name)
+[Thu Feb 23 12:43:50.083237 2017] [:error] [pid 12896]   File "/opt/python/current/app/main/urls.py", line 3, in <module>
+[Thu Feb 23 12:43:50.083238 2017] [:error] [pid 12896]     from . import views
+[Thu Feb 23 12:43:50.083242 2017] [:error] [pid 12896]   File "/opt/python/current/app/main/views.py", line 11, in <module>
+[Thu Feb 23 12:43:50.083244 2017] [:error] [pid 12896]     from apscheduler.scheduler import Scheduler
+[Thu Feb 23 12:43:50.083246 2017] [:error] [pid 12896] ImportError: No module named apscheduler.scheduler
+[Thu Feb 23 13:13:37.878989 2017] [:error] [pid 12896] Invalid HTTP_HOST header: '172.31.13.38'. You may need to add u'172.31.13.38' to ALLOWED_HOSTS.
+[Thu Feb 23 13:17:33.320457 2017] [:error] [pid 12896] Internal Server Error: /busyness
+[Thu Feb 23 13:17:33.320489 2017] [:error] [pid 12896] Traceback (most recent call last):
+[Thu Feb 23 13:17:33.320492 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+[Thu Feb 23 13:17:33.320494 2017] [:error] [pid 12896]     response = get_response(request)
+[Thu Feb 23 13:17:33.320496 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/utils/deprecation.py", line 134, in __call__
+[Thu Feb 23 13:17:33.320498 2017] [:error] [pid 12896]     response = self.process_request(request)
+[Thu Feb 23 13:17:33.320500 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/middleware/common.py", line 62, in process_request
+[Thu Feb 23 13:17:33.320502 2017] [:error] [pid 12896]     if self.should_redirect_with_slash(request):
+[Thu Feb 23 13:17:33.320504 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/middleware/common.py", line 80, in should_redirect_with_slash
+[Thu Feb 23 13:17:33.320506 2017] [:error] [pid 12896]     not is_valid_path(request.path_info, urlconf) and
+[Thu Feb 23 13:17:33.320508 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/base.py", line 157, in is_valid_path
+[Thu Feb 23 13:17:33.320510 2017] [:error] [pid 12896]     resolve(path, urlconf)
+[Thu Feb 23 13:17:33.320512 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/base.py", line 27, in resolve
+[Thu Feb 23 13:17:33.320514 2017] [:error] [pid 12896]     return get_resolver(urlconf).resolve(path)
+[Thu Feb 23 13:17:33.320516 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/resolvers.py", line 270, in resolve
+[Thu Feb 23 13:17:33.320518 2017] [:error] [pid 12896]     for pattern in self.url_patterns:
+[Thu Feb 23 13:17:33.320519 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Thu Feb 23 13:17:33.320521 2017] [:error] [pid 12896]     res = instance.__dict__[self.name] = self.func(instance)
+[Thu Feb 23 13:17:33.320523 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+[Thu Feb 23 13:17:33.320525 2017] [:error] [pid 12896]     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+[Thu Feb 23 13:17:33.320527 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Thu Feb 23 13:17:33.320529 2017] [:error] [pid 12896]     res = instance.__dict__[self.name] = self.func(instance)
+[Thu Feb 23 13:17:33.320531 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+[Thu Feb 23 13:17:33.320533 2017] [:error] [pid 12896]     return import_module(self.urlconf_name)
+[Thu Feb 23 13:17:33.320535 2017] [:error] [pid 12896]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Thu Feb 23 13:17:33.320537 2017] [:error] [pid 12896]     __import__(name)
+[Thu Feb 23 13:17:33.320538 2017] [:error] [pid 12896]   File "/opt/python/current/app/DjangoDB/urls.py", line 23, in <module>
+[Thu Feb 23 13:17:33.320540 2017] [:error] [pid 12896]     url(r'^', include('main.urls')),
+[Thu Feb 23 13:17:33.320542 2017] [:error] [pid 12896]   File "/opt/python/run/venv/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+[Thu Feb 23 13:17:33.320551 2017] [:error] [pid 12896]     urlconf_module = import_module(urlconf_module)
+[Thu Feb 23 13:17:33.320553 2017] [:error] [pid 12896]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Thu Feb 23 13:17:33.320555 2017] [:error] [pid 12896]     __import__(name)
+[Thu Feb 23 13:17:33.320557 2017] [:error] [pid 12896]   File "/opt/python/current/app/main/urls.py", line 3, in <module>
+[Thu Feb 23 13:17:33.320558 2017] [:error] [pid 12896]     from . import views
+[Thu Feb 23 13:17:33.320560 2017] [:error] [pid 12896]   File "/opt/python/current/app/main/views.py", line 11, in <module>
+[Thu Feb 23 13:17:33.320561 2017] [:error] [pid 12896]     from apscheduler.scheduler import Scheduler
+[Thu Feb 23 13:17:33.320623 2017] [:error] [pid 12896] ImportError: No module named apscheduler.scheduler
+[Thu Feb 23 13:24:31.841506 2017] [:error] [pid 12896] Invalid HTTP_HOST header: '172.31.13.38'. You may need to add u'172.31.13.38' to ALLOWED_HOSTS.
+
+
+
+-------------------------------------
+/opt/python/log/supervisord.log
+-------------------------------------
+2017-02-20 15:51:57,397 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 15:58:30,024 INFO stopped: httpd (exit status 0)
+2017-02-20 15:58:31,029 INFO spawned: 'httpd' with pid 4204
+2017-02-20 15:58:32,070 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:00:24,359 INFO stopped: httpd (exit status 0)
+2017-02-20 16:00:25,364 INFO spawned: 'httpd' with pid 4497
+2017-02-20 16:00:26,398 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:06:11,013 INFO stopped: httpd (exit status 0)
+2017-02-20 16:06:12,018 INFO spawned: 'httpd' with pid 4966
+2017-02-20 16:06:13,058 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:09:19,275 INFO stopped: httpd (exit status 0)
+2017-02-20 16:09:20,279 INFO spawned: 'httpd' with pid 5292
+2017-02-20 16:09:21,323 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:11:49,311 INFO stopped: httpd (exit status 0)
+2017-02-20 16:11:50,315 INFO spawned: 'httpd' with pid 5593
+2017-02-20 16:11:51,353 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:16:16,607 INFO stopped: httpd (exit status 0)
+2017-02-20 16:16:17,612 INFO spawned: 'httpd' with pid 5967
+2017-02-20 16:16:18,650 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:21:19,859 INFO stopped: httpd (exit status 0)
+2017-02-20 16:21:20,864 INFO spawned: 'httpd' with pid 6348
+2017-02-20 16:21:21,904 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:28:21,592 INFO stopped: httpd (exit status 0)
+2017-02-20 16:28:22,597 INFO spawned: 'httpd' with pid 6832
+2017-02-20 16:28:23,635 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:37:39,045 INFO stopped: httpd (exit status 0)
+2017-02-20 16:37:40,050 INFO spawned: 'httpd' with pid 7350
+2017-02-20 16:37:41,085 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:40:37,878 INFO stopped: httpd (exit status 0)
+2017-02-20 16:40:38,883 INFO spawned: 'httpd' with pid 7675
+2017-02-20 16:40:39,922 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:47:28,780 INFO stopped: httpd (exit status 0)
+2017-02-20 16:47:29,785 INFO spawned: 'httpd' with pid 8107
+2017-02-20 16:47:30,826 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:52:14,282 INFO stopped: httpd (exit status 0)
+2017-02-20 16:52:15,286 INFO spawned: 'httpd' with pid 8527
+2017-02-20 16:52:16,320 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 16:57:30,299 INFO stopped: httpd (exit status 0)
+2017-02-20 16:57:31,304 INFO spawned: 'httpd' with pid 8950
+2017-02-20 16:57:32,344 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 17:07:35,382 INFO stopped: httpd (exit status 0)
+2017-02-20 17:07:36,387 INFO spawned: 'httpd' with pid 9702
+2017-02-20 17:07:37,421 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 17:29:34,193 INFO stopped: httpd (exit status 0)
+2017-02-20 17:29:35,198 INFO spawned: 'httpd' with pid 10610
+2017-02-20 17:29:36,239 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 17:32:06,400 INFO stopped: httpd (exit status 0)
+2017-02-20 17:32:07,405 INFO spawned: 'httpd' with pid 10933
+2017-02-20 17:32:08,444 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 17:35:33,334 INFO stopped: httpd (exit status 0)
+2017-02-20 17:35:34,339 INFO spawned: 'httpd' with pid 11261
+2017-02-20 17:35:35,379 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 17:41:28,492 INFO stopped: httpd (exit status 0)
+2017-02-20 17:41:29,497 INFO spawned: 'httpd' with pid 11677
+2017-02-20 17:41:30,536 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 17:50:35,169 INFO stopped: httpd (exit status 0)
+2017-02-20 17:50:36,174 INFO spawned: 'httpd' with pid 12221
+2017-02-20 17:50:37,208 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 18:00:24,800 INFO stopped: httpd (exit status 0)
+2017-02-20 18:00:25,805 INFO spawned: 'httpd' with pid 12740
+2017-02-20 18:00:26,847 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 18:08:32,806 INFO stopped: httpd (exit status 0)
+2017-02-20 18:08:33,811 INFO spawned: 'httpd' with pid 13292
+2017-02-20 18:08:34,851 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 18:49:03,091 INFO stopped: httpd (exit status 0)
+2017-02-20 18:49:04,096 INFO spawned: 'httpd' with pid 14791
+2017-02-20 18:49:05,136 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 18:55:29,959 INFO stopped: httpd (exit status 0)
+2017-02-20 18:55:30,964 INFO spawned: 'httpd' with pid 15207
+2017-02-20 18:55:31,998 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 19:06:37,589 INFO stopped: httpd (exit status 0)
+2017-02-20 19:06:38,593 INFO spawned: 'httpd' with pid 15841
+2017-02-20 19:06:39,629 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 19:16:11,484 INFO stopped: httpd (exit status 0)
+2017-02-20 19:16:12,489 INFO spawned: 'httpd' with pid 16399
+2017-02-20 19:16:13,524 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 19:24:12,422 INFO stopped: httpd (exit status 0)
+2017-02-20 19:24:13,427 INFO spawned: 'httpd' with pid 16860
+2017-02-20 19:24:14,460 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 19:25:40,528 INFO stopped: httpd (exit status 0)
+2017-02-20 19:25:41,532 INFO spawned: 'httpd' with pid 17138
+2017-02-20 19:25:42,567 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 19:27:26,679 INFO stopped: httpd (exit status 0)
+2017-02-20 19:27:27,684 INFO spawned: 'httpd' with pid 17427
+2017-02-20 19:27:28,723 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-20 19:38:30,599 INFO stopped: httpd (exit status 0)
+2017-02-20 19:38:31,604 INFO spawned: 'httpd' with pid 18022
+2017-02-20 19:38:32,638 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-23 10:59:15,797 INFO stopped: httpd (exit status 0)
+2017-02-23 10:59:16,802 INFO spawned: 'httpd' with pid 8822
+2017-02-23 10:59:17,880 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-23 11:47:42,511 INFO stopped: httpd (exit status 0)
+2017-02-23 11:47:43,516 INFO spawned: 'httpd' with pid 10637
+2017-02-23 11:47:44,560 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-23 12:01:59,825 INFO stopped: httpd (exit status 0)
+2017-02-23 12:02:00,830 INFO spawned: 'httpd' with pid 11414
+2017-02-23 12:02:01,874 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-02-23 12:43:23,238 INFO stopped: httpd (exit status 0)
+2017-02-23 12:43:24,242 INFO spawned: 'httpd' with pid 12891
+2017-02-23 12:43:25,280 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+
+
+
+-------------------------------------
+/var/log/httpd/access_log
+-------------------------------------
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:38:49 +0000] "GET /busyness HTTP/1.1" 200 100 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:40:50 +0000] "GET /admin HTTP/1.1" 301 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:40:51 +0000] "GET /admin/ HTTP/1.1" 302 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:40:51 +0000] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1653 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:40:52 +0000] "GET /static/admin/css/base.css HTTP/1.1" 404 223 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:40:52 +0000] "GET /static/admin/css/login.css HTTP/1.1" 404 224 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:40:53 +0000] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 - "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:40:54 +0000] "GET /admin/ HTTP/1.1" 200 11270 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:40:54 +0000] "GET /static/admin/css/base.css HTTP/1.1" 404 223 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:40:54 +0000] "GET /static/admin/css/dashboard.css HTTP/1.1" 404 228 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:04 +0000] "GET /admin/main/busynessindex/ HTTP/1.1" 200 12733 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:04 +0000] "GET /static/admin/css/base.css HTTP/1.1" 404 223 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:04 +0000] "GET /static/admin/css/changelists.css HTTP/1.1" 404 230 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:05 +0000] "GET /admin/jsi18n/ HTTP/1.1" 200 3217 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:05 +0000] "GET /static/admin/js/core.js HTTP/1.1" 404 221 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:05 +0000] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 237 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:05 +0000] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 228 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:05 +0000] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 243 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:05 +0000] "GET /static/admin/js/actions.js HTTP/1.1" 404 224 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:05 +0000] "GET /static/admin/js/urlify.js HTTP/1.1" 404 223 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:05 +0000] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 228 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (37.228.252.64) - - [23/Feb/2017:11:41:05 +0000] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 404 239 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+::1 (-) - - [23/Feb/2017:11:41:27 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:41:52 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:41:53 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:41:54 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:41:55 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:41:56 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:41:57 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:41:58 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:41:59 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:42:00 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:42:04 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:42:05 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:42:10 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:42:11 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:11:42:12 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+127.0.0.1 (-) - - [23/Feb/2017:11:47:46 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Feb/2017:11:47:47 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Feb/2017:11:47:48 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Feb/2017:11:47:49 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:50 +0000] "GET /admin/main/busynessindex/ HTTP/1.1" 302 - "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:50 +0000] "GET /admin/login/?next=/admin/main/busynessindex/ HTTP/1.1" 200 1691 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:51 +0000] "GET /static/admin/css/base.css HTTP/1.1" 404 223 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:51 +0000] "GET /static/admin/css/login.css HTTP/1.1" 404 224 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:53 +0000] "POST /admin/login/?next=/admin/main/busynessindex/ HTTP/1.1" 302 - "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:53 +0000] "GET /admin/main/busynessindex/ HTTP/1.1" 200 11918 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/login/?next=/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:53 +0000] "GET /static/admin/css/base.css HTTP/1.1" 404 223 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:53 +0000] "GET /static/admin/css/changelists.css HTTP/1.1" 404 230 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:53 +0000] "GET /static/admin/js/core.js HTTP/1.1" 404 221 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:53 +0000] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 237 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:53 +0000] "GET /admin/jsi18n/ HTTP/1.1" 200 3217 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:54 +0000] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 228 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:54 +0000] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 243 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:54 +0000] "GET /static/admin/js/actions.js HTTP/1.1" 404 224 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:54 +0000] "GET /static/admin/js/urlify.js HTTP/1.1" 404 223 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:54 +0000] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 228 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:54 +0000] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 404 239 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:54 +0000] "GET /static/admin/js/core.js HTTP/1.1" 404 221 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:54 +0000] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 237 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:54 +0000] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 228 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:54 +0000] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 243 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:55 +0000] "GET /static/admin/js/actions.js HTTP/1.1" 404 224 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:55 +0000] "GET /static/admin/js/urlify.js HTTP/1.1" 404 223 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:55 +0000] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 228 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:11:59:55 +0000] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 404 239 "http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/admin/main/busynessindex/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+::1 (-) - - [23/Feb/2017:12:00:51 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:00:52 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:00:53 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:00:54 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:00:55 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:00:56 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:00:57 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:00:58 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:00:59 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:01:00 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:01:01 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:01:02 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:01:03 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:01:04 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+127.0.0.1 (-) - - [23/Feb/2017:12:02:03 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Feb/2017:12:02:04 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Feb/2017:12:02:05 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Feb/2017:12:02:06 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:12:02:20 +0000] "GET /busyness HTTP/1.1" 200 108 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+::1 (-) - - [23/Feb/2017:12:03:35 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:03:36 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:03:43 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+172.31.23.240 (193.1.165.60) - - [23/Feb/2017:12:07:58 +0000] "GET /busyness HTTP/1.1" 200 108 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.23.240 (193.1.165.60) - - [23/Feb/2017:12:30:27 +0000] "GET /busyness HTTP/1.1" 200 100 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+127.0.0.1 (-) - - [23/Feb/2017:12:43:26 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Feb/2017:12:43:28 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Feb/2017:12:43:29 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [23/Feb/2017:12:43:30 +0000] "GET / HTTP/1.1" 400 58275 "-" "Python-urllib/2.7"
+172.31.23.240 (193.1.165.60) - - [23/Feb/2017:12:43:50 +0000] "GET /busyness HTTP/1.1" 500 128962 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+::1 (-) - - [23/Feb/2017:12:44:50 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [23/Feb/2017:12:44:51 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.25 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+172.31.13.38 (52.34.227.110) - - [23/Feb/2017:13:13:37 +0000] "GET / HTTP/1.1" 400 58606 "-" "-"
+172.31.13.38 (193.1.165.60) - - [23/Feb/2017:13:17:33 +0000] "GET /busyness HTTP/1.1" 500 128826 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+172.31.13.38 (52.34.227.110) - - [23/Feb/2017:13:24:31 +0000] "GET / HTTP/1.1" 400 58606 "-" "-"
+
+
+
+-------------------------------------
+/var/log/eb-activity.log
+-------------------------------------
+    inflating: /opt/python/ondeck/app/new_env/Lib/site-packages/django/contrib/admin/locale/bs/LC_MESSAGES/django.mo  
+    inflating: /opt/python/ondeck/app/new_env/Lib/site-packages/django/contrib/humanize/locale/mr/LC_MESSAGES/django.mo  
+    inflating: /opt/python/ondeck/app/eb_virt/Include/node.h  
+    inflating: /opt/python/ondeck/app/version/tcl/tcl8.6/tzdata/Africa/Mogadishu  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/__pycache__/io.cpython-35.pyc  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/redirects/locale/ca/LC_MESSAGES/django.mo  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/sessions/locale/az/LC_MESSAGES/django.mo  
+    inflating: /opt/python/ondeck/app/new_env/Lib/site-packages/django/contrib/admin/static/admin/img/icon-calendar.svg  
+    inflating: /opt/python/ondeck/app/version/Lib/site-packages/pip/commands/__pycache__/__init__.cpython-35.pyc  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/admindocs/locale/te/LC_MESSAGES/django.mo  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.js  
+    inflating: /opt/python/ondeck/app/version/tcl/tcl8.6/tzdata/Australia/Victoria  
+    inflating: /opt/python/ondeck/app/new_env/Lib/site-packages/django/contrib/staticfiles/apps.pyc  
+    inflating: /opt/python/ondeck/app/eb_virt/tcl/tcl8.6/encoding/iso2022-kr.enc  
+    inflating: /opt/python/ondeck/app/version/tcl/tcl8.6/msgs/zh_hk.msg  
+    inflating: /opt/python/ondeck/app/new_env/Lib/site-packages/django/contrib/auth/locale/dsb/LC_MESSAGES/django.mo  
+    inflating: /opt/python/ondeck/app/new_env/Lib/site-packages/django/contrib/flatpages/locale/ka/LC_MESSAGES/django.mo  
+    inflating: /opt/python/ondeck/app/new_env/Lib/site-packages/django/db/models/fields/related.pyc  
+    inflating: /opt/python/ondeck/app/new_env/Lib/site-packages/django/db/backends/base/base.pyc  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/contrib/gis/locale/cy/LC_MESSAGES/django.mo  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/core/mail/backends/filebased.py  
+    inflating: /opt/python/ondeck/app/eb_virt/Lib/site-packages/django/db/backends/base/__pycache__/validation.cpython-35.pyc  
+[2017-02-23T12:43:19.992Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0/AppDeployPreHook/03deploy.py] : Starting activity...
+[2017-02-23T12:43:20.410Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0/AppDeployPreHook/03deploy.py] : Completed activity. Result:
+  Requirement already satisfied (use --upgrade to upgrade): appdirs==1.4.0 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 1))
+  Requirement already satisfied (use --upgrade to upgrade): Django==1.10.3 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 2))
+  Requirement already satisfied (use --upgrade to upgrade): packaging==16.8 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 3))
+  Requirement already satisfied (use --upgrade to upgrade): pyparsing==2.1.10 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 4))
+  Requirement already satisfied (use --upgrade to upgrade): requests==2.13.0 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 5))
+  Requirement already satisfied (use --upgrade to upgrade): six==1.10.0 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 6))
+  You are using pip version 7.1.2, however version 9.0.1 is available.
+  You should consider upgrading via the 'pip install --upgrade pip' command.
+[2017-02-23T12:43:20.410Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0/AppDeployPreHook/04configen.py] : Starting activity...
+[2017-02-23T12:43:21.781Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0/AppDeployPreHook/04configen.py] : Completed activity.
+[2017-02-23T12:43:21.781Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0/AppDeployPreHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/pre.
+[2017-02-23T12:43:21.781Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0/EbExtensionPostBuild] : Starting activity...
+[2017-02-23T12:43:22.221Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Starting activity...
+[2017-02-23T12:43:22.221Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Completed activity.
+[2017-02-23T12:43:22.243Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0/EbExtensionPostBuild] : Completed activity.
+[2017-02-23T12:43:22.243Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0/InfraCleanEbextension] : Starting activity...
+[2017-02-23T12:43:22.298Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0/InfraCleanEbextension] : Completed activity. Result:
+  Cleaned ebextensions subdirectories from /opt/python/ondeck/app.
+[2017-02-23T12:43:22.298Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage0] : Completed activity. Result:
+  Application update - Command CMD-AppDeploy stage 0 completed
+[2017-02-23T12:43:22.298Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage1] : Starting activity...
+[2017-02-23T12:43:22.298Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage1/AppDeployEnactHook] : Starting activity...
+[2017-02-23T12:43:22.298Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage1/AppDeployEnactHook/01flip.py] : Starting activity...
+[2017-02-23T12:43:31.302Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage1/AppDeployEnactHook/01flip.py] : Completed activity. Result:
+  httpd: stopped
+  httpd: started
+  httpd                            RUNNING   pid 12891, uptime 0:00:02
+  2017-02-23 12:43:31,295 INFO     Apache is running, but root page is not responding in 3 seconds.
+[2017-02-23T12:43:31.302Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage1/AppDeployEnactHook/02create_pids_for_monitoring.sh] : Starting activity...
+[2017-02-23T12:43:31.406Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage1/AppDeployEnactHook/02create_pids_for_monitoring.sh] : Completed activity. Result:
+  + chmod 0755 /var/run/httpd
+  + /opt/elasticbeanstalk/bin/healthd-track-pidfile --proxy httpd
+  + /opt/elasticbeanstalk/bin/healthd-track-pidfile --name application --location /opt/python/run/supervisord.pid
+[2017-02-23T12:43:31.406Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage1/AppDeployEnactHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/enact.
+[2017-02-23T12:43:31.406Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage1/AppDeployPostHook] : Starting activity...
+[2017-02-23T12:43:31.406Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage1/AppDeployPostHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/post.
+[2017-02-23T12:43:31.406Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AppDeployStage1] : Completed activity. Result:
+  Application version switch - Command CMD-AppDeploy stage 1 completed
+[2017-02-23T12:43:31.406Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AddonsAfter] : Starting activity...
+[2017-02-23T12:43:31.406Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AddonsAfter/ConfigLogRotation] : Starting activity...
+[2017-02-23T12:43:31.406Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AddonsAfter/ConfigLogRotation/10-config.sh] : Starting activity...
+[2017-02-23T12:43:31.485Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AddonsAfter/ConfigLogRotation/10-config.sh] : Completed activity. Result:
+  Disabled forced hourly log rotation.
+[2017-02-23T12:43:31.485Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AddonsAfter/ConfigLogRotation] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/addons/logpublish/hooks/config.
+[2017-02-23T12:43:31.485Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AddonsAfter/ConfigCWLAgent] : Starting activity...
+[2017-02-23T12:43:31.485Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AddonsAfter/ConfigCWLAgent/10-config.sh] : Starting activity...
+[2017-02-23T12:43:31.605Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AddonsAfter/ConfigCWLAgent/10-config.sh] : Completed activity. Result:
+  Log streaming option setting is not specified, ignore cloudwatch logs setup.
+  
+  Disabled log streaming.
+[2017-02-23T12:43:31.605Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AddonsAfter/ConfigCWLAgent] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/addons/logstreaming/hooks/config.
+[2017-02-23T12:43:31.605Z] INFO  [12754] - [Application update app-6e82-170223_123621@52/AddonsAfter] : Completed activity.
+[2017-02-23T12:43:31.605Z] INFO  [12754] - [Application update app-6e82-170223_123621@52] : Completed activity. Result:
+  Application update - Command CMD-AppDeploy succeeded
+[2017-02-23T13:29:02.438Z] INFO  [14441] - [CMD-TailLogs] : Starting activity...
+[2017-02-23T13:29:02.438Z] INFO  [14441] - [CMD-TailLogs/AddonsBefore] : Starting activity...
+[2017-02-23T13:29:02.438Z] INFO  [14441] - [CMD-TailLogs/AddonsBefore] : Completed activity.
+[2017-02-23T13:29:02.438Z] INFO  [14441] - [CMD-TailLogs/TailLogs] : Starting activity...
+[2017-02-23T13:29:02.438Z] INFO  [14441] - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
+[2017-02-23T13:29:02.666Z] INFO  [14441] - [CMD-TailLogs/TailLogs/TailLogs] : Completed activity.
+[2017-02-23T13:29:02.666Z] INFO  [14441] - [CMD-TailLogs/TailLogs] : Completed activity. Result:
+  CMD-TailLogs - stage 0 - Command CMD-TailLogs stage 0 completed
+[2017-02-23T13:29:02.666Z] INFO  [14441] - [CMD-TailLogs/AddonsAfter] : Starting activity...
+[2017-02-23T13:29:02.666Z] INFO  [14441] - [CMD-TailLogs/AddonsAfter] : Completed activity.
+[2017-02-23T13:29:02.666Z] INFO  [14441] - [CMD-TailLogs] : Completed activity. Result:
+  CMD-TailLogs - Command CMD-TailLogs succeeded
+[2017-02-23T13:29:33.295Z] INFO  [14461] - [CMD-TailLogs] : Starting activity...
+[2017-02-23T13:29:33.295Z] INFO  [14461] - [CMD-TailLogs/AddonsBefore] : Starting activity...
+[2017-02-23T13:29:33.295Z] INFO  [14461] - [CMD-TailLogs/AddonsBefore] : Completed activity.
+[2017-02-23T13:29:33.295Z] INFO  [14461] - [CMD-TailLogs/TailLogs] : Starting activity...
+[2017-02-23T13:29:33.295Z] INFO  [14461] - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
+
+
+
+-------------------------------------
+/var/log/eb-commandprocessor.log
+-------------------------------------
+[2017-02-23T12:43:13.880Z] DEBUG [12754] : Storing current stage..
+[2017-02-23T12:43:13.880Z] DEBUG [12754] : Stage_num does not exist. Not saving null stage. Returning..
+[2017-02-23T12:43:13.880Z] DEBUG [12754] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-02-23T12:43:13.880Z] DEBUG [12754] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2017-02-23T12:43:13.882Z] DEBUG [12754] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2017-02-23T12:43:13.882Z] INFO  [12754] : Found enabled addons: ["logpublish", "logstreaming"].
+[2017-02-23T12:43:13.884Z] INFO  [12754] : Updating Command definition of addon logpublish.
+[2017-02-23T12:43:13.884Z] INFO  [12754] : Updating Command definition of addon logstreaming.
+[2017-02-23T12:43:13.884Z] DEBUG [12754] : Refreshing metadata...
+[2017-02-23T12:43:14.139Z] DEBUG [12754] : Refreshed environment metadata.
+[2017-02-23T12:43:14.139Z] DEBUG [12754] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2017-02-23T12:43:14.140Z] DEBUG [12754] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2017-02-23T12:43:14.140Z] INFO  [12754] : Found enabled addons: ["logpublish", "logstreaming"].
+[2017-02-23T12:43:14.141Z] INFO  [12754] : Updating Command definition of addon logpublish.
+[2017-02-23T12:43:14.141Z] INFO  [12754] : Updating Command definition of addon logstreaming.
+[2017-02-23T12:43:14.141Z] DEBUG [12754] : Retrieving metadata for key: AWS::CloudFormation::Init||Infra-WriteApplication2||files..
+[2017-02-23T12:43:14.142Z] DEBUG [12754] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||ManifestFileS3Key..
+[2017-02-23T12:43:14.238Z] INFO  [12754] : Loading manifest from bucket 'elasticbeanstalk-us-west-2-964127915865' using computed S3 key 'resources/environments/e-iu8qiwkbpz/_runtime/versions/manifest_1487853790927'.
+[2017-02-23T12:43:14.298Z] INFO  [12754] : Updated manifest cache: deployment ID 52 and serial 52.
+[2017-02-23T12:43:14.298Z] DEBUG [12754] : Loaded definition of Command CMD-AppDeploy.
+[2017-02-23T12:43:14.299Z] INFO  [12754] : Executing Application update
+[2017-02-23T12:43:14.299Z] INFO  [12754] : Executing command: CMD-AppDeploy...
+[2017-02-23T12:43:14.299Z] INFO  [12754] : Executing command CMD-AppDeploy activities...
+[2017-02-23T12:43:14.299Z] DEBUG [12754] : Setting environment variables..
+[2017-02-23T12:43:14.299Z] INFO  [12754] : Running AddonsBefore for command CMD-AppDeploy...
+[2017-02-23T12:43:14.299Z] DEBUG [12754] : Running stages of Command CMD-AppDeploy from stage 0 to stage 1...
+[2017-02-23T12:43:14.299Z] INFO  [12754] : Running stage 0 of command CMD-AppDeploy...
+[2017-02-23T12:43:14.299Z] INFO  [12754] : Running leader election...
+[2017-02-23T12:43:14.551Z] INFO  [12754] : Instance is Leader.
+[2017-02-23T12:43:14.551Z] DEBUG [12754] : Loaded 6 actions for stage 0.
+[2017-02-23T12:43:14.551Z] INFO  [12754] : Running 1 of 6 actions: InfraWriteConfig...
+[2017-02-23T12:43:14.554Z] INFO  [12754] : Running 2 of 6 actions: DownloadSourceBundle...
+[2017-02-23T12:43:16.699Z] INFO  [12754] : Running 3 of 6 actions: EbExtensionPreBuild...
+[2017-02-23T12:43:16.978Z] INFO  [12754] : Running 4 of 6 actions: AppDeployPreHook...
+[2017-02-23T12:43:21.781Z] INFO  [12754] : Running 5 of 6 actions: EbExtensionPostBuild...
+[2017-02-23T12:43:22.243Z] INFO  [12754] : Running 6 of 6 actions: InfraCleanEbextension...
+[2017-02-23T12:43:22.298Z] INFO  [12754] : Running stage 1 of command CMD-AppDeploy...
+[2017-02-23T12:43:22.298Z] DEBUG [12754] : Loaded 2 actions for stage 1.
+[2017-02-23T12:43:22.298Z] INFO  [12754] : Running 1 of 2 actions: AppDeployEnactHook...
+[2017-02-23T12:43:31.406Z] INFO  [12754] : Running 2 of 2 actions: AppDeployPostHook...
+[2017-02-23T12:43:31.406Z] INFO  [12754] : Running AddonsAfter for command CMD-AppDeploy...
+[2017-02-23T12:43:31.605Z] INFO  [12754] : Command CMD-AppDeploy succeeded!
+[2017-02-23T12:43:31.605Z] INFO  [12754] : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[]}]}
+[2017-02-23T13:29:02.431Z] DEBUG [14441] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-02-23T13:29:02.431Z] DEBUG [14441] : Checking if the command processor should execute...
+[2017-02-23T13:29:02.434Z] DEBUG [14441] : Checking whether the command is applicable to instance (i-0a8f315582bc1da2b)..
+[2017-02-23T13:29:02.434Z] INFO  [14441] : Command is applicable to this instance (i-0a8f315582bc1da2b)..
+[2017-02-23T13:29:02.434Z] DEBUG [14441] : Checking if the received command stage is valid..
+[2017-02-23T13:29:02.434Z] INFO  [14441] : No stage_num in command. Valid stage..
+[2017-02-23T13:29:02.434Z] INFO  [14441] : Received command CMD-TailLogs: {"execution_data":"{\"aws_access_key_id\":\"ASIAJET2I6AFD2RWDP4A\",\"signature\":\"jrL0DZwP9cE4SsEfHw4VtBqBpcU=\",\"security_token\":\"FQoDYXdzENf\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/wEaDMbJ7IisUW7O0mwbqCKVA+XjYemMrj7DiBwKy78729WgX\\\/qxrSLnsAojSg62UwKWLzrzLC2U77twyRxrWmdYGdiAii4gUXPfldSo7jcx+Jy+4nzlijSh3ZPBW\\\/1CmZLGQBPj6RhvaPC+LpI6dKEEBO1X\\\/NzptpZKfmtCgKQT75ALS05uKj6ilvu5OuFYIlMv05iTnSfJT\\\/1HwZBj18YnV94hpV1jHU95GvY707i999MimfuQY7l\\\/Q52P0hb2E2815+RC7NQSCfGBBxenZAJGq6sG\\\/NRBd+zZ+0BX++lsuGsSD6sCSUvJ3pXqvx+7fY9X4LjC\\\/Ww+6BFkLjaejKlFSR9WThOm+o4nWlRgMdpuI7VDHyJpb7kgYJ\\\/Zi2J\\\/u4i+7W5ND8\\\/UqCw7S86j3Am5kn2TNE74PKPdQLfsZ3mnQYdRKmwduT3zvpL9+wGKIFcojXe3q6BqruSQhPX\\\/jA9CKBI4mp27iy2oNdxqWCFVK+0OS4B1WNELE7N\\\/yyieRxB7v8Skxyi8YOEV8i8cpQ7txaqwFQ\\\/2VJd\\\/CYNocGk9hgYJPv+Pzyicx7vFBQ==\",\"policy\":\"eyJleHBpcmF0aW9uIjoiMjAxNy0wMi0yM1QxMzo1OTowMC41ODFaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkeC1hbXotbWV0YS10aW1lX3N0YW1wIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLXB1Ymxpc2hfbWVjaGFuaXNtIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJyZXNvdXJjZXNcL2Vudmlyb25tZW50c1wvbG9nc1wvIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWJhdGNoX2lkIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWZpbGVfbmFtZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIkeC1hbXotc2VjdXJpdHktdG9rZW4iLCIiXSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsiZXEiLCIkYnVja2V0IiwiZWxhc3RpY2JlYW5zdGFsay11cy13ZXN0LTItOTY0MTI3OTE1ODY1Il0sWyJlcSIsIiRhY2wiLCJwcml2YXRlIl1dfQ==\"}","instance_ids":["i-0a8f315582bc1da2b"],"data":"092ce38f-f9cc-11e6-9bd6-b1fd76ed9e1a","command_name":"CMD-TailLogs","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"092ce38f-f9cc-11e6-9bd6-b1fd76ed9e1a","command_timeout":"600"}
+[2017-02-23T13:29:02.434Z] INFO  [14441] : Command processor should execute command.
+[2017-02-23T13:29:02.434Z] DEBUG [14441] : Storing current stage..
+[2017-02-23T13:29:02.434Z] DEBUG [14441] : Stage_num does not exist. Not saving null stage. Returning..
+[2017-02-23T13:29:02.434Z] DEBUG [14441] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-02-23T13:29:02.434Z] DEBUG [14441] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2017-02-23T13:29:02.435Z] DEBUG [14441] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2017-02-23T13:29:02.436Z] INFO  [14441] : Found enabled addons: ["logpublish", "logstreaming"].
+[2017-02-23T13:29:02.437Z] INFO  [14441] : Updating Command definition of addon logpublish.
+[2017-02-23T13:29:02.437Z] INFO  [14441] : Updating Command definition of addon logstreaming.
+[2017-02-23T13:29:02.437Z] DEBUG [14441] : Loaded definition of Command CMD-TailLogs.
+[2017-02-23T13:29:02.437Z] INFO  [14441] : Executing CMD-TailLogs
+[2017-02-23T13:29:02.438Z] INFO  [14441] : Executing command: CMD-TailLogs...
+[2017-02-23T13:29:02.438Z] INFO  [14441] : Executing command CMD-TailLogs activities...
+[2017-02-23T13:29:02.438Z] DEBUG [14441] : Setting environment variables..
+[2017-02-23T13:29:02.438Z] INFO  [14441] : Running AddonsBefore for command CMD-TailLogs...
+[2017-02-23T13:29:02.438Z] DEBUG [14441] : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
+[2017-02-23T13:29:02.438Z] INFO  [14441] : Running stage 0 of command CMD-TailLogs...
+[2017-02-23T13:29:02.438Z] DEBUG [14441] : Loaded 1 actions for stage 0.
+[2017-02-23T13:29:02.438Z] INFO  [14441] : Running 1 of 1 actions: TailLogs...
+[2017-02-23T13:29:02.666Z] INFO  [14441] : Running AddonsAfter for command CMD-TailLogs...
+[2017-02-23T13:29:02.666Z] INFO  [14441] : Command CMD-TailLogs succeeded!
+[2017-02-23T13:29:02.667Z] INFO  [14441] : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[{"msg":"[Instance: i-0a8f315582bc1da2b] Successfully finished tailing 5 log(s)","severity":"INFO","timestamp":1487856542667}]}]}
+[2017-02-23T13:29:33.288Z] DEBUG [14461] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-02-23T13:29:33.289Z] DEBUG [14461] : Checking if the command processor should execute...
+[2017-02-23T13:29:33.291Z] DEBUG [14461] : Checking whether the command is applicable to instance (i-0a8f315582bc1da2b)..
+[2017-02-23T13:29:33.291Z] INFO  [14461] : Command is applicable to this instance (i-0a8f315582bc1da2b)..
+[2017-02-23T13:29:33.291Z] DEBUG [14461] : Checking if the received command stage is valid..
+[2017-02-23T13:29:33.291Z] INFO  [14461] : No stage_num in command. Valid stage..
+[2017-02-23T13:29:33.291Z] INFO  [14461] : Received command CMD-TailLogs: {"execution_data":"{\"aws_access_key_id\":\"ASIAJUMKLRJ6YPTEFJNQ\",\"signature\":\"596oKp+F+Izfa5e\\\/cle5ZXwI2H8=\",\"security_token\":\"FQoDYXdzENf\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/\\\/wEaDNkFlP5s1LdlQK5SRSKVA+3DnEUGJWJOjVeGe6E\\\/N0Xai8+hrDzndyYoYQ4ntm0Wxfz\\\/mMSPRYRoDckI0qcUnt42Wi1iEGRpFhkZG9GbX1oYYea40sGTi9C8PIxz51YIZe2+i3Qy3N+k8Oo+ZJM7QJt2AzKj2BebB3029DMcIwNTe7fMpMMFkohgScoYFNb8BN2IRjVk\\\/8FVa5OPggU+MMXOZySGCwU5uUuTFTYX9vQrOzGgCxg+tVDrqez65JGhnZCcvDVexQPPojfURpiC1aM\\\/pf55gqOZ7YIhifv5zGE7MN1nptPPlzLKVndcQoYbKoF8xyhHBqEBO+3f\\\/QXzfCvldlDs3aMf+3llZSIXSklpKQ0afa2+R0gKeckNTiqSdYWLNKHMQFMFCPtHnU1Z7aH8f4ZI\\\/EizguZ4I7ibCujStmER+6JeLxZUYBSKuisXG9N+Ge4ZzwDU1vlQRQ6JJR66FBGushuTGezk6XtVP6iHZgYlPKbr5bFZgYZBWCdWB6sgl5ghrRNSFV6A+kpWX0xjM6DFTvvPBiRE9N3GKruAr0HOLSi7x7vFBQ==\",\"policy\":\"eyJleHBpcmF0aW9uIjoiMjAxNy0wMi0yM1QxMzo1OTozMS4zNTVaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkeC1hbXotbWV0YS10aW1lX3N0YW1wIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLXB1Ymxpc2hfbWVjaGFuaXNtIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJyZXNvdXJjZXNcL2Vudmlyb25tZW50c1wvbG9nc1wvIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWJhdGNoX2lkIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWZpbGVfbmFtZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIkeC1hbXotc2VjdXJpdHktdG9rZW4iLCIiXSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsiZXEiLCIkYnVja2V0IiwiZWxhc3RpY2JlYW5zdGFsay11cy13ZXN0LTItOTY0MTI3OTE1ODY1Il0sWyJlcSIsIiRhY2wiLCJwcml2YXRlIl1dfQ==\"}","instance_ids":["i-0a8f315582bc1da2b"],"data":"1b8e642a-f9cc-11e6-9bba-0f8d7dfe72bf","command_name":"CMD-TailLogs","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"1b8e642a-f9cc-11e6-9bba-0f8d7dfe72bf","command_timeout":"600"}
+[2017-02-23T13:29:33.291Z] INFO  [14461] : Command processor should execute command.
+[2017-02-23T13:29:33.291Z] DEBUG [14461] : Storing current stage..
+[2017-02-23T13:29:33.291Z] DEBUG [14461] : Stage_num does not exist. Not saving null stage. Returning..
+[2017-02-23T13:29:33.291Z] DEBUG [14461] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2017-02-23T13:29:33.291Z] DEBUG [14461] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2017-02-23T13:29:33.293Z] DEBUG [14461] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2017-02-23T13:29:33.293Z] INFO  [14461] : Found enabled addons: ["logpublish", "logstreaming"].
+[2017-02-23T13:29:33.294Z] INFO  [14461] : Updating Command definition of addon logpublish.
+[2017-02-23T13:29:33.294Z] INFO  [14461] : Updating Command definition of addon logstreaming.
+[2017-02-23T13:29:33.295Z] DEBUG [14461] : Loaded definition of Command CMD-TailLogs.
+[2017-02-23T13:29:33.295Z] INFO  [14461] : Executing CMD-TailLogs
+[2017-02-23T13:29:33.295Z] INFO  [14461] : Executing command: CMD-TailLogs...
+[2017-02-23T13:29:33.295Z] INFO  [14461] : Executing command CMD-TailLogs activities...
+[2017-02-23T13:29:33.295Z] DEBUG [14461] : Setting environment variables..
+[2017-02-23T13:29:33.295Z] INFO  [14461] : Running AddonsBefore for command CMD-TailLogs...
+[2017-02-23T13:29:33.295Z] DEBUG [14461] : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
+[2017-02-23T13:29:33.295Z] INFO  [14461] : Running stage 0 of command CMD-TailLogs...
+[2017-02-23T13:29:33.295Z] DEBUG [14461] : Loaded 1 actions for stage 0.
+[2017-02-23T13:29:33.295Z] INFO  [14461] : Running 1 of 1 actions: TailLogs...
+
+
+
