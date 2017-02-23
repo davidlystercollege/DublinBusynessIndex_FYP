@@ -1,5 +1,0 @@
-version: 1
-cron:
-— name: “job-name”
-     url: “/path-to post method”
-     schedule: “* * * * *”
