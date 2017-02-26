@@ -1,2 +1,2 @@
-* * * * * /usr/bin/wget -O /dev/null http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/busyness
+5 * * * * /usr/bin/wget -O /dev/null http://busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com/busyness
 
