@@ -13,8 +13,8 @@ SECRET_KEY = ')$f2bcp14lr%60o4giuqkk-547%ha23gx&u==8*js-i4(d9+dl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com',
-                 u'ec2-54-186-188-113.us-west-2.compute.amazonaws.com',]
+ALLOWED_HOSTS = [u'ec2-54-186-188-113.us-west-2.compute.amazonaws.com',
+                 u'busyness-djpy-env.2hynqcyjvw.us-west-2.elasticbeanstalk.com',]
 
 
 # Application definition
