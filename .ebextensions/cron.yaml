@@ -1,0 +1,7 @@
+version: 1
+cron:
+ - name: "busynessEvery5Min"
+   url: "/busyness"
+   schedule: "/5 * * * *"
+
+
