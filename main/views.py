@@ -8,6 +8,7 @@ from carParks.models import CP, CapacityLevel
 from m50times.models import Route, Recording
 from noiseLevels.models import Meter, Reading
 from main.models import DatasetObject, BusynessSub, BusynessIndex
+from django.utils import timezone
 
 import noiseLevels.views
 import m50times.views
@@ -307,6 +308,7 @@ def mainBusyness(request):
         #ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+",  "+str(bikeVal)
         #ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+", "+str(cpVal)+", "+str(bikeVal)
         ans = ans+"<br>"+"Busyness: "+str(busynessIndex)
+        ans = ans+"<br>"+"Time: "+str(timezone.now)
         
         '''busnisses = BusynessIndex.objects.all()
         for i in range(1, 10):
