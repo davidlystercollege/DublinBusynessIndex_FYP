@@ -143,7 +143,7 @@ def carParks(request):
                 #ans = ans + str(tempname) + ' : ' + str(spaces) +  " : fullness : " + str(fullness) + "<br><br/>"                
                 
                 ans=ans + cpRef.name + ": " + str(fullness) + " - (Spc, Cap): " + str(spaces) + ", " + str(cpRef.capacity) + "<br><br/>"    
-                #createCPCapacityLevel(request, cpRef, spaces, fullness)  
+                createCPCapacityLevel(request, cpRef, spaces, fullness)  
                 count=count+1  
                   
         busyness = (busyness/count-1)

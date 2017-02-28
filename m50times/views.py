@@ -170,6 +170,9 @@ def m50times(request):
                 2: busyness = top / rng(size)                
                 '''
                 
+                ruRef = Route.objects.get(name = routename)
+                createRecording(request, ruRef, routetime)
+                
                 #ans = ans + str(routetime) + ': ' + str(busyness) + ': ' + str(busyness2) + '<br><br/>'
                         
                 i=i+1

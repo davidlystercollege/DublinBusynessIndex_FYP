@@ -100,7 +100,7 @@ def noiseLevels(request):
             ans = ans + (str(index) + ": " + locationStr['dates'][-1] + ": " + locationStr['times'][-1] + ": " + aleq) + '<br><br/>'
             
             rdRef = Meter.objects.get(id = index)
-            #createReading(request, rdRef, rdRef.name, aleq, locationStr['times'][-1], locationStr['dates'][-1])
+            createReading(request, rdRef, rdRef.name, aleq, locationStr['times'][-1], locationStr['dates'][-1])
     
             busyness = busyness + float(aleq)
             #addx = addx + str(index) + ': ' + str(busyness) + ': ' + str(float(aleq) - tempAverage) + ': ' + str((locationStr['aleq'][-1])) + '<br><br/>'
