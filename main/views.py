@@ -16,6 +16,7 @@ import dublinBikes.views
 import carParks.views
 
 def home(request):
+    return render(request, 'myDash.html')    
     return HttpResponse("This (for further development) should display a list of links(directories) to other pages in the web app.")
 
 def mainHome(request):
@@ -308,7 +309,6 @@ def mainBusyness(request):
         #ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+",  "+str(bikeVal)
         #ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+", "+str(cpVal)+", "+str(bikeVal)
         ans = ans+"<br>"+"Busyness: "+str(busynessIndex)
-        ans = ans+"<br>"+"Time: "+str(timezone.now)
         
         '''busnisses = BusynessIndex.objects.all()
         for i in range(1, 10):
