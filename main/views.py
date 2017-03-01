@@ -17,7 +17,7 @@ import dublinBikes.views
 import carParks.views
 
 def home(request):
-    template = loader.get_template("DjangoDB/main/myDash.html")
+    template = loader.get_template("myDash.html")
     return HttpResponse(template.render())
     #return render(request, 'myDash.html')
 
