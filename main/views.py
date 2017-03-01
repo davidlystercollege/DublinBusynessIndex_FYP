@@ -9,6 +9,7 @@ from m50times.models import Route, Recording
 from noiseLevels.models import Meter, Reading
 from main.models import DatasetObject, BusynessSub, BusynessIndex
 from django.utils import timezone
+from django.template import Context, loader
 
 import noiseLevels.views
 import m50times.views
@@ -16,8 +17,9 @@ import dublinBikes.views
 import carParks.views
 
 def home(request):
-    return render(request, 'myDash.html')    
-    return HttpResponse("This (for further development) should display a list of links(directories) to other pages in the web app.")
+    template = loader.get_template("myDash.html")
+    return HttpResponse(template.render)
+    #return render(request, 'myDash.html')
 
 def mainHome(request):
     
