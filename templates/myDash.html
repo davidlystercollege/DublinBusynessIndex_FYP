@@ -31,7 +31,7 @@ crossorigin="anonymous"></script>
 <div id="myfirstchart" style="height: 250px;"></div>
 </div>
 <div class="col-md-4">
-<h3>Most popular device manufacturers</h3>
+<h3>Busyness Over Time</h3>
 <div id="mybarchart" style="height: 250px;">
 
 </div>
@@ -39,17 +39,17 @@ crossorigin="anonymous"></script>
 </div>
 <div class="row">
 <div class="col-md-4">
-<h3>Most Popular SSIDs</h3>
+<h3>Dataset Results</h3>
 <div id="donut-example" style="height: 250px;">
 
 </div>
 </div>
 <div class="col-md-4">
-<h1><small>Average number of SSIDs requested by each device: </small>2.76</h1>
+<h1><small>Busyness Index </small>37.987..</h1>
 </div>
 
 <div class="col-md-4">
-<h3>Number of Probe Requests by time of day.</h3>
+<h3>---------------------</h3>
 <div id="mysecondchart" style="height: 250px;"></div>
 </div>
 </div>
@@ -65,11 +65,11 @@ element: 'myfirstchart',
 // Chart data records -- each entry in this array corresponds to a point on
 // the chart.
 data: [
-{year: '2008', value: 20},
-{year: '2009', value: 10},
-{year: '2010', value: 5},
-{year: '2011', value: 5},
-{year: '2012', value: 20}
+{year: '20:00', value: 35},
+{year: '20:05', value: 37},
+{year: '20:10', value: 40},
+{year: '20:15', value: 40},
+{year: '20:20', value: 33}
 ],
 // The name of the data record attribute that contains x-values.
 xkey: 'year',
@@ -99,9 +99,10 @@ labels: ['Series A', 'Series B']
 Morris.Donut({
 element: 'donut-example',
 data: [
-{label: "Dublin Bus Wifi", value: 12},
-{label: "UCD Wireless", value: 30},
-{label: "eduroam", value: 20}
+{label: "Car Parks", value: 78},
+{label: "M50", value: 78},
+{label: "DublinBikes", value: 80},
+{label: "Noise Meters", value: 75}
 ]
 });
 
@@ -111,14 +112,14 @@ element: 'mysecondchart',
 // Chart data records -- each entry in this array corresponds to a point on
 // the chart.
 data: [
-{year: '2008', value: 20},
-{year: '2009', value: 10},
-{year: '2010', value: 5},
-{year: '2011', value: 5},
-{year: '2012', value: 20}
+{day: 'Tue', value: 37.5},
+{day: 'Wed', value: 35.1},
+{day: 'Thur', value: 39},
+{day: 'Fri', value: 45.3},
+{day: 'Sat', value: 32.1}
 ],
 // The name of the data record attribute that contains x-values.
-xkey: 'year',
+xkey: 'day',
 // A list of names of data record attributes that contain y-values.
 ykeys: ['value'],
 // Labels for the ykeys -- will be displayed when you hover over the
