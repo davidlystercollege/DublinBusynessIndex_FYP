@@ -18,7 +18,7 @@ import carParks.views
 
 def home(request):
     template = loader.get_template("myDash.html")
-    return HttpResponse(template.render)
+    return HttpResponse(template.render())
     #return render(request, 'myDash.html')
 
 def mainHome(request):
