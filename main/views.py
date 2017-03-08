@@ -171,7 +171,7 @@ def testing(request):
             
             bizFact = ( ( bikeVal* .30) + ( cpVal* .30) + ( m50Val* .10) + ( nseVal* .30) ) 
             
-            bizArr.append(bizFact)
+            bizArr.insert(i, bizFact)
             
             data = data + "Busy: " +str(bizFact) + "<br>"
             data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br><br/>"
