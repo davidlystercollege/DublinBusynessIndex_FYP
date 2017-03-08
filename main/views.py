@@ -163,7 +163,7 @@ def testing(request):
         
         
         bizArr = []
-        for i in range(1, 400):
+        for i in range(1, 600):
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
             m50Val = m50Subs[len(m50Subs) - i].busynessFactor
