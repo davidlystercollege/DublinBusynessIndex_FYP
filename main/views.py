@@ -161,8 +161,8 @@ def testing(request):
         m50Subs = BusynessSub.objects.filter(name = "M50")
         noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
         
-        for i in range(1, 5):
-            data = data + "bk, cp, m50, noise := " + str(bikeSubs[i]) + ", "+ str(cpSubs[i]) + ", "+ str(m50Subs[i]) + ", "+ str(noiseSubs[i]) + "<br><br/>"
+        for i in range(1, 20):
+            data = data + "bk, cp, m50, noise := " + str(bikeSubs[i].BusynessFator) + ", "+ str(cpSubs[i].BusynessFator) + ", "+ str(m50Subs[i].BusynessFator) + ", "+ str(noiseSubs[i].BusynessFator) + "<br><br/>"
         return data
     
     
