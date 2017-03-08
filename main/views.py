@@ -21,8 +21,7 @@ def home(request):
     return HttpResponse(template.render())
     #return render(request, 'myDash.html')
 
-def mainHome(request):
-    
+def testing(request):
     
     def createBusynessSub(request, DatasetObject, busynessArg):
         bzSub = BusynessSub.objects.create(dataObj = DatasetObject, busynessFactor = busynessArg)
@@ -151,29 +150,28 @@ def mainHome(request):
             busy = (busy_nw * rangeWeight)
                     
             data = data + trt.name + ': ' + str(trt.traveltime) + ": busyness = " + str(busy_nw) + ": busynessWeigthed = " + str(busy) + '<br><br/>'
-                            
-#             if(i>0):
-#                 rmax = max(routeAverage)
-#                 rmin = min(routeAverage)
-#                 
-#                 data=data + rt.name + ": max - " + str(rmax) + ": min - " + str(rmin) + "<br><br/>"
-#             if(j>0):
-#                 rmax = max(overallRouteAverage)
-#                 rmin = min(overallRouteAverage)
-#                 
-#                 data=data + rt.name + ": max - " + str(rmax) + ": min - " + str(rmin) + "<br><br/>"
-          
-            
-            
-#         subRouteAverage = subRouteTotal/k
-#         fullRouteAverage = fullRouteTotal/l
-#         
-#         data = data + 'subrouteAverage: ' + str(subRouteAverage) + '<br><br/>'
-#         data = data + 'fullRouteAverage: ' + str(fullRouteAverage) + '<br><br/>'
         
         return data
     
-    return HttpResponse(carParks.views.carParks(request))
+    def tests():
+        data = ''
+        
+        bikeSubs = BusynessSub.objects.filter(name = "DublinBikes")
+        cpSubs = BusynessSub.objects.filter(name = "CarPark")
+        m50Subs = BusynessSub.objects.filter(name = "M50")
+        noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
+        
+        for i in range(1, 5):
+            data = data + "bk, cp, m50, noise := " + bikeSubs[i] + ", "+ cpSubs[i] + ", "+ m50Subs[i] + ", "+ noiseSubs[i] + "<br><br/>"
+        return data
+    
+    return HttpResponse(tests())
+
+##########################################
+##########################################
+##########################################
+##########################################
+##########################################
 
 def mainBusyness(request):
     
