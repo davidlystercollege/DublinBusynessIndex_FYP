@@ -167,7 +167,7 @@ def testing(request):
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
             m50Val = m50Subs[len(m50Subs) - i].busynessFactor
             nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
-            bizArr = list()
+            bizArr = []
             
             bizFact = ( ( bikeVal* .30) + ( cpVal* .30) + ( m50Val* .10) + ( nseVal* .30) ) 
             
