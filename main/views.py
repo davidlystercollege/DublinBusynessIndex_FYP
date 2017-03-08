@@ -161,8 +161,16 @@ def testing(request):
         m50Subs = BusynessSub.objects.filter(name = "M50")
         noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
         
-        for i in range(1, 20):
-            data = data + "bk, cp, m50, noise := " + str(bikeSubs[len(bikeSubs) - i].busynessFactor) + ", "+ str(cpSubs[len(bikeSubs) - i].busynessFactor) + ", "+ str(m50Subs[len(bikeSubs) - i].busynessFactor) + ", "+ str(noiseSubs[len(bikeSubs) - i].busynessFactor) + "<br><br/>"
+        for i in range(1, 100):
+            bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
+            cpVal = cpSubs[len(cpSubs) - i].busynessFactor
+            m50Val = cpSubs[len(m50Subs) - i].busynessFactor
+            nseVal = cpSubs[len(noiseSubs) - i].busynessFactor
+            
+            
+            bizFact = ( ( bikeVal* .30) + ( cpVal* .30) + ( m50Val* .10) + ( nseVal* .30) ) 
+            data = data + "Busy: " +str(bizFact) + "<br>"
+            data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br><br/>"
         return data
     
     return HttpResponse(tests())
