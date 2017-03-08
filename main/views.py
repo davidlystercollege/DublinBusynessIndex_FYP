@@ -164,8 +164,8 @@ def testing(request):
         for i in range(1, 100):
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
-            m50Val = cpSubs[len(m50Subs) - i].busynessFactor
-            nseVal = cpSubs[len(noiseSubs) - i].busynessFactor
+            m50Val = m50Subs[len(m50Subs) - i].busynessFactor
+            nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
             
             
             bizFact = ( ( bikeVal* .30) + ( cpVal* .30) + ( m50Val* .10) + ( nseVal* .30) ) 
