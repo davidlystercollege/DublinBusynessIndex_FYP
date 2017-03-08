@@ -162,21 +162,21 @@ def testing(request):
         noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
         
         
+        bizArr = []
         for i in range(1, 400):
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
             m50Val = m50Subs[len(m50Subs) - i].busynessFactor
             nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
-            bizArr = []
             
             bizFact = ( ( bikeVal* .30) + ( cpVal* .30) + ( m50Val* .10) + ( nseVal* .30) ) 
             
-            bizArr.insert(i, bizFact)
+            bizArr.append(bizFact)
             
             data = data + "Busy: " +str(bizFact) + "<br>"
             data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br><br/>"
         
-        data = data + "MAX : " + str(max(bizArr))
+        data = data + "MAX : " + str(max(bizArr)) + "<br>"
         data = data + "MIN : " + str(min(bizArr))
         return data
     
