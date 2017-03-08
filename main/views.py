@@ -176,8 +176,8 @@ def testing(request):
             data = data + "Busy: " +str(bizFact) + "<br>"
             data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br><br/>"
         
-        data = data + "MAX : " + max(bizArr)
-        data = data + "MIN : " + min(bizArr)
+        data = data + "MAX : " + str(max(bizArr))
+        data = data + "MIN : " + str(min(bizArr))
         return data
     
     return HttpResponse(tests())
