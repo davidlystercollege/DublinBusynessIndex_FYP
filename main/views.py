@@ -162,7 +162,7 @@ def testing(request):
         noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
         
         for i in range(1, 20):
-            data = data + "bk, cp, m50, noise := " + str(bikeSubs[i].BusynessFactor) + ", "+ str(cpSubs[i].BusynessFactor) + ", "+ str(m50Subs[i].BusynessFactor) + ", "+ str(noiseSubs[i].BusynessFactor) + "<br><br/>"
+            data = data + "bk, cp, m50, noise := " + str(bikeSubs[i].busynessFactor) + ", "+ str(cpSubs[i].busynessFactor) + ", "+ str(m50Subs[i].busynessFactor) + ", "+ str(noiseSubs[i].busynessFactor) + "<br><br/>"
         return data
     
     return HttpResponse(tests())
