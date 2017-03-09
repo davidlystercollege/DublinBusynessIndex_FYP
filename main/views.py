@@ -176,7 +176,7 @@ def testing(request):
             bizFact_2 = ( ( bikeVal* .35) + ( cpVal* .35) + ( m50Val* .10) + ( nseVal* .20) ) 
             bizFact_3 = ( ( bikeVal* .30) + ( cpVal* .30) + ( m50Val* .15) + ( nseVal* .25) ) 
             
-            range = max(bizFact_1, bizFact_2, bizFact_3) - min(bizFact_1, bizFact_2, bizFact_3)
+            rnge = max(bizFact_1, bizFact_2, bizFact_3) - min(bizFact_1, bizFact_2, bizFact_3)
             
             bizArr_1.append(bizFact_1)
             bizArr_2.append(bizFact_2)
@@ -185,7 +185,7 @@ def testing(request):
             data = data + "Busy 1: " +str(bizFact_1) + "<br>"
             data = data + "Busy 2: " +str(bizFact_2) + "<br>"
             data = data + "Busy 3: " +str(bizFact_3) + "<br>"
-            data = data + "RANGE SIZE: " +str(range) + "<br>"
+            data = data + "RANGE SIZE: " +str(rnge) + "<br>"
             data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br>"
             data = data + "Time: " +str(time) +"<br><br/>"
         
