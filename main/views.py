@@ -180,10 +180,11 @@ def testing(request):
             bizArr_2.append(bizFact_2)
             bizArr_3.append(bizFact_3)
             
-            data = data + "Busy 1: " +str(bizFact_1) + " - " + str(time) +"<br>"
-            data = data + "Busy 2: " +str(bizFact_2) + " - " + str(time) +"<br>"
-            data = data + "Busy 3: " +str(bizFact_3) + " - " + str(time) +"<br>"
-            data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br><br/>"
+            data = data + "Busy 1: " +str(bizFact_1) + "<br>"
+            data = data + "Busy 2: " +str(bizFact_2) + "<br>"
+            data = data + "Busy 3: " +str(bizFact_3) + "<br>"
+            data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br>"
+            data = data + "Busy 1: " +str(bizFact_1) + " - " + str(time) +"<br><br/>"
         
         data = data + "Series 1" + "<br>"
         data = data + "MAX : " + str(max(bizArr_1)) + "<br>"
