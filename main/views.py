@@ -166,6 +166,7 @@ def testing(request):
         bizArr_2 = []
         bizArr_3 = []
         for i in range(1, 600):
+            time = bikeSubs[len(bikeSubs) - i].dateTaken
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
             m50Val = m50Subs[len(m50Subs) - i].busynessFactor
@@ -179,13 +180,22 @@ def testing(request):
             bizArr_2.append(bizFact_2)
             bizArr_3.append(bizFact_3)
             
-            data = data + "Busy 1: " +str(bizFact_1) + " - " + str(bikeVal.dateTaken) +"<br>"
-            data = data + "Busy 2: " +str(bizFact_2) + " - " + str(bikeVal.dateTaken) +"<br>"
-            data = data + "Busy 3: " +str(bizFact_3) + " - " + str(bikeVal.dateTaken) +"<br>"
+            data = data + "Busy 1: " +str(bizFact_1) + " - " + str(time) +"<br>"
+            data = data + "Busy 2: " +str(bizFact_2) + " - " + str(time) +"<br>"
+            data = data + "Busy 3: " +str(bizFact_3) + " - " + str(time) +"<br>"
             data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br><br/>"
         
+        data = data + "Series 1" + "<br>"
         data = data + "MAX : " + str(max(bizArr_1)) + "<br>"
-        data = data + "MIN : " + str(min(bizArr_1))
+        data = data + "MIN : " + str(min(bizArr_1)) + "<br><br/>"
+        
+        data = data + "Series 2" + "<br>"
+        data = data + "MAX : " + str(max(bizArr_2)) + "<br>"
+        data = data + "MIN : " + str(min(bizArr_2)) + "<br><br/>"
+        
+        data = data + "Series 3" + "<br>"
+        data = data + "MAX : " + str(max(bizArr_3)) + "<br>"
+        data = data + "MIN : " + str(min(bizArr_3)) + "<br><br/>"
         return data
     
     return HttpResponse(tests())
