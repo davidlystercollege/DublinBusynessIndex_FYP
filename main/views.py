@@ -162,22 +162,30 @@ def testing(request):
         noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
         
         
-        bizArr = []
+        bizArr_1 = []
+        bizArr_2 = []
+        bizArr_3 = []
         for i in range(1, 600):
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
             m50Val = m50Subs[len(m50Subs) - i].busynessFactor
             nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
             
-            bizFact = ( ( bikeVal* .30) + ( cpVal* .30) + ( m50Val* .10) + ( nseVal* .30) ) 
+            bizFact_1 = ( ( bikeVal* .30) + ( cpVal* .30) + ( m50Val* .10) + ( nseVal* .30) ) 
+            bizFact_2 = ( ( bikeVal* .35) + ( cpVal* .35) + ( m50Val* .10) + ( nseVal* .20) ) 
+            bizFact_3 = ( ( bikeVal* .30) + ( cpVal* .30) + ( m50Val* .15) + ( nseVal* .25) ) 
             
-            bizArr.append(bizFact)
+            bizArr_1.append(bizFact_1)
+            bizArr_2.append(bizFact_2)
+            bizArr_3.append(bizFact_3)
             
-            data = data + "Busy: " +str(bizFact) + "<br>"
+            data = data + "Busy 1: " +str(bizFact_1) + " - " + str(bikeVal.dateTaken) +"<br>"
+            data = data + "Busy 2: " +str(bizFact_2) + " - " + str(bikeVal.dateTaken) +"<br>"
+            data = data + "Busy 3: " +str(bizFact_3) + " - " + str(bikeVal.dateTaken) +"<br>"
             data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br><br/>"
         
-        data = data + "MAX : " + str(max(bizArr)) + "<br>"
-        data = data + "MIN : " + str(min(bizArr))
+        data = data + "MAX : " + str(max(bizArr_1)) + "<br>"
+        data = data + "MIN : " + str(min(bizArr_1))
         return data
     
     return HttpResponse(tests())
