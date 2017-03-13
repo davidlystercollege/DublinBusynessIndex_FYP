@@ -30,10 +30,12 @@ def home(request):
     m50Val = m50Subs[len(m50Subs) - 1].busynessFactor
     nseVal = noiseSubs[len(noiseSubs) - 1].busynessFactor
     
-    dat = [{label: "Car Parks", value: cpVal }, {label: "M50", value: m50Val },{label: "DublinBikes", value: bikeVal},{label: "Noise Meters", value: nseVal}] ])
+    dat = [ ['CP', cpVal], ['CP', m50Val], ['CP', bikeVal], ['CP', nseVal] ] 
     
     
-    contx = Context([ 'donutData' : dat ])
+    contx = Context({})
+    
+    contx['donutData'] = dat
     return HttpResponse(template.render(contx))
     #return render(request, 'myDash.html')
 
