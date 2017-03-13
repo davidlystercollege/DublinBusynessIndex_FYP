@@ -32,12 +32,14 @@ def home(request):
     
     dat = [ ['CP', cpVal], ['CP', m50Val], ['CP', bikeVal], ['CP', nseVal] ] 
     
+    title = 'tmp'
+    context = {
+        "temp_title": title,
+        "donutData": dat,
+    }
     
-    contx = Context({})
-    
-    contx['donutData'] = dat
-    return HttpResponse(template.render(contx))
-    #return render(request, 'myDash.html')
+    #return HttpResponse(template.render(contx))
+    return render(request, 'myDash.html', context)
 
 def testing(request):
     
