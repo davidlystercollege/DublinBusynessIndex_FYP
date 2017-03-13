@@ -96,21 +96,9 @@ ykeys: ['a', 'b'],
 labels: ['Series A', 'Series B']
 });
 
+donuts = {{donutData}}
 Morris.Donut({
 element: 'DoughChart',
-//bikeVal = bikeSubs[len(bikeSubs) - 1].busynessFactor
-//cpVal = cpSubs[len(cpSubs)  - 1].busynessFactor
-//m50Val = m50Subs[len(m50Subs) -1].busynessFactor
-//nseVal = noiseSubs[len(noiseSubs) -1].busynessFactor
-
-datadon = {{ donutData }} 
-
-//data: [
-//{label: "Car Parks", value: cpVal },
-//{label: "M50", value: m50Val },
-//{label: "DublinBikes", value: bikeVal},
-//{label: "Noise Meters", value: nseVal} 
-//]
 
 //data: [
 //{label: "Car Parks", value: 84},
@@ -120,10 +108,10 @@ datadon = {{ donutData }}
 //]
 
 data: [
-{label: "CP", value: {{ donutData[0] }} },
-{label:  "M50", value: {{ donutData[1] }} },
-{label: "Noise", value: {{ donutData[2] }} },
-{label: "Bikes", value: {{ donutData[3] }} } 
+{label: "CP", value: donuts[0] },
+{label:  "M50", value: donuts[1] },
+{label: "Noise", value: donuts[2] },
+{label: "Bikes", value: donuts[3] } 
 ]
 });
 
