@@ -18,7 +18,23 @@ import carParks.views
 
 def home(request):
     template = loader.get_template("myDash.html")
-    return HttpResponse(template.render())
+    
+    
+    bikeSubs = BusynessSub.objects.filter(name = "DublinBikes")
+    cpSubs = BusynessSub.objects.filter(name = "CarPark")
+    m50Subs = BusynessSub.objects.filter(name = "M50")
+    noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
+    
+    bikeVal = bikeSubs[len(bikeSubs) - 1].busynessFactor
+    cpVal = cpSubs[len(cpSubs) - 1].busynessFactor
+    m50Val = m50Subs[len(m50Subs) - 1].busynessFactor
+    nseVal = noiseSubs[len(noiseSubs) - 1].busynessFactor
+    
+    dat = [{label: "Car Parks", value: cpVal }, {label: "M50", value: m50Val },{label: "DublinBikes", value: bikeVal},{label: "Noise Meters", value: nseVal}] ])
+    
+    
+    contx = Context([ 'donutData' : dat ])
+    return HttpResponse(template.render(contx))
     #return render(request, 'myDash.html')
 
 def testing(request):
