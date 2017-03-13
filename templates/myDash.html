@@ -45,7 +45,7 @@ crossorigin="anonymous"></script>
 </div>
 </div>
 <div class="col-md-4">
-<h1><small>Busyness Index </small>{{temp_title}}..</h1>
+<h1><small>Busyness Index </small>{{busyIndNow}}</h1>
 </div>
 
 <div class="col-md-4">
@@ -98,12 +98,12 @@ labels: ['Series A', 'Series B']
 
 Morris.Donut({
 element: 'DoughChart',
-bikeVal = bikeSubs[len(bikeSubs) - 1].busynessFactor
-cpVal = cpSubs[len(cpSubs)  - 1].busynessFactor
-m50Val = m50Subs[len(m50Subs) -1].busynessFactor
-nseVal = noiseSubs[len(noiseSubs) -1].busynessFactor
+//bikeVal = bikeSubs[len(bikeSubs) - 1].busynessFactor
+//cpVal = cpSubs[len(cpSubs)  - 1].busynessFactor
+//m50Val = m50Subs[len(m50Subs) -1].busynessFactor
+//nseVal = noiseSubs[len(noiseSubs) -1].busynessFactor
 
-//data = [ {{ donutData }} ]
+data = {{ donutData }} 
 
 //data: [
 //{label: "Car Parks", value: cpVal },
