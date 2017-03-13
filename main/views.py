@@ -25,14 +25,14 @@ def home(request):
     m50Subs = BusynessSub.objects.filter(name = "M50")
     noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
     
-    bikeVal = bikeSubs[len(bikeSubs) - 1].busynessFactor
-    cpVal = cpSubs[len(cpSubs) - 1].busynessFactor
-    m50Val = m50Subs[len(m50Subs) - 1].busynessFactor
-    nseVal = noiseSubs[len(noiseSubs) - 1].busynessFactor
+    bikeVal = bikeSubs.last().busynessFactor
+    cpVal = cpSubs.last().busynessFactor
+    m50Val = m50Subs.last().busynessFactor
+    nseVal = noiseSubs.last().busynessFactor
     
-    dat = [ ['CP', cpVal], ['CP', m50Val], ['CP', bikeVal], ['CP', nseVal] ] 
+    dat = [cpVal, m50Val, bikeVal, nseVal] 
     
-    bizness = BusynessIndex.objects.first()
+    bizness = BusynessIndex.objects.last().Busyness
     context = {
         "busyIndNow": bizness,
         "donutData": dat,
