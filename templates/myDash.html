@@ -103,7 +103,7 @@ cpVal = cpSubs[len(cpSubs)  - 1].busynessFactor
 m50Val = m50Subs[len(m50Subs) -1].busynessFactor
 nseVal = noiseSubs[len(noiseSubs) -1].busynessFactor
 
-data = [ {{ donutData }} ]
+//data = [ {{ donutData }} ]
 
 //data: [
 //{label: "Car Parks", value: cpVal },
@@ -118,6 +118,13 @@ data = [ {{ donutData }} ]
 //{label: "DublinBikes", value: 53},
 //{label: "Noise Meters", value: 42} 
 //]
+
+data: [
+{label: "dat[0,0]", value: dat[0,1]},
+{label: "dat[1,0]", value: dat[1,1]},
+{label: "dat[2,0]", value: dat[2,1]},
+{label: "dat[3,0]", value: dat[3,1]} 
+]
 });
 
 new Morris.Line({
