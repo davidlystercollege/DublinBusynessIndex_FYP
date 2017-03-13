@@ -61,7 +61,7 @@ crossorigin="anonymous"></script>
 <script>
 new Morris.Line({
 // ID of the element in which to draw the chart.
-element: 'myfirstchart',
+element: 'myMorrisLine',
 // Chart data records -- each entry in this array corresponds to a point on
 // the chart.
 data: [
@@ -81,7 +81,7 @@ labels: ['Value']
 });
 
 Morris.Bar({
-element: 'mybarchart',
+element: 'myMorrisBar',
 data: [
 {y: '2006', a: 100, b: 90},
 {y: '2007', a: 75, b: 65},
@@ -97,18 +97,22 @@ labels: ['Series A', 'Series B']
 });
 
 Morris.Donut({
-element: 'donut-example',
+element: 'DoughChart',
+bikeVal = bikeSubs[len(bikeSubs)].busynessFactor
+cpVal = cpSubs[len(cpSubs) ].busynessFactor
+m50Val = m50Subs[len(m50Subs) ].busynessFactor
+nseVal = noiseSubs[len(noiseSubs) ].busynessFactor
 data: [
-{label: "Car Parks", value: 78},
-{label: "M50", value: 78},
-{label: "DublinBikes", value: 80},
-{label: "Noise Meters", value: 75}
+{label: "Car Parks", value: cpVal },
+{label: "M50", value: m50Val },
+{label: "DublinBikes", value: bikeVal},
+{label: "Noise Meters", value: nseVal} 
 ]
 });
 
 new Morris.Line({
 // ID of the element in which to draw the chart.
-element: 'mysecondchart',
+element: 'myMorLine2',
 // Chart data records -- each entry in this array corresponds to a point on
 // the chart.
 data: [
