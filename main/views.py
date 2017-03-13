@@ -32,9 +32,9 @@ def home(request):
     
     dat = [ ['CP', cpVal], ['CP', m50Val], ['CP', bikeVal], ['CP', nseVal] ] 
     
-    title = 'tmp'
+    bizness = BusynessIndex.objects.first()
     context = {
-        "temp_title": title,
+        "busyIndNow": bizness,
         "donutData": dat,
     }
     
