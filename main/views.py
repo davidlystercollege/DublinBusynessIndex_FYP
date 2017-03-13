@@ -32,7 +32,7 @@ def home(request):
     
     dat = [cpVal, m50Val, bikeVal, nseVal] 
     
-    bizness = BusynessIndex.objects.last().Busyness
+    bizness = BusynessIndex.objects.last().busyness
     context = {
         "busyIndNow": bizness,
         "donutData": dat,
