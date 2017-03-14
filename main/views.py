@@ -44,7 +44,10 @@ def home(request):
     for i in range(12):
         tempBiz = BusynessIndex.objects.get(id = (sze-i))
         bizys1.append(tempBiz.busyness)
-        times1.append(tempBiz.dateTaken)
+        
+        tmptym = (tempBiz.dateTaken).timestamp
+        
+        times1.append(tmptym)
     ################################################
     
     ########### Line Graph 2 Data #####################
