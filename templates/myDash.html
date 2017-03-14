@@ -59,7 +59,8 @@ crossorigin="anonymous"></script>
 
 
 <script>
-vals = {{ line1dt }}
+vals = {{ line1bizs }}
+times = {{ line1times }}
 new Morris.Line({
 // ID of the element in which to draw the chart.
 element: 'myMorrisLine',
@@ -67,9 +68,9 @@ element: 'myMorrisLine',
 // the chart.
 
 data: [
-{time: '0', value: vals[0]},
-{time: '-5', value: vals[1]},
-{time: '-10', value: vals[2]},
+{time: times[0], value: vals[0]},
+{time: times[1], value: vals[1]},
+{time: times[2], value: vals[2]},
 //{year: '-15', value: vals[3]},
 //{year: '-20', value: vals[4]},
 //{year: '-25', value: vals[5]},
@@ -96,7 +97,7 @@ xkey: 'time',
 ykeys: ['value'],
 // Labels for the ykeys -- will be displayed when you hover over the
 // chart.
-labels: ['Value']
+labels: ['Busyness Index']
 });
 
 Morris.Bar({
