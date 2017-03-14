@@ -118,11 +118,11 @@ data: [
 
 vals2 = {{ line2bizs }}
 
-//x=0
-//res=[]
-//for(x; x<500; x++){
-//	res.push( { no: (500-x), value : vals2[x] } )
-//}
+x=0
+res=[]
+for(total=500; x<total; x++){
+	res.push( { no: (500-x), value : vals2[x] } )
+}
 
 new Morris.Line({
 // ID of the element in which to draw the chart.
@@ -142,8 +142,10 @@ data: [
 
 // The name of the data record attribute that contains x-values.
 xkey: 'day',
+
 // A list of names of data record attributes that contain y-values.
 ykeys: ['value'],
+
 // Labels for the ykeys -- will be displayed when you hover over the
 // chart.
 labels: ['Busyness Index']
