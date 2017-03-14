@@ -45,7 +45,7 @@ def home(request):
         tempBiz = BusynessIndex.objects.get(id = (sze-i))
         bizys1.append(tempBiz.busyness)
         
-        tmptym = (tempBiz.dateTaken).timestamp()
+        tmptym = (tempBiz.dateTaken).replace(tzinfo=timezone.utc).timestamp()
         
         times1.append(tmptym)
     ################################################
