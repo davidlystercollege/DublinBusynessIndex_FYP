@@ -36,14 +36,15 @@ def home(request):
     bizness = BusynessIndex.objects.last().busyness#
     ################################################
     
-    bizys = []
     ########### Line Graph 1 Data #####################
-    
+    bizys1 = []
+    times1 = []
     sze = len(BusynessIndex.objects.all())
     
     for i in range(12):
         tempBiz = BusynessIndex.objects.get(id = (sze-i))
-        bizys.append(tempBiz.busyness)
+        bizys1.append(tempBiz.busyness)
+        times1.append(tempBiz.dateTaken)
     ################################################
     
     ########### Line Graph 2 Data #####################
@@ -57,7 +58,8 @@ def home(request):
     context = {
         "busyIndNow": bizness,
         "donutData": dat,
-        "line1dt" : bizys
+        "line1bizs" : bizys1,
+        "line1times" : times1,
     }
     
     ## render html page on request with respect to context ##
