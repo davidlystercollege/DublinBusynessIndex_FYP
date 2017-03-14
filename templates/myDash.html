@@ -27,7 +27,7 @@ crossorigin="anonymous"></script>
 
 <div class="row">
 <div class="col-md-8">
-<h3>Busyness Index Movement</h3>
+<h3>Busyness Index Movement Over Last Hour</h3>
 <div id="myMorrisLine" style="height: 250px;"></div>
 </div>
 <div class="col-md-4">
@@ -60,7 +60,6 @@ crossorigin="anonymous"></script>
 
 <script>
 vals = {{ line1bizs }}
-times = {{ line1times }}
 new Morris.Line({
 // ID of the element in which to draw the chart.
 element: 'myMorrisLine',
@@ -82,14 +81,6 @@ data: [
 {time: -5, value: vals[1]},
 {time: 0, value: vals[0]},
 ],
-
-//data: [
-//{year: '2013', value: 24},
-//{year: '2014', value: 30},
-//{year: '2015', value: 22},
-//{year: '2016', value: 26},
-//{year: '2017', value: 29}
-//],
 
 // The name of the data record attribute that contains x-values.
 xkey: 'time',
@@ -122,13 +113,6 @@ donuts = {{donutData}}
 Morris.Donut({
 element: 'DoughChart',
 
-//data: [
-//{label: "Car Parks", value: 84},
-//{label: "M50", value: 34},
-//{label: "DublinBikes", value: 53},
-//{label: "Noise Meters", value: 42} 
-//]
-
 data: [
 {label: "CP", value: donuts[0] },
 {label:  "M50", value: donuts[1] },
@@ -137,25 +121,38 @@ data: [
 ]
 });
 
+
+vals2 = {{ line2bizs }}
+
+x=0
+res=[]
+for(500; x<500; x++){
+	res.push( { no: (500-x), value : vals2[x] } )
+}
+
 new Morris.Line({
 // ID of the element in which to draw the chart.
 element: 'myMorLine2',
 // Chart data records -- each entry in this array corresponds to a point on
 // the chart.
-data: [
-{day: '0', value: 37.5},
-{day: '1', value: 35.1},
-{day: '2', value: 39},
-{day: '3', value: 45.3},
-{day: '4', value: 32.1}
-],
+data: res,
+
+//data: [
+//{day: '0', value: 37.5},
+//{day: '1', value: 35.1},
+//{day: '2', value: 39},
+//{day: '3', value: 45.3},
+//{day: '4', value: 32.1}
+//],
+
+
 // The name of the data record attribute that contains x-values.
-xkey: 'day',
+xkey: 'no',
 // A list of names of data record attributes that contain y-values.
 ykeys: ['value'],
 // Labels for the ykeys -- will be displayed when you hover over the
 // chart.
-labels: ['Value']
+labels: ['Busyness Index']
 });
 
 </script>
