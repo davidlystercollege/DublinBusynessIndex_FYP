@@ -47,7 +47,7 @@ def home(request):
         bizys1.append(tempBiz.busyness)
         
         #tmptym = (tempBiz.dateTaken).time()
-        tmptym = timezone.now() - (i * 5)
+        tmptym = datetime.datetime.now() - datetime.timedelta(minutes=(i * 5))
         #tmptym = ((tempBiz.dateTaken) - datetime(1970, 1, 1)).total_seconds() 
         
         
