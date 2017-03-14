@@ -32,7 +32,7 @@ crossorigin="anonymous"></script>
 </div>
 
 <div class="col-md-4">
-<h1><small>Busyness Index </large>{{busyIndNow}}</h1>
+<h1><small>Busyness Index </small>{{busyIndNow}}</h1>
 </div>
 
 </div>
@@ -40,7 +40,7 @@ crossorigin="anonymous"></script>
 </div>
 <div class="row">
 <div class="col-md-8">
-<h3>---------------------</h3>
+<h3>Busyness - Weekly</h3>
 <div id="myMorLine2" style="height: 250px;"></div>
 
 </div>
@@ -92,21 +92,21 @@ labels: ['Busyness Index'],
 parseTime: false
 });
 
-Morris.Bar({
-element: 'myMorrisBar',
-data: [
-{y: '2006', a: 100, b: 90},
-{y: '2007', a: 75, b: 65},
-{y: '2008', a: 50, b: 40},
-{y: '2009', a: 75, b: 65},
-{y: '2010', a: 50, b: 40},
-{y: '2011', a: 75, b: 65},
-{y: '2012', a: 100, b: 90}
-],
-xkey: 'y',
-ykeys: ['a', 'b'],
-labels: ['Series A', 'Series B']
-});
+//Morris.Bar({
+//element: 'myMorrisBar',
+//data: [
+//{y: '2006', a: 100, b: 90},
+//{y: '2007', a: 75, b: 65},
+//{y: '2008', a: 50, b: 40},
+//{y: '2009', a: 75, b: 65},
+//{y: '2010', a: 50, b: 40},
+//{y: '2011', a: 75, b: 65},
+//{y: '2012', a: 100, b: 90}
+//],
+//xkey: 'y',
+//ykeys: ['a', 'b'],
+//labels: ['Series A', 'Series B']
+//});
 
 donuts = {{donutData}}
 Morris.Donut({
