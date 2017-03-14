@@ -19,6 +19,8 @@ import carParks.views
 
 def home(request):
     
+    allBusynessz = BusynessIndex.objects.all()
+    
     ########### Donut Data ################################
     bikeSubs = BusynessSub.objects.filter(name = "DublinBikes")
     cpSubs = BusynessSub.objects.filter(name = "CarPark")
@@ -39,12 +41,13 @@ def home(request):
     
     ########### Line Graph 1 Data #####################
     bizys1 = []
+    bizys2 = []
     times1 = []
-    sze = len(BusynessIndex.objects.all())
+    sze = len(allBusynessz)
     
     for i in range(13):
-        tempBiz = BusynessIndex.objects.get(id = (sze-(i-1)))
-        bizys1.append(tempBiz.busyness)
+        tempBiz1 = allBusynessz.get(id = (sze-(i-1)))
+        bizys1.append(tempBiz1.busyness)
         
         #tmptym = (tempBiz.dateTaken).time()
         #tmptym = datetime.datetime.now() - datetime.timedelta(minutes=(i * 5))
@@ -55,6 +58,9 @@ def home(request):
     ################################################
     
     ########### Line Graph 2 Data #####################
+    for i in range(500):
+        tempBiz2 = allBusynessz.get(id = (sze-(i-1)))
+        bizys2.append(tempBiz2.busyness)
     ################################################
     
     ########### Bar Chart Data #####################
@@ -66,6 +72,7 @@ def home(request):
         "busyIndNow": bizness,
         "donutData": dat,
         "line1bizs" : bizys1,
+        "line2bizs" : bizys2,
         #"line1times" : times1,
     }
     
