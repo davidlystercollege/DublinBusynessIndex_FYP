@@ -39,7 +39,8 @@ def home(request):
     bizys = []
     ########### Line Graph 1 Data #####################
     for i in range(0,5):
-        bizys[i] = BusynessIndex.objects.get(id = i).busyness
+        tempBiz = BusynessIndex.objects.get(id = i)
+        bizys[i] = tempBiz.busyness
     ################################################
     
     ########### Line Graph 2 Data #####################
