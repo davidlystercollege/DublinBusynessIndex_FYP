@@ -38,9 +38,12 @@ def home(request):
     
     bizys = []
     ########### Line Graph 1 Data #####################
+    
+    sze = len(BusynessIndex.objects.all())
+    
     for i in range(5):
         tempBiz = BusynessIndex.objects.get(id = -(i+1))
-        bizys[i] = tempBiz.busyness
+        bizys.append(tempBiz.busyness)
     ################################################
     
     ########### Line Graph 2 Data #####################
