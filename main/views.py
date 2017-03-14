@@ -47,11 +47,11 @@ def home(request):
         bizys1.append(tempBiz.busyness)
         
         #tmptym = (tempBiz.dateTaken).time()
-        tmptym = datetime.datetime.now() - datetime.timedelta(minutes=(i * 5))
+        #tmptym = datetime.datetime.now() - datetime.timedelta(minutes=(i * 5))
         #tmptym = ((tempBiz.dateTaken) - datetime(1970, 1, 1)).total_seconds() 
         
         
-        times1.append(tmptym)
+        #times1.append(tmptym)
     ################################################
     
     ########### Line Graph 2 Data #####################
@@ -66,7 +66,7 @@ def home(request):
         "busyIndNow": bizness,
         "donutData": dat,
         "line1bizs" : bizys1,
-        "line1times" : times1,
+        #"line1times" : times1,
     }
     
     ## render html page on request with respect to context ##
