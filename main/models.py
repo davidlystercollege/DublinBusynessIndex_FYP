@@ -15,8 +15,6 @@ class BusynessSub(models.Model):
     busynessFactor = models.FloatField(default = 0.0)
     dateTaken = models.DateTimeField(default=timezone.now)
     
-    #average = models.FloatField(default = 0.0)
-    
     def __str__(self):
         return self.name  
     

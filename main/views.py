@@ -17,9 +17,8 @@ import dublinBikes.views
 import carParks.views
 
 def home(request):
-    template = loader.get_template("myDash.html")
     
-    
+    ########### Donut Data ################################
     bikeSubs = BusynessSub.objects.filter(name = "DublinBikes")
     cpSubs = BusynessSub.objects.filter(name = "CarPark")
     m50Subs = BusynessSub.objects.filter(name = "M50")
@@ -31,14 +30,33 @@ def home(request):
     nseVal = noiseSubs.last().busynessFactor
     
     dat = [cpVal, m50Val, bikeVal, nseVal] 
+    #########################################################
     
-    bizness = BusynessIndex.objects.last().busyness
+    ########### Busyness Index #####################
+    bizness = BusynessIndex.objects.last().busyness#
+    ################################################
+    
+    bizys = []
+    ########### Line Graph 1 Data #####################
+    for i in range(1,5):
+        bizys[i] = BusynessIndex.objects.get(i).busyness
+    ################################################
+    
+    ########### Line Graph 2 Data #####################
+    ################################################
+    
+    ########### Bar Chart Data #####################
+    ################################################
+    
+    
+    ### Pass Required Data to our Context ##########
     context = {
         "busyIndNow": bizness,
         "donutData": dat,
+        "line1dt" : bizys
     }
     
-    #return HttpResponse(template.render(contx))
+    ## render html page on request with respect to context ##
     return render(request, 'myDash.html', context)
 
 def testing(request):
