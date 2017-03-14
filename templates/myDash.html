@@ -59,17 +59,18 @@ crossorigin="anonymous"></script>
 
 
 <script>
+vals = {{ line1dt }}
 new Morris.Line({
 // ID of the element in which to draw the chart.
 element: 'myMorrisLine',
 // Chart data records -- each entry in this array corresponds to a point on
 // the chart.
 data: [
-{year: '2013', value: 37},
-{year: '2014', value: 35},
-{year: '2015', value: 41},
-{year: '2016', value: 40},
-{year: '2017', value: 33}
+{year: '2013', value: vals[0]},
+{year: '2014', value: vals[1]},
+{year: '2015', value: vals[2]},
+{year: '2016', value: vals[3]},
+{year: '2017', value: vals[4]}
 ],
 // The name of the data record attribute that contains x-values.
 xkey: 'year',
