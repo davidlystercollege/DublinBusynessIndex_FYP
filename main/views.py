@@ -46,7 +46,7 @@ def home(request):
         tempBiz = BusynessIndex.objects.get(id = (sze-i))
         bizys1.append(tempBiz.busyness)
         
-        tmptym = (tempBiz.dateTaken).time
+        tmptym = (tempBiz.dateTaken).time()
         #tmptym = ((tempBiz.dateTaken) - datetime(1970, 1, 1)).total_seconds() 
         
         
