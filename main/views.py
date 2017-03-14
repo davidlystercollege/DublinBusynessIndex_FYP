@@ -11,6 +11,7 @@ from main.models import DatasetObject, BusynessSub, BusynessIndex
 from django.utils import timezone
 from django.template import Context, loader
 
+import datetime
 import noiseLevels.views
 import m50times.views
 import dublinBikes.views
@@ -45,7 +46,8 @@ def home(request):
         tempBiz = BusynessIndex.objects.get(id = (sze-i))
         bizys1.append(tempBiz.busyness)
         
-        tmptym = (tempBiz.dateTaken).replace(tzinfo=timezone.utc).timestamp()
+        #tmptym = (tempBiz.dateTaken).replace(tzinfo=timezone.utc).timestamp()
+        tmptym = ((tempBiz.dateTaken) - datetime(1970, 1, 1)).total_seconds()
         
         times1.append(tmptym)
     ################################################
