@@ -42,7 +42,7 @@ def home(request):
     sze = len(BusynessIndex.objects.all())
     
     for i in range(5):
-        tempBiz = BusynessIndex.objects.get(id = -(i+1))
+        tempBiz = BusynessIndex.objects.get(id = (sze-i))
         bizys.append(tempBiz.busyness)
     ################################################
     
