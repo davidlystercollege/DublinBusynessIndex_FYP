@@ -378,7 +378,7 @@ def mainBusyness(request):
         nl_dso = getDatasetObj('NoiseLevel')
         m50_dso = getDatasetObj('M50')
         
-        weigths = [.40, .30, .20, .05]
+        weigths = [.40, .30, .25, .05]
         
         noiseVal=0
         m50Val=0
