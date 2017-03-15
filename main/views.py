@@ -73,7 +73,6 @@ def home(request):
         "donutData": dat,
         "line1bizs" : bizys1,
         "line2bizs" : bizys2,
-        #"line1times" : times1,
     }
     
     ## render html page on request with respect to context ##
@@ -379,7 +378,7 @@ def mainBusyness(request):
         nl_dso = getDatasetObj('NoiseLevel')
         m50_dso = getDatasetObj('M50')
         
-        weigths = [.40, .30, .20, .10]
+        weigths = [.40, .30, .20, .05]
         
         noiseVal=0
         m50Val=0
@@ -400,7 +399,7 @@ def mainBusyness(request):
         
         #busynessIndex = ( (m50Val*weigths[0]) + (noiseVal*weigths[1]) + (bikeVal*weigths[3]) )
         
-        busynessIndex = ( (m50Val*weigths[0]) + (noiseVal*weigths[1]) + (cpVal*weigths[2]) + (bikeVal*weigths[3]) )
+        busynessIndex = ( (m50Val*weigths[3]) + (noiseVal*weigths[0]) + (cpVal*weigths[1]) + (bikeVal*weigths[2]) )
         createBusynessIndex(request, busynessIndex)
         
         ans = "Noise, M50, Bikes, CPs:" + str(noiseVal) + ", " + str(m50Val) + ", " + str(bikeVal) + ", " + str(cpVal)
