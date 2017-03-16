@@ -288,8 +288,10 @@ def testing(request):
             nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
         
             bkArr.append(bikeVal)
-            cpArr.append(cpVal)
             nArr.append(nseVal)
+            
+            if(cpVal != 95):
+                cpArr.append(cpVal)
         
         bAv = sum(bkArr) / len(bkArr)
         cAv = sum(cpArr) / len(cpArr)
@@ -298,9 +300,12 @@ def testing(request):
         for i in range(0, len(bkArr)):            
             nseS = nseS + ( (nArr[i] - nAv) * (nArr[i] - nAv) ) 
             bkeS = bkeS + ( (bkArr[i] - bAv) * (bkArr[i] - bAv) )
+            
+        sz = len(cpArr)    
+        for i in range(0, sz):
             cpS = cpS + ( (cpArr[i] - cAv) * (cpArr[i] - cAv) )
             
-        std_cp = math.sqrt( cpS / 800 )
+        std_cp = math.sqrt( cpS / sz )
         std_bk = math.sqrt( bkeS / 800 )
         std_ns = math.sqrt( nseS / 800 )
         
