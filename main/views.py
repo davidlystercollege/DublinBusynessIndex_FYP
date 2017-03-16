@@ -310,8 +310,13 @@ def testing(request):
         std_ns = math.sqrt( nseS / 800 )
         
         data = data + "STD CP: " + str(std_cp) + "<br>"
+        data = data + "Min, Max: " + str(min(cpArr)) + ", " + str(max(cpArr)) + "<br></br>"
+        
         data = data + "STD Bikes: " + str(std_bk) + "<br>"
+        data = data + "Min, Max: " + str(min(bkArr)) + ", " + str(max(bkArr)) + "<br></br>"
+        
         data = data + "STD Noises: " + str(std_ns) + "<br>"
+        data = data + "Min, Max: " + str(min(nArr)) + ", " + str(max(nArr)) + "<br></br>"
         return data
     
     
