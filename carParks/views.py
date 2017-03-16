@@ -171,7 +171,7 @@ def tests(request):
                 tempname = children.get('name')
                 spaces = children.get('spaces')            
                     
-                cpRef = CP.objects.all().get(name = tempname)
+                cpRef = CP.objects.get(name = tempname)
                 
                 if(cpRef.name == "THOMASST"):
                     continue    # not recording data
