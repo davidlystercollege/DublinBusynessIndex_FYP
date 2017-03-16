@@ -230,34 +230,34 @@ def testing(request):
             m50Val = m50Subs[len(m50Subs) - i].busynessFactor
             nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
             
-            bizFact_1 = ( ( bikeVal* .30) + ( cpVal* .30) + ( m50Val* .10) + ( nseVal* .30) ) 
-            bizFact_2 = ( ( bikeVal* .35) + ( cpVal* .35) + ( m50Val* .10) + ( nseVal* .20) ) 
-            bizFact_3 = ( ( bikeVal* .30) + ( cpVal* .30) + ( m50Val* .15) + ( nseVal* .25) ) 
+            bizFact_1 = ( ( bikeVal* .30) + ( cpVal* .25) + ( m50Val* .05) + ( nseVal* .40) ) 
+            #bizFact_2 = ( ( bikeVal* .35) + ( cpVal* .35) + ( m50Val* .05) + ( nseVal* .40) ) 
+            #bizFact_3 = ( ( bikeVal* .30) + ( cpVal* .25) + ( m50Val* .05) + ( nseVal* .40) ) 
             
-            rnge = max(bizFact_1, bizFact_2, bizFact_3) - min(bizFact_1, bizFact_2, bizFact_3)
+            #rnge = max(bizFact_1, bizFact_2, bizFact_3) - min(bizFact_1, bizFact_2, bizFact_3)
             
             bizArr_1.append(bizFact_1)
-            bizArr_2.append(bizFact_2)
-            bizArr_3.append(bizFact_3)
+            #bizArr_2.append(bizFact_2)
+            #bizArr_3.append(bizFact_3)
             
             data = data + "Busy 1: " +str(bizFact_1) + "<br>"
-            data = data + "Busy 2: " +str(bizFact_2) + "<br>"
-            data = data + "Busy 3: " +str(bizFact_3) + "<br>"
-            data = data + "RANGE SIZE: " +str(rnge) + "<br>"
-            data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br>"
+            #data = data + "Busy 2: " +str(bizFact_2) + "<br>"
+            #data = data + "Busy 3: " +str(bizFact_3) + "<br>"
+            #data = data + "RANGE SIZE: " +str(rnge) + "<br>"
+            #data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br>"
             data = data + "Time: " +str(time) +"<br><br/>"
         
         data = data + "Series 1" + "<br>"
         data = data + "MAX : " + str(max(bizArr_1)) + "<br>"
         data = data + "MIN : " + str(min(bizArr_1)) + "<br><br/>"
         
-        data = data + "Series 2" + "<br>"
-        data = data + "MAX : " + str(max(bizArr_2)) + "<br>"
-        data = data + "MIN : " + str(min(bizArr_2)) + "<br><br/>"
+        #data = data + "Series 2" + "<br>"
+        #data = data + "MAX : " + str(max(bizArr_2)) + "<br>"
+        #data = data + "MIN : " + str(min(bizArr_2)) + "<br><br/>"
         
-        data = data + "Series 3" + "<br>"
-        data = data + "MAX : " + str(max(bizArr_3)) + "<br>"
-        data = data + "MIN : " + str(min(bizArr_3)) + "<br><br/>"
+        #data = data + "Series 3" + "<br>"
+        #data = data + "MAX : " + str(max(bizArr_3)) + "<br>"
+        #data = data + "MIN : " + str(min(bizArr_3)) + "<br><br/>"
         return data
     
     def tests2():
@@ -296,7 +296,7 @@ def testing(request):
     
     #template = loader.get_template("myDash.html")
     #return HttpResponse(template.render())
-    return HttpResponse(tests2())
+    return HttpResponse(tests())
 
 ##########################################
 ##########################################
