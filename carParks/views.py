@@ -169,10 +169,10 @@ def tests(request):
         for child in root:
             for children in child:
                     
-                #tempname = children.get('name')
-                #spaces = children.get('spaces')            
+                tempname = children.get('name')
+                spaces = children.get('spaces')            
                 
-                '''    
+                   
                 cpRef = CP.objects.all().get(name = tempname)
                 
                 if(cpRef.name == "THOMASST"):
@@ -202,8 +202,8 @@ def tests(request):
                 ans=ans + "Busyness: " +str(busyness) + "<br>"
                 #createCPCapacityLevel(request, cpRef, spaces, fullness)  
                 count=count+1  
-                '''  
-                ans = " "  
+                
+                #ans = " "  
         #busyness = (busyness/count-1)
         return ans
     
