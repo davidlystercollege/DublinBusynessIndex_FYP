@@ -12,6 +12,7 @@ from django.utils import timezone
 from django.template import Context, loader
 
 import datetime
+import math
 import noiseLevels.views
 import m50times.views
 import dublinBikes.views
@@ -259,10 +260,43 @@ def testing(request):
         data = data + "MIN : " + str(min(bizArr_3)) + "<br><br/>"
         return data
     
+    def tests2():
+        data = ''
+        
+        bikeSubs = BusynessSub.objects.filter(name = "DublinBikes")
+        cpSubs = BusynessSub.objects.filter(name = "CarPark")
+        #m50Subs = BusynessSub.objects.filter(name = "M50")
+        noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
+        
+        nseS = 0.0
+        bkeS = 0.0
+        cpS = 0.0
+        for i in range(1, 800):
+            #time = bikeSubs[len(bikeSubs) - i].dateTaken
+            bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
+            cpVal = cpSubs[len(cpSubs) - i].busynessFactor
+            #m50Val = m50Subs[len(m50Subs) - i].busynessFactor
+            nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
+        
+            nseS = nseS + nseVal
+            bkeS = bkeS + bikeVal
+            cpS = cpS + cpVal
+        
+        #for i in range(1, 800):
+        
+        std_cp = math.sqrt( cpS / 800 )
+        std_bk = math.sqrt( bkeS / 800 )
+        std_ns = math.sqrt( nseS / 800 )
+        
+        data = data + "STD CP: " + str(std_cp) + "<br>"
+        data = data + "STD Bikes: " + str(std_bk) + "<br>"
+        data = data + "STD Noises: " + str(std_ns) + "<br>"
+        return data
+    
     
     #template = loader.get_template("myDash.html")
     #return HttpResponse(template.render())
-    return HttpResponse(tests())
+    return HttpResponse(tests2())
 
 ##########################################
 ##########################################
