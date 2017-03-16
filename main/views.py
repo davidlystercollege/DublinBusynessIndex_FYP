@@ -223,7 +223,7 @@ def testing(request):
         bizArr_1 = []
         bizArr_2 = []
         bizArr_3 = []
-        for i in range(1, 600):
+        for i in range(1, 1500):
             time = bikeSubs[len(bikeSubs) - i].dateTaken
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
