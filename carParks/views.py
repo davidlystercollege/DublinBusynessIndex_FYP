@@ -157,6 +157,7 @@ def tests(request):
     carpark_url = 'http://opendata.dublincity.ie/TrafficOpenData/CP_TR/CPDATA.xml'
     file = urllib2.urlopen(carpark_url)
     
+    ans=''
     def getBusyness2():
         busyness = 0.0
         fullness=0.0
@@ -207,4 +208,4 @@ def tests(request):
         return ans
     
     #return HttpResponse(getCapacityDetails())
-    return HttpResponse(getBusyness2())
+    return HttpResponse(ans)
