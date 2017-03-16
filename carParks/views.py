@@ -157,7 +157,7 @@ def tests(request):
     carpark_url = 'http://opendata.dublincity.ie/TrafficOpenData/CP_TR/CPDATA.xml'
     file = urllib2.urlopen(carpark_url)
     
-    def getBusyness():
+    def getBusyness2():
         busyness = 0.0
         fullness=0
         tree = et.parse(file)
@@ -195,7 +195,7 @@ def tests(request):
                 #x = x + str(busyness) + ': ' + str(fullness) + ': ' + str(spaces) + '<br><br/>'    
                 #ans = ans + str(tempname) + ' : ' + str(spaces) +  " : fullness : " + str(fullness) + "<br><br/>"                
                 
-                ans=ans + cpRef.name + ": " + str(fullness) + " - (Spc, Cap): " + str(spaces) + ", " + str(cpRef.capacity) + "<br><br/>"
+                ans=ans + str(cpRef.name) + ": " + str(fullness) + " - (Spc, Cap): " + str(spaces) + ", " + str(cpRef.capacity) + "<br><br/>"
                 ans=ans + "Busyness: " +str(busyness) + "<br>"
                 #createCPCapacityLevel(request, cpRef, spaces, fullness)  
                 count=count+1  
@@ -204,4 +204,4 @@ def tests(request):
         return ans
     
     #return HttpResponse(getCapacityDetails())
-    return HttpResponse(getBusyness())
+    return HttpResponse(getBusyness2())
