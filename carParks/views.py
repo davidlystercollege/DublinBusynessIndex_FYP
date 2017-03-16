@@ -11,8 +11,8 @@ def home(request):
     return HttpResponse("This'll be the carParks homepage")
 
 def carParks(request):
-    
-    carpark_url = 'http://opendata.dublincity.ie/TrafficOpenData/CP_TR/CPDATA.xml'
+    carpark_url = 'http://www.dublincity.ie/dublintraffic/cpdata.xml'
+    #carpark_url = 'http://opendata.dublincity.ie/TrafficOpenData/CP_TR/CPDATA.xml'
     file = urllib2.urlopen(carpark_url)
     #response = urllib.request.urlopen(carpark_url)
 
