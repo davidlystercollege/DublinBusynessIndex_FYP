@@ -295,7 +295,7 @@ def testing(request):
         cAv = sum(cpArr) / len(cpArr)
         nAv = sum(nArr) / len(nArr)
         
-        for i in range(1, 800):            
+        for i in range(0, 800):            
             nseS = nseS + (nArr[i] - nAv)
             bkeS = bkeS + (bkArr[i] - bAv)
             cpS = cpS + (cpArr[i] - cAv)
