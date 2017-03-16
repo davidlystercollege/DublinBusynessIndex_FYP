@@ -202,7 +202,7 @@ def tests(request):
                 count=count+1  
                   
         busyness = (busyness/count-1)
-        return ans
+        return str(ans)
     
     #return HttpResponse(getCapacityDetails())
     return HttpResponse(getBusyness2())
