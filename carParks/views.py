@@ -208,7 +208,8 @@ def tests(request):
         return ans
     
     def tst1():
-        cpRef = CP.objects.all().get(name = "C/CHURCH")
+        cpRef = []
+        cpRef = CP.objects.all().filter(name = "C/CHURCH")
         
         for cp in cpRef:
             ans = ans + cp.spaces + "<br>"
