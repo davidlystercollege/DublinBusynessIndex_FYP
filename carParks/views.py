@@ -201,8 +201,9 @@ def tests(request):
                 #createCPCapacityLevel(request, cpRef, spaces, fullness)  
                 count=count+1  
                   
+                ans = " "  
         busyness = (busyness/count-1)
-        return busyness
+        return ans
     
     #return HttpResponse(getCapacityDetails())
     return HttpResponse(getBusyness2())
