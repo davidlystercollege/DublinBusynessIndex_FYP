@@ -295,10 +295,10 @@ def testing(request):
         cAv = sum(cpArr) / len(cpArr)
         nAv = sum(nArr) / len(nArr)
         
-        for i in range(0, 800):            
-            nseS = nseS + (nArr[i] - nAv)
-            bkeS = bkeS + (bkArr[i] - bAv)
-            cpS = cpS + (cpArr[i] - cAv)
+        for i in range(0, len(bkArr)):            
+            nseS = nseS + ( (nArr[i] - nAv) * (nArr[i] - nAv) ) 
+            bkeS = bkeS + ( (bkArr[i] - bAv) * (bkArr[i] - bAv) )
+            cpS = cpS + ( (cpArr[i] - cAv) * (cpArr[i] - cAv) )
             
         std_cp = math.sqrt( cpS / 800 )
         std_bk = math.sqrt( bkeS / 800 )
