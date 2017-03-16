@@ -208,4 +208,4 @@ def tests(request):
         return ans
     
     #return HttpResponse(getCapacityDetails())
-    return HttpResponse("Yes")
+    return HttpResponse(ans)
