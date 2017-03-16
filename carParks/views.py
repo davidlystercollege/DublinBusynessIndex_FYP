@@ -170,7 +170,8 @@ def tests(request):
                     
                 tempname = children.get('name')
                 spaces = children.get('spaces')            
-                    
+                
+                '''    
                 cpRef = CP.objects.all().get(name = tempname)
                 
                 if(cpRef.name == "THOMASST"):
@@ -200,9 +201,9 @@ def tests(request):
                 ans=ans + "Busyness: " +str(busyness) + "<br>"
                 #createCPCapacityLevel(request, cpRef, spaces, fullness)  
                 count=count+1  
-                  
+                '''  
                 ans = " "  
-        busyness = (busyness/count-1)
+        #busyness = (busyness/count-1)
         return ans
     
     #return HttpResponse(getCapacityDetails())
