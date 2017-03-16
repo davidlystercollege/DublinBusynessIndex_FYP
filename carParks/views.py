@@ -159,7 +159,7 @@ def tests(request):
     
     def getBusyness2():
         busyness = 0.0
-        fullness=0
+        fullness=0.0
         tree = et.parse(file)
         root = tree.getroot()
         spaces=0
@@ -190,7 +190,8 @@ def tests(request):
                 if(fullness > 100 or fullness < 0):
                     fullness = 100
                     
-                busyness = busyness + float(fullness)
+                #busyness = busyness + float(fullness)
+                busyness = busyness + fullness
                   
                 #x = x + str(busyness) + ': ' + str(fullness) + ': ' + str(spaces) + '<br><br/>'    
                 #ans = ans + str(tempname) + ' : ' + str(spaces) +  " : fullness : " + str(fullness) + "<br><br/>"                
