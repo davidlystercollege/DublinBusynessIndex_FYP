@@ -459,7 +459,9 @@ def mainBusyness(request):
         
         #busynessIndex = ( (m50Val*weigths[0]) + (noiseVal*weigths[1]) + (bikeVal*weigths[3]) )
         
-        busynessIndex = ( (m50Val*weigths[3]) + (noiseVal*weigths[0]) + (cpVal*weigths[1]) + (bikeVal*weigths[2]) )
+        #busynessIndex = ( (m50Val*weigths[3]) + (noiseVal*weigths[0]) + (cpVal*weigths[1]) + (bikeVal*weigths[2]) )
+        busynessIndex = ( (noiseVal*weigths[0]) + (bikeVal*weigths[1]) + (cpVal*weigths[2]) + (m50Val*weigths[3]) )
+        
         createBusynessIndex(request, busynessIndex)
         
         ans = "Noise, M50, Bikes, CPs:" + str(noiseVal) + ", " + str(m50Val) + ", " + str(bikeVal) + ", " + str(cpVal)
