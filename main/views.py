@@ -221,6 +221,9 @@ def testing(request):
         
         
         bizArr_1 = []
+        
+        totl = 0.0
+        
         bizArr_2 = []
         bizArr_3 = []
         for i in range(1, 1500):
@@ -237,6 +240,7 @@ def testing(request):
             #rnge = max(bizFact_1, bizFact_2, bizFact_3) - min(bizFact_1, bizFact_2, bizFact_3)
             
             bizArr_1.append(bizFact_1)
+            totl = totl + bizFact_1
             #bizArr_2.append(bizFact_2)
             #bizArr_3.append(bizFact_3)
             
@@ -268,6 +272,11 @@ def testing(request):
         #m50Subs = BusynessSub.objects.filter(name = "M50")
         noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
         
+        
+        nArr =[]
+        bkArr = []
+        cpArr = []
+        
         nseS = 0.0
         bkeS = 0.0
         cpS = 0.0
@@ -278,12 +287,19 @@ def testing(request):
             #m50Val = m50Subs[len(m50Subs) - i].busynessFactor
             nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
         
-            nseS = nseS + nseVal
-            bkeS = bkeS + bikeVal
-            cpS = cpS + cpVal
+            bkArr.append(bikeVal)
+            cpArr.append(cpVal)
+            nArr.append(nseVal)
         
-        #for i in range(1, 800):
+        bAv = sum(bkArr) / len(bkArr)
+        cAv = sum(cpArr) / len(cpArr)
+        nAv = sum(nArr) / len(nArr)
         
+        for i in range(1, 800):            
+            nseS = nseS + (nArr[i] - nAv)
+            bkeS = bkeS + (bkArr[i] - bAv)
+            cpS = cpS + (cpArr[i] - cAv)
+            
         std_cp = math.sqrt( cpS / 800 )
         std_bk = math.sqrt( bkeS / 800 )
         std_ns = math.sqrt( nseS / 800 )
