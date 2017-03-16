@@ -212,7 +212,7 @@ def tests(request):
         cpRef = CapacityLevel.objects.all().filter(name = "C/CHURCH")
         ans=''
         for cp in cpRef:
-            ans = ans + cp.availableSpaces + "<br>"
+            ans = ans + str(cp.availableSpaces) + "<br>"
             
         return ans
     #return HttpResponse(getCapacityDetails())
