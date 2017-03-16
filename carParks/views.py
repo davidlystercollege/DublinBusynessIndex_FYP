@@ -168,8 +168,8 @@ def tests(request):
         for child in root:
             for children in child:
                     
-                tempname = children.get('name')
-                spaces = children.get('spaces')            
+                #tempname = children.get('name')
+                #spaces = children.get('spaces')            
                 
                 '''    
                 cpRef = CP.objects.all().get(name = tempname)
