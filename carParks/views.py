@@ -207,5 +207,12 @@ def tests(request):
         #busyness = (busyness/count-1)
         return ans
     
+    def tst1():
+        cpRef = CP.objects.all().get(name = "C/CHURCH")
+        
+        for cp in cpRef:
+            ans = ans + cp.spaces + "<br>"
+            
+        return ans
     #return HttpResponse(getCapacityDetails())
-    return HttpResponse(getBusyness2())
+    return HttpResponse(tst1())
