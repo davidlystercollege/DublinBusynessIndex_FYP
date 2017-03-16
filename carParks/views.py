@@ -152,3 +152,56 @@ def carParks(request):
     #return HttpResponse(getCapacityDetails())
     #return HttpResponse(getBusyness())
     return getBusyness()
+
+def tests(request):
+    carpark_url = 'http://opendata.dublincity.ie/TrafficOpenData/CP_TR/CPDATA.xml'
+    file = urllib2.urlopen(carpark_url)
+    
+    def getBusyness():
+        busyness = 0.0
+        fullness=0
+        tree = et.parse(file)
+        root = tree.getroot()
+        spaces=0
+        count=1
+        ans=''
+        for child in root:
+            for children in child:
+                    
+                tempname = children.get('name')
+                spaces = children.get('spaces')            
+                    
+                cpRef = CP.objects.all().get(name = tempname)
+                
+                if(cpRef.name == "THOMASST"):
+                    continue    # not recording data
+                
+                #null data check
+                if(spaces == " "):
+                    spaces=cpRef.capacity
+                    
+                if(spaces=="FULL"):
+                    spaces = 0
+                
+            
+                
+                fullness = ( ( (int(cpRef.capacity) - int(spaces)) / cpRef.capacity) * 100)
+                
+                if(fullness > 100 or fullness < 0):
+                    fullness = 100
+                    
+                busyness = busyness + float(fullness)
+                  
+                #x = x + str(busyness) + ': ' + str(fullness) + ': ' + str(spaces) + '<br><br/>'    
+                #ans = ans + str(tempname) + ' : ' + str(spaces) +  " : fullness : " + str(fullness) + "<br><br/>"                
+                
+                ans=ans + cpRef.name + ": " + str(fullness) + " - (Spc, Cap): " + str(spaces) + ", " + str(cpRef.capacity) + "<br><br/>"
+                ans=ans + "Busyness: " +str(busyness) + "<br>"
+                #createCPCapacityLevel(request, cpRef, spaces, fullness)  
+                count=count+1  
+                  
+        busyness = (busyness/count-1)
+        return ans
+    
+    #return HttpResponse(getCapacityDetails())
+    return HttpResponse(getBusyness())
