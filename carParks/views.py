@@ -171,7 +171,7 @@ def tests(request):
                 tempname = children.get('name')
                 spaces = children.get('spaces')            
                     
-                cpRef = CP.objects.get(name = tempname)
+                cpRef = CP.objects.all().get(name = tempname)
                 
                 if(cpRef.name == "THOMASST"):
                     continue    # not recording data
@@ -202,7 +202,7 @@ def tests(request):
                 count=count+1  
                   
         busyness = (busyness/count-1)
-        return str(ans)
+        return busyness
     
     #return HttpResponse(getCapacityDetails())
     return HttpResponse(getBusyness2())
