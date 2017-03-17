@@ -255,25 +255,6 @@ def testing(request):
         data = data + "MAX : " + str(max(bizArr_1)) + "<br>"
         data = data + "MIN : " + str(min(bizArr_1)) + "<br><br/>"
         
-        db_dso = getDatasetObj('DublinBikes')
-        cp_dso = getDatasetObj('CarPark')
-        nl_dso = getDatasetObj('NoiseLevel')
-        m50_dso = getDatasetObj('M50')
-        
-        noiseVal = noiseLevels.views.noiseLevels(request)
-        createBusynessSub(request, nl_dso, noiseVal)
-        
-        m50Val = m50times.views.m50times(request)
-        createBusynessSub(request, m50_dso, m50Val)
-        
-        cpVal = carParks.views.carParks(request)
-        createBusynessSub(request, cp_dso, cpVal)
-        
-        bikeVal = dublinBikes.views.dubBikes(request)
-        createBusynessSub(request, db_dso, bikeVal)
-        
-        data = data + "n,m,c,b:= " + noiseVal + ", " + m50Val + ", " + cpVal + ", " + bikeVal
-        
         #data = data + "Series 2" + "<br>"
         #data = data + "MAX : " + str(max(bizArr_2)) + "<br>"
         #data = data + "MIN : " + str(min(bizArr_2)) + "<br><br/>"
@@ -336,6 +317,26 @@ def testing(request):
         
         data = data + "STD Noises: " + str(std_ns) + "<br>"
         data = data + "Min, Max: " + str(min(nArr)) + ", " + str(max(nArr)) + "<br></br>"
+        
+        db_dso = getDatasetObj('DublinBikes')
+        cp_dso = getDatasetObj('CarPark')
+        nl_dso = getDatasetObj('NoiseLevel')
+        m50_dso = getDatasetObj('M50')
+        
+        noiseVal = noiseLevels.views.noiseLevels(request)
+        createBusynessSub(request, nl_dso, noiseVal)
+        
+        m50Val = m50times.views.m50times(request)
+        createBusynessSub(request, m50_dso, m50Val)
+        
+        cpVal = carParks.views.carParks(request)
+        createBusynessSub(request, cp_dso, cpVal)
+        
+        bikeVal = dublinBikes.views.dubBikes(request)
+        createBusynessSub(request, db_dso, bikeVal)
+        
+        data = data + "n,m,c,b:= " + noiseVal + ", " + m50Val + ", " + cpVal + ", " + bikeVal
+        
         return data
     
     
