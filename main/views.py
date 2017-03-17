@@ -62,7 +62,7 @@ def home(request):
     
     ########### Line Graph 2 Data #####################
     for i in range(200):
-        tempBiz2 = allBusynessz.get(id = (sze-(i-1)))
+        tempBiz2 = allBusynessz.get(id = (sze-(i+15)))
         bizys2.append(tempBiz2.busyness)
     ################################################
     
