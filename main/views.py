@@ -241,8 +241,9 @@ def testing(request):
             #rnge = max(bizFact_1, bizFact_2, bizFact_3) - min(bizFact_1, bizFact_2, bizFact_3)
             
             bizArr_1.append(bizFact_1)
-            totl = totl + bizFact_1
-            #bizArr_2.append(bizFact_2)
+            #totl = totl + bizFact_1
+            
+            bizArr_2.append(bizFact_2)
             #bizArr_3.append(bizFact_3)
             
             data = data + "Busy 1: " +str(bizFact_1) + "<br>"
