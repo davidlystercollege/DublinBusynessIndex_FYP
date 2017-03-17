@@ -60,7 +60,7 @@ def home(request):
     ################################################
     
     ########### Line Graph 2 Data #####################
-    for i in range(200):
+    for i in range(50):
         indx = sze-(i-1)
         if allBusynessz.get(id = (indx)) != NULL:
             tempBiz2 = allBusynessz.get(id = (indx))
