@@ -315,7 +315,7 @@ def testing(request):
         bkeS = 0.0
         cpS = 0.0
         m5S = 0.0
-        for i in range(1, 400):
+        for i in range(1, 250):
             #time = bikeSubs[len(bikeSubs) - i].dateTaken
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
@@ -344,9 +344,9 @@ def testing(request):
             cpS = cpS + ( (cpArr[i] - cAv) * (cpArr[i] - cAv) )
             
         std_cp = math.sqrt( cpS / sz )
-        std_bk = math.sqrt( bkeS / 400 )
-        std_ns = math.sqrt( nseS / 400 )
-        std_m50 = math.sqrt( m5S / 400 )
+        std_bk = math.sqrt( bkeS / 250 )
+        std_ns = math.sqrt( nseS / 250 )
+        std_m50 = math.sqrt( m5S / 250 )
         
         data = data + "STD CP: " + str(std_cp) + "<br>"
         data = data + "Min, Max: " + str(min(cpArr)) + ", " + str(max(cpArr)) + "<br></br>"
