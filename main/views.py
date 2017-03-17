@@ -49,7 +49,7 @@ def home(request):
     
     for i in range(13):
         indx = sze-(i-1)
-        tempBiz1 = allBusynessz.get(id = (sze-(i+15)))
+        tempBiz1 = allBusynessz.get(id = (sze-(i)))
         bizys1.append(tempBiz1.busyness)
         
         #tmptym = (tempBiz.dateTaken).time()
@@ -62,7 +62,7 @@ def home(request):
     
     ########### Line Graph 2 Data #####################
     for i in range(200):
-        tempBiz2 = allBusynessz.get(id = (sze-(i+15)))
+        tempBiz2 = allBusynessz.get(id = (sze-(i)))
         bizys2.append(tempBiz2.busyness)
     ################################################
     
