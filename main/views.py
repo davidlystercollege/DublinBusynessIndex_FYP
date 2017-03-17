@@ -220,6 +220,7 @@ def testing(request):
         m50Subs = BusynessSub.objects.filter(name = "M50")
         noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
         
+        busys = BusynessIndex.objects.all()
         
         bizArr_1 = []
         
@@ -233,9 +234,11 @@ def testing(request):
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
             m50Val = m50Subs[len(m50Subs) - i].busynessFactor
             nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
+            bizVal = busys[len(busys) - i].busynessFactor
             
             bizFact_1 = ( ( bikeVal* .25) + ( cpVal* .20) + ( m50Val* .05) + ( nseVal* .50) ) 
             bizFact_2 = ( ( bikeVal* .30) + ( cpVal* .25) + ( m50Val* .05) + ( nseVal* .40) ) 
+            bizFact_3 = bizVal
             #bizFact_3 = ( ( bikeVal* .30) + ( cpVal* .25) + ( m50Val* .05) + ( nseVal* .40) ) 
             
             #rnge = max(bizFact_1, bizFact_2, bizFact_3) - min(bizFact_1, bizFact_2, bizFact_3)
@@ -244,10 +247,11 @@ def testing(request):
             #totl = totl + bizFact_1
             
             bizArr_2.append(bizFact_2)
-            #bizArr_3.append(bizFact_3)
+            bizArr_3.append(bizFact_3)
             
             data = data + "Busy 1: " +str(bizFact_1) + "<br>"
             data = data + "Busy 2: " +str(bizFact_2) + "<br>"
+            data = data + "Busy 3 real: " +str(bizFact_3) + "<br>"
             #data = data + "Busy 3: " +str(bizFact_3) + "<br>"
             #data = data + "RANGE SIZE: " +str(rnge) + "<br>"
             #data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br>"
@@ -261,17 +265,26 @@ def testing(request):
         data = data + "MAX : " + str(max(bizArr_2)) + "<br>"
         data = data + "MIN : " + str(min(bizArr_2)) + "<br><br/>"
         
+        data = data + "Real 3" + "<br>"
+        data = data + "MAX : " + str(max(bizArr_3)) + "<br>"
+        data = data + "MIN : " + str(min(bizArr_3)) + "<br><br/>"
+        
         mean1 = sum(bizArr_1) / len(bizArr_1)
         mean2 = sum(bizArr_2) / len(bizArr_2)
+        mean3 = sum(bizArr_3) / len(bizArr_3)
         
         m1s=0.0
         m2s=0.0
+        m3s=0.0
         for i in range(0, len(bizArr_1)):            
             m1s = m1s + ( (bizArr_1[i] - mean1) * (bizArr_1[i] - mean1) ) 
             m2s = m2s + ( (bizArr_2[i] - mean2) * (bizArr_2[i] - mean2) )
+            m3s = m3s + ( (bizArr_3[i] - mean2) * (bizArr_3[i] - mean3) )
             
         std_1 = math.sqrt( m1s / len(bizArr_1) )
         std_2 = math.sqrt( m2s / len(bizArr_1) )
+        std_3 = math.sqrt( m3s / len(bizArr_1) )
+        
         
         #data = data + "Series 3" + "<br>"
         #data = data + "MAX : " + str(max(bizArr_3)) + "<br>"
@@ -279,6 +292,7 @@ def testing(request):
         
         data = data + "S1 Sd: " + str(std_1) + "<br>"
         data = data + "S2 Sd: " + str(std_2) + "<br>"
+        data = data + "S3 Sd: " + str(std_3) + "<br>"
         
         return data
     
@@ -373,7 +387,7 @@ def testing(request):
     
     #template = loader.get_template("myDash.html")
     #return HttpResponse(template.render())
-    return HttpResponse(tests2())
+    return HttpResponse(tests())
 
 ##########################################
 ##########################################
