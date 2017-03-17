@@ -328,7 +328,7 @@ def testing(request):
         cpVal = carParks.views.carParks(request)
         #createBusynessSub(request, cp_dso, cpVal)
         
-        #bikeVal = dublinBikes.views.dubBikes(request)
+        bikeVal = dublinBikes.views.dubBikes(request)
         #createBusynessSub(request, db_dso, bikeVal)
         
         #data = data + "n,m,c,b:= " + noiseVal + ", " + m50Val + ", " + cpVal + ", " + bikeVal
@@ -336,7 +336,7 @@ def testing(request):
         data=data + "N: " + str(noiseVal) + "<br>"
         #data=data + "M50: " + str(m50Val) + "<br>"
         data=data + "cp: " + str(cpVal) + "<br>"
-        #data=data + "b: " + str(bikeVal) + "<br>"
+        data=data + "b: " + str(bikeVal) + "<br>"
         
         return data
     
