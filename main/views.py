@@ -373,7 +373,7 @@ def testing(request):
     
     #template = loader.get_template("myDash.html")
     #return HttpResponse(template.render())
-    return HttpResponse(tests())
+    return HttpResponse(tests2())
 
 ##########################################
 ##########################################
