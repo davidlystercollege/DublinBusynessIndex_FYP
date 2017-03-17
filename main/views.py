@@ -227,14 +227,14 @@ def testing(request):
         
         bizArr_2 = []
         bizArr_3 = []
-        for i in range(1, 1500):
+        for i in range(1, 800):
             time = bikeSubs[len(bikeSubs) - i].dateTaken
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
             m50Val = m50Subs[len(m50Subs) - i].busynessFactor
             nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
             
-            bizFact_1 = ( ( bikeVal* .30) + ( cpVal* .25) + ( m50Val* .05) + ( nseVal* .40) ) 
+            bizFact_1 = ( ( bikeVal* .25) + ( cpVal* .20) + ( m50Val* .05) + ( nseVal* .50) ) 
             #bizFact_2 = ( ( bikeVal* .35) + ( cpVal* .35) + ( m50Val* .05) + ( nseVal* .40) ) 
             #bizFact_3 = ( ( bikeVal* .30) + ( cpVal* .25) + ( m50Val* .05) + ( nseVal* .40) ) 
             
@@ -347,7 +347,7 @@ def testing(request):
     
     #template = loader.get_template("myDash.html")
     #return HttpResponse(template.render())
-    return HttpResponse(tests2())
+    return HttpResponse(tests())
 
 ##########################################
 ##########################################
@@ -474,7 +474,7 @@ def mainBusyness(request):
         createBusynessSub(request, nl_dso, noiseVal)
         
         #m50Val = m50times.views.m50times(request)
-        m50Val = 26.34343
+        m50Val = 19.34342113
         createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
