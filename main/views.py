@@ -48,6 +48,9 @@ def home(request):
     sze = len(allBusynessz)
     
     for i in range(13):
+        indx = sze-(i-1)
+        if(indx == 1699):
+            i=i+1
         tempBiz1 = allBusynessz.get(id = (sze-(i-1)))
         bizys1.append(tempBiz1.busyness)
         
