@@ -235,7 +235,7 @@ def testing(request):
             nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
             
             bizFact_1 = ( ( bikeVal* .25) + ( cpVal* .20) + ( m50Val* .05) + ( nseVal* .50) ) 
-            #bizFact_2 = ( ( bikeVal* .35) + ( cpVal* .35) + ( m50Val* .05) + ( nseVal* .40) ) 
+            bizFact_2 = ( ( bikeVal* .30) + ( cpVal* .25) + ( m50Val* .05) + ( nseVal* .40) ) 
             #bizFact_3 = ( ( bikeVal* .30) + ( cpVal* .25) + ( m50Val* .05) + ( nseVal* .40) ) 
             
             #rnge = max(bizFact_1, bizFact_2, bizFact_3) - min(bizFact_1, bizFact_2, bizFact_3)
@@ -246,7 +246,7 @@ def testing(request):
             #bizArr_3.append(bizFact_3)
             
             data = data + "Busy 1: " +str(bizFact_1) + "<br>"
-            #data = data + "Busy 2: " +str(bizFact_2) + "<br>"
+            data = data + "Busy 2: " +str(bizFact_2) + "<br>"
             #data = data + "Busy 3: " +str(bizFact_3) + "<br>"
             #data = data + "RANGE SIZE: " +str(rnge) + "<br>"
             #data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br>"
@@ -256,9 +256,9 @@ def testing(request):
         data = data + "MAX : " + str(max(bizArr_1)) + "<br>"
         data = data + "MIN : " + str(min(bizArr_1)) + "<br><br/>"
         
-        #data = data + "Series 2" + "<br>"
-        #data = data + "MAX : " + str(max(bizArr_2)) + "<br>"
-        #data = data + "MIN : " + str(min(bizArr_2)) + "<br><br/>"
+        data = data + "Series 2" + "<br>"
+        data = data + "MAX : " + str(max(bizArr_2)) + "<br>"
+        data = data + "MIN : " + str(min(bizArr_2)) + "<br><br/>"
         
         #data = data + "Series 3" + "<br>"
         #data = data + "MAX : " + str(max(bizArr_3)) + "<br>"
