@@ -261,9 +261,25 @@ def testing(request):
         data = data + "MAX : " + str(max(bizArr_2)) + "<br>"
         data = data + "MIN : " + str(min(bizArr_2)) + "<br><br/>"
         
+        mean1 = sum(bizArr_1) / len(bizArr_1)
+        mean2 = sum(bizArr_2) / len(bizArr_2)
+        
+        m1s=0.0
+        m2s=0.0
+        for i in range(0, len(bizArr_1)):            
+            m1s = m1s + ( (bizArr_1[i] - mean1) * (bizArr_1[i] - mean1) ) 
+            m2s = m2s + ( (bizArr_2[i] - mean2) * (bizArr_2[i] - mean2) )
+            
+        std_1 = math.sqrt( m1s / len(bizArr_1) )
+        std_2 = math.sqrt( m2s / len(bizArr_1) )
+        
         #data = data + "Series 3" + "<br>"
         #data = data + "MAX : " + str(max(bizArr_3)) + "<br>"
         #data = data + "MIN : " + str(min(bizArr_3)) + "<br><br/>"
+        
+        data = data + "S1 Sd: " + std_1
+        data = data + "S2 Sd: " + std_2
+        
         return data
     
     def tests2():
