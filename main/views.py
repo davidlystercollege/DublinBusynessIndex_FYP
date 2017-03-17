@@ -318,10 +318,6 @@ def testing(request):
         data = data + "STD Noises: " + str(std_ns) + "<br>"
         data = data + "Min, Max: " + str(min(nArr)) + ", " + str(max(nArr)) + "<br></br>"
         
-        db_dso = getDatasetObj('DublinBikes')
-        cp_dso = getDatasetObj('CarPark')
-        nl_dso = getDatasetObj('NoiseLevel')
-        m50_dso = getDatasetObj('M50')
         
         noiseVal = noiseLevels.views.noiseLevels(request)
         #createBusynessSub(request, nl_dso, noiseVal)
@@ -339,8 +335,8 @@ def testing(request):
         
         data=data + "N: " + noiseVal + "<br>"
         data=data + "M50: " + m50Val + "<br>"
-        data=data + "cp: " + cpVal + "<br>"
-        data=data + "b: " + bikeVal + "<br>"
+        #data=data + "cp: " + cpVal + "<br>"
+        #data=data + "b: " + bikeVal + "<br>"
         
         return data
     
