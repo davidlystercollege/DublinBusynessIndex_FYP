@@ -62,11 +62,11 @@ def home(request):
     ########### Line Graph 2 Data #####################
     for i in range(50):
         indx = sze-(i-1)
-        if allBusynessz.get(id = (indx)) != NULL:
-            tempBiz2 = allBusynessz.get(id = (indx))
-        else:
-            indx = indx + 1    
-            tempBiz2 = allBusynessz.get(id = (indx))
+        
+        if indx == 1780:
+            i=i+1   
+        
+        tempBiz2 = allBusynessz.get(id = (indx))
             
         bizys2.append(tempBiz2.busyness)
     ################################################
