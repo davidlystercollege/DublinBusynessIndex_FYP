@@ -17,6 +17,7 @@ import noiseLevels.views
 import m50times.views
 import dublinBikes.views
 import carParks.views
+from boto.dynamodb.condition import NULL
 
 def home(request):
     
@@ -322,7 +323,10 @@ def testing(request):
         noiseVal = noiseLevels.views.noiseLevels(request)
         #createBusynessSub(request, nl_dso, noiseVal)
         
-        m50Val = m50times.views.m50times(request)
+        if m50times.views.m50times(request) != NULL:
+            m50Val = m50times.views.m50times(request)
+        else:
+            m50Val = 25    
         #createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
