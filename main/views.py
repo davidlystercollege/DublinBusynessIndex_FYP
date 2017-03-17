@@ -287,26 +287,29 @@ def testing(request):
         
         bikeSubs = BusynessSub.objects.filter(name = "DublinBikes")
         cpSubs = BusynessSub.objects.filter(name = "CarPark")
-        #m50Subs = BusynessSub.objects.filter(name = "M50")
+        m50Subs = BusynessSub.objects.filter(name = "M50")
         noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
         
         
         nArr =[]
         bkArr = []
         cpArr = []
+        m50arr = []
         
         nseS = 0.0
         bkeS = 0.0
         cpS = 0.0
+        m5S = 0.0
         for i in range(1, 800):
             #time = bikeSubs[len(bikeSubs) - i].dateTaken
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
-            #m50Val = m50Subs[len(m50Subs) - i].busynessFactor
+            m50Val = m50Subs[len(m50Subs) - i].busynessFactor
             nseVal = noiseSubs[len(noiseSubs) - i].busynessFactor
         
             bkArr.append(bikeVal)
             nArr.append(nseVal)
+            m50arr.append(m50Val)
             
             if(cpVal != 95):
                 cpArr.append(cpVal)
@@ -314,10 +317,12 @@ def testing(request):
         bAv = sum(bkArr) / len(bkArr)
         cAv = sum(cpArr) / len(cpArr)
         nAv = sum(nArr) / len(nArr)
+        mAv = sum(m50arr) / len(m50arr)
         
         for i in range(0, len(bkArr)):            
             nseS = nseS + ( (nArr[i] - nAv) * (nArr[i] - nAv) ) 
             bkeS = bkeS + ( (bkArr[i] - bAv) * (bkArr[i] - bAv) )
+            m5S = m5S + ( (m50arr[i] - mAv) * (m50arr[i] - mAv) )
             
         sz = len(cpArr)    
         for i in range(0, sz):
@@ -326,6 +331,7 @@ def testing(request):
         std_cp = math.sqrt( cpS / sz )
         std_bk = math.sqrt( bkeS / 800 )
         std_ns = math.sqrt( nseS / 800 )
+        std_m50 = math.sqrt( m5S / 800 )
         
         data = data + "STD CP: " + str(std_cp) + "<br>"
         data = data + "Min, Max: " + str(min(cpArr)) + ", " + str(max(cpArr)) + "<br></br>"
@@ -335,6 +341,9 @@ def testing(request):
         
         data = data + "STD Noises: " + str(std_ns) + "<br>"
         data = data + "Min, Max: " + str(min(nArr)) + ", " + str(max(nArr)) + "<br></br>"
+        
+        data = data + "STD m50: " + str(std_m50) + "<br>"
+        data = data + "Min, Max: " + str(min(m50arr)) + ", " + str(max(m50arr)) + "<br></br>"
         
         
         noiseVal = noiseLevels.views.noiseLevels(request)
