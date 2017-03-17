@@ -333,10 +333,10 @@ def testing(request):
         
         #data = data + "n,m,c,b:= " + noiseVal + ", " + m50Val + ", " + cpVal + ", " + bikeVal
         
-        data=data + "N: " + noiseVal + "<br>"
-        #data=data + "M50: " + m50Val + "<br>"
-        #data=data + "cp: " + cpVal + "<br>"
-        #data=data + "b: " + bikeVal + "<br>"
+        data=data + "N: " + str(noiseVal) + "<br>"
+        #data=data + "M50: " + str(m50Val) + "<br>"
+        #data=data + "cp: " + str(cpVal) + "<br>"
+        #data=data + "b: " + str(bikeVal) + "<br>"
         
         return data
     
