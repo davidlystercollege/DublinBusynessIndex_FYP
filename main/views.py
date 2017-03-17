@@ -349,10 +349,10 @@ def testing(request):
         noiseVal = noiseLevels.views.noiseLevels(request)
         #createBusynessSub(request, nl_dso, noiseVal)
         
-        if m50times.views.m50times(request) != NULL:
-            m50Val = m50times.views.m50times(request)
-        else:
-            m50Val = 25    
+        #if m50times.views.m50times(request) != NULL:
+        m50Val = m50times.views.m50times(request)
+        #else:
+        #   m50Val = 25    
         #createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
