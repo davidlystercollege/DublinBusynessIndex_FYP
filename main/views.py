@@ -473,8 +473,9 @@ def mainBusyness(request):
         noiseVal = noiseLevels.views.noiseLevels(request)
         createBusynessSub(request, nl_dso, noiseVal)
         
-        m50Val = m50times.views.m50times(request)
-        createBusynessSub(request, m50_dso, m50Val)
+        #m50Val = m50times.views.m50times(request)
+        #createBusynessSub(request, m50_dso, m50Val)
+        m50Val = 26.34343
         
         cpVal = carParks.views.carParks(request)
         createBusynessSub(request, cp_dso, cpVal)
@@ -501,4 +502,4 @@ def mainBusyness(request):
         return ans
 
     #test = dublinBikes.views.dubBikes(request)
-    return HttpResponse(getBusynessValues())
+    return getBusynessValues()
