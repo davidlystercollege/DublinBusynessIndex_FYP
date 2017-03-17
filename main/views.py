@@ -277,8 +277,8 @@ def testing(request):
         #data = data + "MAX : " + str(max(bizArr_3)) + "<br>"
         #data = data + "MIN : " + str(min(bizArr_3)) + "<br><br/>"
         
-        data = data + "S1 Sd: " + str(std_1)
-        data = data + "S2 Sd: " + str(std_2)
+        data = data + "S1 Sd: " + str(std_1) + "<br>"
+        data = data + "S2 Sd: " + str(std_2) + "<br>"
         
         return data
     
