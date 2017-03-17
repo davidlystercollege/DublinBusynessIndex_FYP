@@ -337,6 +337,11 @@ def testing(request):
         
         data = data + "n,m,c,b:= " + noiseVal + ", " + m50Val + ", " + cpVal + ", " + bikeVal
         
+        data=data + "N: " + noiseVal + "<br>"
+        data=data + "M50: " + m50Val + "<br>"
+        data=data + "cp: " + cpVal + "<br>"
+        data=data + "b: " + bikeVal + "<br>"
+        
         return data
     
     
