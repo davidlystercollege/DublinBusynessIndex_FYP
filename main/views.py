@@ -319,7 +319,7 @@ def testing(request):
         data = data + "Min, Max: " + str(min(nArr)) + ", " + str(max(nArr)) + "<br></br>"
         
         
-        noiseVal = noiseLevels.views.noiseLevels(request)
+        #noiseVal = noiseLevels.views.noiseLevels(request)
         #createBusynessSub(request, nl_dso, noiseVal)
         
         m50Val = m50times.views.m50times(request)
@@ -333,7 +333,7 @@ def testing(request):
         
         #data = data + "n,m,c,b:= " + noiseVal + ", " + m50Val + ", " + cpVal + ", " + bikeVal
         
-        data=data + "N: " + noiseVal + "<br>"
+        #data=data + "N: " + noiseVal + "<br>"
         data=data + "M50: " + m50Val + "<br>"
         #data=data + "cp: " + cpVal + "<br>"
         #data=data + "b: " + bikeVal + "<br>"
