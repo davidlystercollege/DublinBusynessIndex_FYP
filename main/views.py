@@ -504,7 +504,7 @@ def mainBusyness(request):
         nl_dso = getDatasetObj('NoiseLevel')
         m50_dso = getDatasetObj('M50')
         
-        weigths = [.425, .30, .25, .05]
+        weigths = [.41, .30, .25, .05]
         
         noiseVal=0
         m50Val=0
@@ -514,8 +514,8 @@ def mainBusyness(request):
         noiseVal = noiseLevels.views.noiseLevels(request)
         createBusynessSub(request, nl_dso, noiseVal)
         
-        #m50Val = m50times.views.m50times(request)
-        m50Val = 19.34342113
+        m50Val = m50times.views.m50times(request)
+        #m50Val = 19.34342113
         createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
