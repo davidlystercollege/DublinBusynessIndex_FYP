@@ -121,8 +121,8 @@ vals2 = {{ line2bizs }}
 
 x=0
 res=[]
-for(total=40; x<total; x++){
-	res.push( { no: (40-x), value : vals2[x] } )
+for(total=300; x<total; x++){
+	res.push( { no: (300-x), value : vals2[x] } )
 }
 
 new Morris.Line({
@@ -132,7 +132,7 @@ element: 'myMorLine2',
 // the chart.
 data: res,
 
-ymin: 50,
+ymin: 40,
 //data: [{day: '0', value: 37.5},{day: '1', value: 35.1},{day: '2', value: 39},{day: '3', value: 45.3},{day: '4', value: 32.1}],
 
 
