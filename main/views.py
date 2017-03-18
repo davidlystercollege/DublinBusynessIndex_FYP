@@ -65,6 +65,7 @@ def home(request):
         
         if indx == 1780:
             i=i+1   
+            indx = sze-(i-1)
         
         tempBiz2 = allBusynessz.get(id = (indx))
             
