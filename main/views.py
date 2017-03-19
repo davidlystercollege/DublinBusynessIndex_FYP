@@ -321,6 +321,7 @@ def testing(request):
     def tests2():
         data = ''
         data = data + "Standard Deviation of Datasets Page" + "<br>"
+        data = data + "-----------------------------------" + "<br></br>"
         bikeSubs = BusynessSub.objects.filter(name = "DublinBikes")
         cpSubs = BusynessSub.objects.filter(name = "CarPark")
         m50Subs = BusynessSub.objects.filter(name = "M50")
