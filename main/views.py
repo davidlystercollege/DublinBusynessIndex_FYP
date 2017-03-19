@@ -70,7 +70,7 @@ def home(request):
     for i in range(800):
         indx = sze-(i-1)
         
-        if indx == 1780:
+        if (indx == 1780) or (indx == 1680) :
             i=i+1   
             indx = sze-(i-1)
         
