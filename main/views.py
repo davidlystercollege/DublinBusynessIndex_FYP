@@ -73,9 +73,10 @@ def home(request):
         tempBiz2 = allBusynessz.get(id = (indx))
             
         bizys2.append(tempBiz2.busyness)
-        a = datetime.datetime.strptime(str(tempBiz2.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00')
-        a = a.timestamp() * 1000
-        time2.append(a)
+        a = datetime.datetime.strptime(str(tempBiz2.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        d_in_ms = int(a)*1000
+        #a = a.timestamp() * 1000
+        time2.append(d_in_ms)
     ################################################
     
     ########### Bar Chart Data #####################
