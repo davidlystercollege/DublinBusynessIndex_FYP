@@ -89,7 +89,7 @@ def home(request):
     
     ### Pass Required Data to our Context ##########
     context = {
-        "busyIndNow": bizness,
+        "busyIndNow": str(bizness[:5]),
         "donutData": dat,
         "line1bizs" : bizys1,
         "line2bizs" : bizys2,
