@@ -40,6 +40,7 @@ def home(request):
     
     ########### Busyness Index #####################
     bizness = BusynessIndex.objects.last().busyness#
+    bizness = str(bizness[:5])
     ################################################
     
     ########### Line Graph 1 Data #####################
@@ -89,7 +90,7 @@ def home(request):
     
     ### Pass Required Data to our Context ##########
     context = {
-        "busyIndNow": str(bizness[:5]),
+        "busyIndNow": bizness,
         "donutData": dat,
         "line1bizs" : bizys1,
         "line2bizs" : bizys2,
