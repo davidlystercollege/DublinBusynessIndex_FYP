@@ -73,7 +73,7 @@ def home(request):
         tempBiz2 = allBusynessz.get(id = (indx))
             
         bizys2.append(tempBiz2.busyness)
-        a = datetime.datetime.strptime(str(tempBiz2.dateTaken), '%Y-%m-%d %H:%M:S.%f')
+        a = datetime.datetime.strptime(str(tempBiz2.dateTaken), '%Y-%m-%d %H:%M:%S.%f')
         a = a.timestamp() * 1000
         time2.append(a)
     ################################################
