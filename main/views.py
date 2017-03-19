@@ -320,7 +320,7 @@ def testing(request):
     
     def tests2():
         data = ''
-        
+        data = data + "Standard Deviation of Datasets Page" + "<br>"
         bikeSubs = BusynessSub.objects.filter(name = "DublinBikes")
         cpSubs = BusynessSub.objects.filter(name = "CarPark")
         m50Subs = BusynessSub.objects.filter(name = "M50")
@@ -336,7 +336,7 @@ def testing(request):
         bkeS = 0.0
         cpS = 0.0
         m5S = 0.0
-        for i in range(1, 1000):
+        for i in range(1, 1300):
             #time = bikeSubs[len(bikeSubs) - i].dateTaken
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
@@ -381,7 +381,7 @@ def testing(request):
         data = data + "STD m50: " + str(std_m50) + "<br>"
         data = data + "Min, Max: " + str(min(m50arr)) + ", " + str(max(m50arr)) + "<br></br>"
         
-        
+        '''
         noiseVal = noiseLevels.views.noiseLevels(request)
         #createBusynessSub(request, nl_dso, noiseVal)
         
@@ -403,7 +403,7 @@ def testing(request):
         data=data + "M50: " + str(m50Val) + "<br>"
         data=data + "cp: " + str(cpVal) + "<br>"
         data=data + "b: " + str(bikeVal) + "<br>"
-        
+        '''
         return data
     
     
