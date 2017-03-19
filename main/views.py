@@ -72,7 +72,7 @@ def home(request):
         tempBiz2 = allBusynessz.get(id = (indx))
             
         bizys2.append(tempBiz2.busyness)
-        time2.append(tempBiz2.dateTaken)
+        time2.append(tempBiz2.dateTaken.getTime())
     ################################################
     
     ########### Bar Chart Data #####################
