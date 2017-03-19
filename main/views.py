@@ -51,7 +51,7 @@ def home(request):
     sze = len(allBusynessz)
     
     for i in range(13):
-        tempBiz1 = allBusynessz.get(id = (sze-(i)))
+        tempBiz1 = allBusynessz.get(id = (sze-(i-1)))
         bizys1.append(tempBiz1.busyness)
         
         dt = datetime.datetime.strptime(str(tempBiz1.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
