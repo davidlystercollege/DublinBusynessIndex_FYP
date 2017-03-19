@@ -336,7 +336,7 @@ def testing(request):
         bkeS = 0.0
         cpS = 0.0
         m5S = 0.0
-        for i in range(1, 250):
+        for i in range(1, 1000):
             #time = bikeSubs[len(bikeSubs) - i].dateTaken
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
