@@ -10,6 +10,7 @@ from noiseLevels.models import Meter, Reading
 from main.models import DatasetObject, BusynessSub, BusynessIndex
 from django.utils import timezone
 from django.template import Context, loader
+from datetime import datetime
 
 import datetime
 import math
@@ -72,7 +73,9 @@ def home(request):
         tempBiz2 = allBusynessz.get(id = (indx))
             
         bizys2.append(tempBiz2.busyness)
-        time2.append(tempBiz2.dateTaken.getTime())
+        a = datetime.datetime.strptime(tempBiz2.dateTaken, '%d.%m.%Y %H:%M:%S,%f')
+        a = a.timestamp() * 1000
+        time2.append(a)
     ################################################
     
     ########### Bar Chart Data #####################
