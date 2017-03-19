@@ -51,9 +51,12 @@ def home(request):
     
     for i in range(13):
         tempBiz1 = allBusynessz.get(id = (sze-(i)))
-        time1.append(tempBiz1.dateTaken)
         bizys1.append(tempBiz1.busyness)
         
+        dt = datetime.datetime.strptime(str(tempBiz1.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        dt_in_ms = int(dt)*1000
+        
+        time1.append(dt_in_ms)
         #tmptym = (tempBiz.dateTaken).time()
         #tmptym = datetime.datetime.now() - datetime.timedelta(minutes=(i * 5))
         #tmptym = ((tempBiz.dateTaken) - datetime(1970, 1, 1)).total_seconds() 
@@ -73,6 +76,7 @@ def home(request):
         tempBiz2 = allBusynessz.get(id = (indx))
             
         bizys2.append(tempBiz2.busyness)
+        
         a = datetime.datetime.strptime(str(tempBiz2.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
         d_in_ms = int(a)*1000
         #a = a.timestamp() * 1000

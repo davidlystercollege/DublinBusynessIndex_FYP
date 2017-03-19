@@ -55,6 +55,7 @@ crossorigin="anonymous"></script>
 </font>
 <script>
 vals = {{ line1bizs }}
+times1 = {{ line1times }}}
 new Morris.Line({
 // ID of the element in which to draw the chart.
 element: 'myMorrisLine',
@@ -62,19 +63,19 @@ element: 'myMorrisLine',
 // the chart.
 
 data: [
-{time: -60, value: vals[12]},
-{time: -55, value: vals[11]},
-{time: -50, value: vals[10]},
-{time: -45, value: vals[9]},
-{time: -40, value: vals[8]},
-{time: -35, value: vals[7]},
-{time: -30, value: vals[6]},
-{time: -25, value: vals[5]},
-{time: -20, value: vals[4]},
-{time: -15, value: vals[3]},
-{time: -10, value: vals[2]},
-{time: -5, value: vals[1]},
-{time: 0, value: vals[0]},
+{time: times1[12] , value: vals[12]},
+{time: times1[11], value: vals[11]},
+{time: times1[10], value: vals[10]},
+{time: times1[9], value: vals[9]},
+{time: times1[8], value: vals[8]},
+{time: times1[7], value: vals[7]},
+{time: times1[6], value: vals[6]},
+{time: times1[5], value: vals[5]},
+{time: times1[4], value: vals[4]},
+{time: times1[3], value: vals[3]},
+{time: times1[2], value: vals[2]},
+{time: times1[1], value: vals[1]},
+{time: times1[0], value: vals[0]},
 ],
 
 // The name of the data record attribute that contains x-values.
