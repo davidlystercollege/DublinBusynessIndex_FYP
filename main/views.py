@@ -40,7 +40,7 @@ def home(request):
     
     ########### Busyness Index #####################
     bizness = BusynessIndex.objects.last().busyness#
-    bizness = round(bizness, 2)
+    bizness = round(bizness, 3)
     ################################################
     
     ########### Line Graph 1 Data #####################
