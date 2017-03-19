@@ -118,11 +118,11 @@ data: [
 
 
 vals2 = {{ line2bizs }}
-
+timz2 = {{ line2times }}
 x=0
 res=[]
-for(total=300; x<total; x++){
-	res.push( { no: (300-x), value : vals2[x] } )
+for(total=600; x<total; x++){
+	res.push( { no: timz2[x], value : vals2[x] } )
 }
 
 new Morris.Line({

@@ -44,11 +44,13 @@ def home(request):
     ########### Line Graph 1 Data #####################
     bizys1 = []
     bizys2 = []
-    times1 = []
+    time1 = []
+    time2 = []
     sze = len(allBusynessz)
     
     for i in range(13):
         tempBiz1 = allBusynessz.get(id = (sze-(i)))
+        time1.append(tempBiz1.dateTaken)
         bizys1.append(tempBiz1.busyness)
         
         #tmptym = (tempBiz.dateTaken).time()
@@ -60,7 +62,7 @@ def home(request):
     ################################################
     
     ########### Line Graph 2 Data #####################
-    for i in range(300):
+    for i in range(600):
         indx = sze-(i-1)
         
         if indx == 1780:
@@ -70,6 +72,7 @@ def home(request):
         tempBiz2 = allBusynessz.get(id = (indx))
             
         bizys2.append(tempBiz2.busyness)
+        time2.append(tempBiz2.dateTaken)
     ################################################
     
     ########### Bar Chart Data #####################
@@ -82,6 +85,9 @@ def home(request):
         "donutData": dat,
         "line1bizs" : bizys1,
         "line2bizs" : bizys2,
+        "line1times" : time1,
+        "line2times" : time2,
+        
     }
     
     ## render html page on request with respect to context ##
