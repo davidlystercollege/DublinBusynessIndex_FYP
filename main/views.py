@@ -63,7 +63,7 @@ def home(request):
     ################################################
     
     ########### Line Graph 2 Data #####################
-    for i in range(600):
+    for i in range(800):
         indx = sze-(i-1)
         
         if indx == 1780:
