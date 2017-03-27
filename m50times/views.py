@@ -11,6 +11,9 @@ def home(request):
     return HttpResponse("This'll be the m50 homepage")
 
 def m50times(request):
+    
+    fail = 0;
+    
     m50_url = 'http://dataproxy.mtcc.ie/v1.5/api/traveltimes.json'
     m50data = requests.get(m50_url)
     
@@ -186,5 +189,5 @@ def m50times(request):
         busyness=(busyness*100)
         return busyness
     
-    #return HttpResponse(getCurrTTBusyness())
-    return getCurrTTBusyness()
+    return HttpResponse(getCurrTTBusyness())
+    #return getCurrTTBusyness()
