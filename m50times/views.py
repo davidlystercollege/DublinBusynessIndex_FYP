@@ -49,6 +49,7 @@ def m50times(request):
     
     def getCurrTT():
         
+                
         decoded_content = m50data.content.decode('utf-8')
         z = json.loads(decoded_content)
             
@@ -120,76 +121,79 @@ def m50times(request):
     def getCurrTTBusyness():
         busyness = 0.0
         
-        decoded_content = m50data.content.decode('utf-8')
-        z = json.loads(decoded_content)
+        if(fail == 0):
+            decoded_content = m50data.content.decode('utf-8')
+            z = json.loads(decoded_content)
+                
+            i=0
+            data = ''
             
-        i=0
-        data = ''
-        
-        rangeMaxs = [61,89,200,900,318,900,537,190,240,240,0]   # last 0 is placeholder for overall/last route
-        rangeSizes = [2,10,100,640,260,800,400,75,130,40,1]
-        
-        
-        while(i < 11):
-                
-            busy_nw=0.0
-            busy=0.0
+            rangeMaxs = [61,89,200,900,318,900,537,190,240,240,0]   # last 0 is placeholder for overall/last route
+            rangeSizes = [2,10,100,640,260,800,400,75,130,40,1]
             
-            if(i < len(z["M50_northBound"]['data'])):
-                
-                routename = str(z["M50_northBound"]['data'][i]["from_name"] + ' -> ' + z["M50_northBound"]['data'][i]["to_name"])
-                routenum = routes.index(routename)
-                routetime = z["M50_northBound"]['data'][i]["current_travel_time"]
             
-                rngeMax=rangeMaxs[routenum]
-                rngeSize=rangeSizes[routenum]
-                
-                #data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + '<br><br/>'
-                
-                '''if(routename != 'J17 Shankill -> J3 M1/N32/DPT'):
-                    continue
-                
-                '''
-                #data = data + str(z["M50_northBound"]['data'][i]) + "<br><br/>"
-                if(routenum!=10):
+            while(i < 11):
                     
-                    if(routetime>rngeMax):
-                        busy_nw = 1
-                    else:
-                        rngeLocation = rngeSize - (rngeMax - routetime)
-                        busy_nw = (rngeLocation/rngeSize)
-                          
-                        rangeWeight = (rngeSize/2457)
-                        # int value above.......^^^ is sum of all range sizes
+                busy_nw=0.0
+                busy=0.0
+                
+                if(i < len(z["M50_northBound"]['data'])):
+                    
+                    routename = str(z["M50_northBound"]['data'][i]["from_name"] + ' -> ' + z["M50_northBound"]['data'][i]["to_name"])
+                    routenum = routes.index(routename)
+                    routetime = z["M50_northBound"]['data'][i]["current_travel_time"]
+                
+                    rngeMax=rangeMaxs[routenum]
+                    rngeSize=rangeSizes[routenum]
+                    
+                    #data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + '<br><br/>'
+                    
+                    '''if(routename != 'J17 Shankill -> J3 M1/N32/DPT'):
+                        continue
+                    
+                    '''
+                    #data = data + str(z["M50_northBound"]['data'][i]) + "<br><br/>"
+                    if(routenum!=10):
                         
-                    busy = (busy_nw * rangeWeight)                
-                    
-                    busyness = busyness + busy                
-                    
-                    data = data + "r(w,s,l) = " + str(rngeMax) + ", " + str(rngeSize) + ", " + str(rngeLocation)
-                    data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + " - busynw = " +str(busy_nw)+ " - B: " + str(busy*100) + '<br><br/>'
-                    
-                    #data = data + "size, max, num := " + str(rngeSize) + ", "  + str(rngeMax) + ", " + str(rangeWeight) + "<br><br/>"
-                    
-                '''
-                1: top =      rng(size) - ( rng(max) - routeTime )
-                2: busyness = top / rng(size)                
-                '''
-                
-                ruRef = Route.objects.get(name = routename)
-                #createRecording(request, ruRef, routetime)
-                
-                #ans = ans + str(routetime) + ': ' + str(busyness) + ': ' + str(busyness2) + '<br><br/>'
+                        if(routetime>rngeMax):
+                            busy_nw = 1
+                        else:
+                            rngeLocation = rngeSize - (rngeMax - routetime)
+                            busy_nw = (rngeLocation/rngeSize)
+                              
+                            rangeWeight = (rngeSize/2457)
+                            # int value above.......^^^ is sum of all range sizes
+                            
+                        busy = (busy_nw * rangeWeight)                
                         
-                i=i+1
-            else:   
-                data = data + 'Fail at index '+str(i) + ' where data size = '+str(len(z["M50_northBound"]['data'])) + '<br><br/>'
-                #i=i+1
-               
-        #return str(busyness) + ': ' + str(busyness2)   
-        #return ans
-        data=data + "Busyness = " +str(busyness)
-        busyness=(busyness*100)
+                        busyness = busyness + busy                
+                        
+                        data = data + "r(w,s,l) = " + str(rngeMax) + ", " + str(rngeSize) + ", " + str(rngeLocation)
+                        data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + " - busynw = " +str(busy_nw)+ " - B: " + str(busy*100) + '<br><br/>'
+                        
+                        #data = data + "size, max, num := " + str(rngeSize) + ", "  + str(rngeMax) + ", " + str(rangeWeight) + "<br><br/>"
+                        
+                    '''
+                    1: top =      rng(size) - ( rng(max) - routeTime )
+                    2: busyness = top / rng(size)                
+                    '''
+                    
+                    ruRef = Route.objects.get(name = routename)
+                    #createRecording(request, ruRef, routetime)
+                    
+                    #ans = ans + str(routetime) + ': ' + str(busyness) + ': ' + str(busyness2) + '<br><br/>'
+                            
+                    i=i+1
+                else:   
+                    data = data + 'Fail at index '+str(i) + ' where data size = '+str(len(z["M50_northBound"]['data'])) + '<br><br/>'
+                    #i=i+1
+                   
+            #return str(busyness) + ': ' + str(busyness2)   
+            #return ans
+            data=data + "Busyness = " +str(busyness)
+            busyness=(busyness*100)
+        else:
+            busyness = 19.34342113  # hard code in average for when dataset is not live
         return str(busyness) + " - fail: " + str(fail)
     
     return HttpResponse(getCurrTTBusyness())
