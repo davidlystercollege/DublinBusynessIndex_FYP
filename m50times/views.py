@@ -17,6 +17,12 @@ def m50times(request):
     m50_url = 'http://dataproxy.mtcc.ie/v1.5/api/traveltimes.json'
     m50data = requests.get(m50_url)
     
+    tst_url = 'hjk.json'
+    try:
+        m50data = requests.get(tst_url)
+    except:
+        fail = 1
+        
     routes = ['J17 Shankill -> J16 Cherrywood','J16 Cherrywood -> J15 Ballyogan',
               'J15 Ballyogan -> J13 Balinteer','J13 Balinteer -> J12 Scholarstown',
               'J12 Scholarstown -> J11 Balrathory','J11 Balrathory -> J9 Red Cow',
@@ -187,7 +193,7 @@ def m50times(request):
         #return ans
         data=data + "Busyness = " +str(busyness)
         busyness=(busyness*100)
-        return busyness
+        return busyness + " " + str(fail)
     
     return HttpResponse(getCurrTTBusyness())
     #return getCurrTTBusyness()
