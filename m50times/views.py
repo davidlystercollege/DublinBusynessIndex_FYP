@@ -15,11 +15,8 @@ def m50times(request):
     fail = 0;
     
     m50_url = 'http://dataproxy.mtcc.ie/v1.5/api/traveltimes.json'
-    m50data = requests.get(m50_url)
-    
-    tst_url = 'hjk.json'
     try:
-        m50data = requests.get(tst_url)
+        m50data = requests.get(m50_url)
     except:
         fail = 1
         
@@ -185,7 +182,7 @@ def m50times(request):
                 #ans = ans + str(routetime) + ': ' + str(busyness) + ': ' + str(busyness2) + '<br><br/>'
                         
                 i=i+1
-            else:    
+            else:   
                 data = data + 'Fail at index '+str(i) + ' where data size = '+str(len(z["M50_northBound"]['data'])) + '<br><br/>'
                 #i=i+1
                
