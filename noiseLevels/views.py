@@ -31,7 +31,6 @@ def noiseLevels(request):
         
         for i in range(0,14):
             ans = ans + str(allLocations[i]) + '<br><br/>'
-            
         return ans
       
     def getSpecificLocationData():
@@ -86,26 +85,32 @@ def noiseLevels(request):
         busyness = 0.0
         count=0
         
+        fail = 0;
         ''' 1-13* '''
-        for index in range(1,13):
-            locationReqAPI = 'http://dublincitynoise.sonitussystems.com/applications/api/dublinnoisedata.php?location='+str(index)
-            locationReq = requests.get(locationReqAPI)
+        if fail == 0:
+            for index in range(1,13): 
+                locationReqAPI = 'http://dublincitynoise.sonitussystems.com/applications/api/dublinnoisedata.php?location='+str(index)
+                try:
+                    locationReq = requests.get(locationReqAPI)
+                    decoded_content = locationReq.content.decode('utf-8')
+                    locationStr = json.loads(decoded_content)
+                    
+                    aleq = locationStr['aleq'][-1]
+                    
+                    ans = ans + str(Meter.objects.get(id=index)) + ' - '
+                    ans = ans + (str(index) + ": " + locationStr['dates'][-1] + ": " + locationStr['times'][-1] + ": " + aleq) + '<br><br/>'
+                    
+                    rdRef = Meter.objects.get(id = index)
+                    createReading(request, rdRef, rdRef.name, aleq, locationStr['times'][-1], locationStr['dates'][-1])
             
-            decoded_content = locationReq.content.decode('utf-8')
-            locationStr = json.loads(decoded_content)
-            
-            aleq = locationStr['aleq'][-1]
-            
-            ans = ans + str(Meter.objects.get(id=index)) + ' - '
-            ans = ans + (str(index) + ": " + locationStr['dates'][-1] + ": " + locationStr['times'][-1] + ": " + aleq) + '<br><br/>'
-            
-            rdRef = Meter.objects.get(id = index)
-            createReading(request, rdRef, rdRef.name, aleq, locationStr['times'][-1], locationStr['dates'][-1])
-    
-            busyness = busyness + float(aleq)
-            #addx = addx + str(index) + ': ' + str(busyness) + ': ' + str(float(aleq) - tempAverage) + ': ' + str((locationStr['aleq'][-1])) + '<br><br/>'
-            count=count+1
-            
+                    busyness = busyness + float(aleq)
+                    #addx = addx + str(index) + ': ' + str(busyness) + ': ' + str(float(aleq) - tempAverage) + ': ' + str((locationStr['aleq'][-1])) + '<br><br/>'
+                    count=count+1
+                except:
+                    fail = 1
+        else:
+            busyness=40
+            count=1    
         '''
         seeing as range is 20<aleq>70, (length 50), if we take 20 off the 
         average current reading, it'll be in the range of 0<aleq>50, so then 
