@@ -179,7 +179,7 @@ def m50times(request):
                     '''
                     
                     ruRef = Route.objects.get(name = routename)
-                    #createRecording(request, ruRef, routetime)
+                    createRecording(request, ruRef, routetime)
                     
                     #ans = ans + str(routetime) + ': ' + str(busyness) + ': ' + str(busyness2) + '<br><br/>'
                             
