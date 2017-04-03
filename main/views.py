@@ -103,7 +103,7 @@ def home(request):
         bizys3.append(tempBiz3.busyness)
         
         #if(tempBiz3.dateTaken.today().weekday == 0):
-        mondays.append(tempBiz3.dateTaken.today().weekday())
+        mondays.append(tempBiz3.dateTaken.weekday())
         
         a = datetime.datetime.strptime(str(tempBiz3.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
         d_in_ms = int(a)*1000
