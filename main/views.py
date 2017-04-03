@@ -90,7 +90,7 @@ def home(request):
     ################################################
     
     ########### Line Graph 3 Data #####################
-    for i in range(5000):
+    for i in range(3000):
         indx = sze-(i-1)
         
         if (indx == 1780) or (indx == 1680) :
