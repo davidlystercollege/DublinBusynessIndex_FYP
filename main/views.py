@@ -112,7 +112,7 @@ def home(request):
     cptimes = []
     
     tmp = []
-    tmp = cpSubs.reverse()[:1000]
+    tmp = cpSubs[:1000]
     
     sze = len(tmp)-1
     for i in range(1000):
