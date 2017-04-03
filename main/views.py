@@ -563,7 +563,7 @@ def mainBusyness(request):
         for i in range(1, 10):
             ans = ans + "-" + str(i) + ": " + str(busnisses[i]) + "<br><br/>"
         '''
-        ans = 'y'
+        ans = str(noiseVal) + ", " +str(m50Val)
         return ans
 
     #test = dublinBikes.views.dubBikes(request)
