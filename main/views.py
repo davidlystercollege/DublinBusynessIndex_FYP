@@ -111,12 +111,13 @@ def home(request):
     cps = []
     cptimes = []
     
+    sze = len(cpSubs)
     for i in range(3000):
         indx = sze-(i-1)
         
         tempCP = cpSubs.get(id = (indx))
             
-        cps.append(tempCP.percentFull)
+        cps.append(tempCP.busynessFactor)
         
         a = datetime.datetime.strptime(str(tempCP.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
         d_in_ms = int(a)*1000
