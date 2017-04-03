@@ -66,9 +66,6 @@ crossorigin="anonymous"></script>
 
 </div>
 
-//////////////////////////////////////////////////////
-////////////////JAVASCRIPT///////////////////////////
-//////////////////////////////////////////////////////
 </font>
 <script>
 vals = {{ line1bizs }}
@@ -210,7 +207,7 @@ vals4 = {{ cps}}
 timz4 = {{ cptimes }}
 x=0
 res4=[]
-for(total=3000; x<total; x++){
+for(total=2000; x<total; x++){
 	res4.push( { no: timz4[x], value : vals4[x] } )
 }
 new Morris.Line({
