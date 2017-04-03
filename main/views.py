@@ -107,6 +107,23 @@ def home(request):
         time3.append(d_in_ms)
     ################################################
     
+    ### DATASET CONTEXTS ###########################
+    cps = []
+    cptimes = []
+    
+    for i in range(3000):
+        indx = sze-(i-1)
+        
+        tempCP = cpSubs.get(id = (indx))
+            
+        cps.append(tempCP.percentFull)
+        
+        a = datetime.datetime.strptime(str(tempCP.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        d_in_ms = int(a)*1000
+        #a = a.timestamp() * 1000
+        cptimes.append(d_in_ms)
+    ################################################
+    
     ### Pass Required Data to our Context ##########
     context = {
         "busyIndNow": bizness,
@@ -118,6 +135,8 @@ def home(request):
         "line2times" : time2,
         "line3times" : time3,
         
+        "cps" : cps,
+        "cptimes" : cptimes, 
     }
     
     ## render html page on request with respect to context ##

@@ -52,12 +52,22 @@ crossorigin="anonymous"></script>
 </div>
 <div class="row">
 <div class="col-md-12">
-<h3>Busyness - Past Month</h3>
+<h3>Busyness - Past 2 Weeks</h3>
 <div id="myMorLine3" style="height: 250px;"></div>
 </div>
 
 </div>
+<div class="row">
+<div class="col-md-12">
+<h3>Car Parks Movement</h3>
+<div id="carparksLine" style="height: 250px;"></div>
+</div>
 
+</div>
+
+//////////////////////////////////////////////////////
+////////////////JAVASCRIPT///////////////////////////
+//////////////////////////////////////////////////////
 </font>
 <script>
 vals = {{ line1bizs }}
@@ -193,6 +203,28 @@ xkey: 'no',
 ykeys: ['value'],
 labels: ['Busyness Index']
 });
+
+///////////////////////////////////////
+vals4 = {{ cps}}
+timz4 = {{ cptimes }}
+x=0
+res4=[]
+for(total=3000; x<total; x++){
+	res4.push( { no: timz4[x], value : vals4[x] } )
+}
+new Morris.Line({
+element: 'carparksLine',
+data: res4,
+
+ymin: 0,
+ymax: 80,
+
+xkey: 'no',
+
+ykeys: ['value'],
+labels: ['PercentFull']
+});
+//////////////////////////////////////////
 
 </script>
 </body>
