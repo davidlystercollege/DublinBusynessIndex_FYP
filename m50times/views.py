@@ -142,6 +142,7 @@ def m50times(request):
                 
                 if not z["M50_northBound"]['data']:
                     i = 11
+                    fail = 1
                     break
                     
                 if(i < len(z["M50_northBound"]['data'])):
@@ -197,10 +198,12 @@ def m50times(request):
                    
             #return str(busyness) + ': ' + str(busyness2)   
             #return ans
-            busyness = 10.34342113
-            data=data + "Busyness = " +str(busyness)
-            busyness=(busyness*100)
-            busyness = 10.34342113
+
+            if(fail == 0):
+                data=data + "Busyness = " +str(busyness)
+                busyness=(busyness*100)
+            else:
+                busyness = 10.34342113
         else:
             busyness = 10.34342113  # hard code in average for when dataset is not live
                                     # this will be very slow hours so the average is halved
