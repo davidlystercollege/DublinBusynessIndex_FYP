@@ -19,6 +19,7 @@ import m50times.views
 import dublinBikes.views
 import carParks.views
 from boto.dynamodb.condition import NULL
+from statistics import mean
 
 def home(request):
     
@@ -171,6 +172,8 @@ def home(request):
         
         "noises" : noises,
         "noisetimes" : noisetimes, 
+        
+        "mon" : mean(mondays),
     }
     
     ## render html page on request with respect to context ##
