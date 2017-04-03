@@ -113,7 +113,7 @@ def home(request):
     
     
     sze = len(cpSubs)-1
-    for i in range(1000):
+    for i in range(2000):
         indx = sze-(i)
         
         tempCP = cpSubs[indx]
