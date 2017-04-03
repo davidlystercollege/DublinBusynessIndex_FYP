@@ -114,7 +114,7 @@ def home(request):
     tmp = []
     tmp = cpSubs[:2000]
     
-    sze = len(cpSubs)
+    sze = len(tmp)
     for i in range(2000):
         indx = sze-(i-1)
         
