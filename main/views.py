@@ -433,7 +433,7 @@ def mainBusyness(request):
     
     def getDatasetObj(nameArg):
         return DatasetObject.objects.get(name = nameArg)
-    
+    '''
     def getBikes():
         i=0
         subtotal=0
@@ -517,7 +517,7 @@ def mainBusyness(request):
         data = data + 'fullRouteAverage: ' + str(fullRouteAverage) + '<br><br/>'
         
         return data
-    
+    '''
     def getBusynessValues():
         busynessIndex = 0.0
         
