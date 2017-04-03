@@ -173,7 +173,7 @@ def home(request):
         "noises" : noises,
         "noisetimes" : noisetimes, 
         
-        "mon" : mondays,
+        #"mon" : mondays,
     }
     
     ## render html page on request with respect to context ##
