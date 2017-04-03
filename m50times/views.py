@@ -122,7 +122,7 @@ def m50times(request):
     '''
     def getCurrTTBusyness():
         busyness = 0.0
-        
+        '''
         if(fail == 0):
             decoded_content = m50data.content.decode('utf-8')
             z = json.loads(decoded_content)
@@ -150,8 +150,12 @@ def m50times(request):
                     
                     #data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + '<br><br/>'
                     
+                    '''
+                    
                     '''if(routename != 'J17 Shankill -> J3 M1/N32/DPT'):
                         continue
+                    
+                    '''
                     
                     '''
                     #data = data + str(z["M50_northBound"]['data'][i]) + "<br><br/>"
@@ -176,10 +180,11 @@ def m50times(request):
                         #data = data + "size, max, num := " + str(rngeSize) + ", "  + str(rngeMax) + ", " + str(rangeWeight) + "<br><br/>"
                         
                     '''
+                    '''
                     1: top =      rng(size) - ( rng(max) - routeTime )
                     2: busyness = top / rng(size)                
                     '''
-                    
+                    '''
                     ruRef = Route.objects.get(name = routename)
                     createRecording(request, ruRef, routetime)
                     
@@ -198,6 +203,7 @@ def m50times(request):
         else:
             busyness = 10.34342113  # hard code in average for when dataset is not live
                                     # this will be very slow hours so the average is halved
+        '''
         return m50data
     
     #return HttpResponse(getCurrTTBusyness())
