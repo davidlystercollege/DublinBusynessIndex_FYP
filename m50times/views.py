@@ -193,9 +193,10 @@ def m50times(request):
                    
             #return str(busyness) + ': ' + str(busyness2)   
             #return ans
+            busyness = 10.34342113
             data=data + "Busyness = " +str(busyness)
             busyness=(busyness*100)
-        
+            busyness = 10.34342113
         else:
             busyness = 10.34342113  # hard code in average for when dataset is not live
                                     # this will be very slow hours so the average is halved
