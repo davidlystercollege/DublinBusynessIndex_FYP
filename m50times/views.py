@@ -140,12 +140,12 @@ def m50times(request):
                 busy_nw=0.0
                 busy=0.0
                 
-                if(i < len(z["M50_northBound"]['data'])):
-                    if z["M50_northBound"]['data'] == []:
-                        break
+                if not z["M50_northBound"]['data']:
+                    i = 11
+                    break
                     
-                    if not z["M50_northBound"]['data']:
-                        break
+                if(i < len(z["M50_northBound"]['data'])):
+                    
                     routename = str(z["M50_northBound"]['data'][i]["from_name"] + ' -> ' + z["M50_northBound"]['data'][i]["to_name"])
                     routenum = routes.index(routename)
                     routetime = z["M50_northBound"]['data'][i]["current_travel_time"]
