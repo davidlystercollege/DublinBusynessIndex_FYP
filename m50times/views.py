@@ -13,7 +13,7 @@ def home(request):
 
 def m50times(request):
     
-    fail = 0;
+    fail = 0
     
     m50_url = 'http://dataproxy.mtcc.ie/v1.5/api/traveltimes.json'
     try:
