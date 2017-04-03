@@ -108,6 +108,8 @@ def noiseLevels(request):
                     count=count+1
                 except:
                     fail = 1
+                    busyness=40
+                    count=1 
                     break
         else:
             busyness=40
