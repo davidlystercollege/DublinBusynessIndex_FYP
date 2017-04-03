@@ -144,7 +144,7 @@ def m50times(request):
                     if z["M50_northBound"]['data'] == []:
                         break
                     
-                    if z["M50_northBound"]['data'] == null:
+                    if not z["M50_northBound"]['data']:
                         break
                     routename = str(z["M50_northBound"]['data'][i]["from_name"] + ' -> ' + z["M50_northBound"]['data'][i]["to_name"])
                     routenum = routes.index(routename)
