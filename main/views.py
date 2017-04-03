@@ -111,14 +111,12 @@ def home(request):
     cps = []
     cptimes = []
     
-    tmp = []
-    tmp = cpSubs[:1000]
     
-    sze = len(tmp)-1
+    sze = len(cpSubs)-1
     for i in range(1000):
         indx = sze-(i)
         
-        tempCP = tmp[i]
+        tempCP = cpSubs[indx]
             
         cps.append(tempCP.busynessFactor)
         
