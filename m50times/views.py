@@ -6,6 +6,7 @@ import json
 from pprint import pprint
 import requests
 from m50times.models import Route, Recording
+from docutils.parsers import null
 
 def home(request):
     return HttpResponse("This'll be the m50 homepage")
@@ -141,6 +142,9 @@ def m50times(request):
                 
                 if(i < len(z["M50_northBound"]['data'])):
                     if z["M50_northBound"]['data'] == []:
+                        break
+                    
+                    if z["M50_northBound"]['data'] == null:
                         break
                     routename = str(z["M50_northBound"]['data'][i]["from_name"] + ' -> ' + z["M50_northBound"]['data'][i]["to_name"])
                     routenum = routes.index(routename)
