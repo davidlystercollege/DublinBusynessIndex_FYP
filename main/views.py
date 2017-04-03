@@ -112,7 +112,7 @@ def home(request):
     cptimes = []
     
     tmp = []
-    tmp = cpSubs[:2000]
+    tmp = cpSubs[:-2000]
     
     sze = len(tmp)-1
     for i in range(2000):
