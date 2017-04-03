@@ -30,10 +30,10 @@ def home(request):
     m50Subs = BusynessSub.objects.filter(name = "M50")
     noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
     
-    bikeVal = bikeSubs.last().busynessFactor
-    cpVal = cpSubs.last().busynessFactor
-    m50Val = m50Subs.last().busynessFactor
-    nseVal = noiseSubs.last().busynessFactor
+    bikeVal = round(bikeSubs.last().busynessFactor, 3)
+    cpVal = round(cpSubs.last().busynessFactor, 3)
+    m50Val = round(m50Subs.last().busynessFactor, 3)
+    nseVal = round(noiseSubs.last().busynessFactor, 3)
     
     dat = [cpVal, m50Val, bikeVal, nseVal] 
     #########################################################
