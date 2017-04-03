@@ -533,7 +533,7 @@ def mainBusyness(request):
         cpVal=0
         bikeVal=0        
         
-        noiseVal = noiseLevels.views.noiseLevels(request)
+        #noiseVal = noiseLevels.views.noiseLevels(request)
         #createBusynessSub(request, nl_dso, noiseVal)
         
         m50Val = m50times.views.m50times(request)
@@ -564,7 +564,7 @@ def mainBusyness(request):
             ans = ans + "-" + str(i) + ": " + str(busnisses[i]) + "<br><br/>"
         '''
         #ans = str(noiseVal) 
-        ans = str(noiseVal) + ", " +str(m50Val)
+        ans = str(m50Val)
         #ans = str(noiseVal) + ", " +str(m50Val)
         #ans = str(noiseVal) + ", " +str(m50Val)
         return ans
