@@ -112,10 +112,10 @@ def home(request):
     cptimes = []
     
     tmp = []
-    tmp = cpSubs[:3000]
+    tmp = cpSubs[:2000]
     
     sze = len(cpSubs)
-    for i in range(3000):
+    for i in range(2000):
         indx = sze-(i-1)
         
         tempCP = tmp[i]
