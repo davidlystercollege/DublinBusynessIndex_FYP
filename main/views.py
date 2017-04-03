@@ -433,7 +433,7 @@ def mainBusyness(request):
     
     def getDatasetObj(nameArg):
         return DatasetObject.objects.get(name = nameArg)
-    '''
+    
     def getBikes():
         i=0
         subtotal=0
@@ -517,7 +517,7 @@ def mainBusyness(request):
         data = data + 'fullRouteAverage: ' + str(fullRouteAverage) + '<br><br/>'
         
         return data
-    '''
+    
     def getBusynessValues():
         busynessIndex = 0.0
         
@@ -536,11 +536,9 @@ def mainBusyness(request):
         #noiseVal = noiseLevels.views.noiseLevels(request)
         #createBusynessSub(request, nl_dso, noiseVal)
         
-        try:
-            m50Val = m50times.views.m50times(request)
-        except:
-            m50Val = 19.34342113
+        m50Val = m50times.views.m50times(request)
         '''
+        #m50Val = 19.34342113
         #createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
@@ -569,7 +567,7 @@ def mainBusyness(request):
         ans = str(m50Val)
         #ans = str(noiseVal) + ", " +str(m50Val)
         #ans = str(noiseVal) + ", " +str(m50Val)
-        return m50Val
+        return ans
 
     #test = dublinBikes.views.dubBikes(request)
     return HttpResponse(getBusynessValues())
