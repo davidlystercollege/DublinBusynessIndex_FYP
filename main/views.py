@@ -46,8 +46,10 @@ def home(request):
     ########### Line Graph 1 Data #####################
     bizys1 = []
     bizys2 = []
+    bizys3 = []
     time1 = []
     time2 = []
+    time3 = []
     sze = len(allBusynessz)
     
     for i in range(13):
@@ -87,6 +89,23 @@ def home(request):
     ########### Bar Chart Data #####################
     ################################################
     
+    ########### Line Graph 3 Data #####################
+    for i in range(5000):
+        indx = sze-(i-1)
+        
+        if (indx == 1780) or (indx == 1680) :
+            i=i+1   
+            indx = sze-(i-1)
+        
+        tempBiz3 = allBusynessz.get(id = (indx))
+            
+        bizys3.append(tempBiz3.busyness)
+        
+        a = datetime.datetime.strptime(str(tempBiz3.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        d_in_ms = int(a)*1000
+        #a = a.timestamp() * 1000
+        time3.append(d_in_ms)
+    ################################################
     
     ### Pass Required Data to our Context ##########
     context = {
@@ -94,8 +113,10 @@ def home(request):
         "donutData": dat,
         "line1bizs" : bizys1,
         "line2bizs" : bizys2,
+        "line3bizs" : bizys3,
         "line1times" : time1,
         "line2times" : time2,
+        "line3times" : time3,
         
     }
     
