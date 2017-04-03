@@ -90,6 +90,7 @@ def home(request):
     ################################################
     
     ########### Line Graph 3 Data #####################
+    mondays=[]
     for i in range(3000):
         indx = sze-(i-1)
         
@@ -101,8 +102,8 @@ def home(request):
             
         bizys3.append(tempBiz3.busyness)
         
-        #if(tempBiz3.dateTaken.day == 0):
-        #   mondays.append(tempBiz3)
+        if(tempBiz3.dateTaken.today().weekday == 0):
+            mondays.append(tempBiz3)
         
         a = datetime.datetime.strptime(str(tempBiz3.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
         d_in_ms = int(a)*1000
@@ -171,7 +172,7 @@ def home(request):
         "noises" : noises,
         "noisetimes" : noisetimes, 
         
-        #"mon" : mondays,
+        "mon" : mondays,
     }
     
     ## render html page on request with respect to context ##
