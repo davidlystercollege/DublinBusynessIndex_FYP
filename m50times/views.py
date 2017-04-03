@@ -123,6 +123,7 @@ def m50times(request):
     '''
     def getCurrTTBusyness():
         busyness = 0.0
+        fail = 0
         
         if(fail == 0):
             decoded_content = m50data.content.decode('utf-8')
