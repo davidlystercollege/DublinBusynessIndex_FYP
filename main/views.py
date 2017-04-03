@@ -116,7 +116,7 @@ def home(request):
     
     sze = len(tmp)
     for i in range(2000):
-        indx = sze-(i-1)
+        indx = sze-(i)
         
         tempCP = tmp[indx]
             
