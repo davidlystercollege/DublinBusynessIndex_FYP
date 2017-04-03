@@ -91,6 +91,13 @@ def home(request):
     
     ########### Line Graph 3 Data #####################
     mondays=[]
+    tuesdays=[]
+    wednesdays=[]
+    thursdays=[]
+    fridays=[]
+    saturdays=[]
+    sundays=[]
+    
     for i in range(3000):
         indx = sze-(i-1)
         
@@ -102,13 +109,45 @@ def home(request):
             
         bizys3.append(tempBiz3.busyness)
         
-        #if(tempBiz3.dateTaken.today().weekday == 0):
-        mondays.append(tempBiz3.dateTaken.weekday())
+        day = tempBiz3.dateTaken.weekday()
         
+        if(day == 0):
+            mondays.append(tempBiz3.busyness)
+        elif(day == 1):    
+            tuesdays.append(tempBiz3.busyness)
+        elif(day == 2):    
+            wednesdays.append(tempBiz3.busyness)
+        elif(day == 3):    
+            thursdays.append(tempBiz3.busyness)
+        elif(day == 4):    
+            fridays.append(tempBiz3.busyness)    
+        elif(day == 5):    
+            saturdays.append(tempBiz3.busyness)    
+        else:    
+            sundays.append(tempBiz3.busyness)
+                
         a = datetime.datetime.strptime(str(tempBiz3.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
         d_in_ms = int(a)*1000
         #a = a.timestamp() * 1000
         time3.append(d_in_ms)
+    
+    sumMon = sum(mondays)
+    sumTue = sum(tuesdays)
+    sumWed = sum(wednesdays)
+    sumThu = sum(thursdays)
+    sumFri = sum(fridays)
+    sumSat = sum(saturdays)
+    sumSun = sum(sundays)
+    
+    mMon = sumMon/len(mondays)
+    mTue = sumTue/len(tuesdays)
+    mWed = sumWed/len(wednesdays)
+    mThu = sumThu/len(thursdays)
+    mFri = sumFri/len(fridays)
+    mSat = sumSat/len(saturdays)
+    mSun = sumSun/len(sundays)
+    
+    means = [mMon, mTue, mWed, mThu, mFri, mSat, mSun]
     ################################################
     
     ### DATASET CONTEXTS ###########################
@@ -172,7 +211,7 @@ def home(request):
         "noises" : noises,
         "noisetimes" : noisetimes, 
         
-        "mon" : mondays,
+        "means" : means,
     }
     
     ## render html page on request with respect to context ##

@@ -34,6 +34,7 @@ crossorigin="anonymous"></script>
 
 <div class="col-md-4" style="text-align:center;">
 <h1><small>Busyness Index </small><br><FONT SIZE=+9>{{busyIndNow}}</FONT></h1>
+<h1><small>Busyness is the physical congestion of a city, with regards to the effect on available space in this city, caused directly or indirectly by human activity.</h1>
 </div>
 
 </div>
@@ -51,9 +52,15 @@ crossorigin="anonymous"></script>
 
 </div>
 <div class="row">
-<div class="col-md-12">
+<div class="col-md-8">
 <h3>Busyness - Past 2 Weeks</h3>
 <div id="myMorLine3" style="height: 250px;"></div>
+</div>
+
+<div class="col-md-4">
+<h3>Daily Average</h3>
+<div id="myMorrisBar" style="height: 250px;">
+</div>
 </div>
 
 </div>
@@ -136,21 +143,22 @@ labels: ['Busyness Index'],
 parseTime: false
 });
 
-//Morris.Bar({
-//element: 'myMorrisBar',
-//data: [
-//{y: '2006', a: 100, b: 90},
-//{y: '2007', a: 75, b: 65},
-//{y: '2008', a: 50, b: 40},
-//{y: '2009', a: 75, b: 65},
-//{y: '2010', a: 50, b: 40},
-//{y: '2011', a: 75, b: 65},
-//{y: '2012', a: 100, b: 90}
-//],
-//xkey: 'y',
-//ykeys: ['a', 'b'],
-//labels: ['Series A', 'Series B']
-//});
+means = {{ means }}
+Morris.Bar({
+element: 'myMorrisBar',
+data: [
+{y: 'Monday', a: means[0]},
+{y: 'Tuesday', a: means[1]},
+{y: 'Wednesday', a: means[2]}.
+{y: 'Thursday', a: means[3]},
+{y: 'Friday', a: means[4]},
+{y: 'Saturday', a: means[5]},
+{y: 'Sunday', a: means[6]},
+],
+xkey: 'y',
+ykeys: ['a'],
+labels: ['Series A']
+});
 
 donuts = {{donutData}}
 Morris.Donut({
