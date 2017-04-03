@@ -536,9 +536,11 @@ def mainBusyness(request):
         #noiseVal = noiseLevels.views.noiseLevels(request)
         #createBusynessSub(request, nl_dso, noiseVal)
         
-        m50Val = m50times.views.m50times(request)
+        try:
+            m50Val = m50times.views.m50times(request)
+        except:
+            m50Val = 19.34342113
         '''
-        #m50Val = 19.34342113
         #createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
