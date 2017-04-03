@@ -118,7 +118,7 @@ def home(request):
     for i in range(3000):
         indx = sze-(i-1)
         
-        tempCP = tmp.get(i)
+        tempCP = tmp[i]
             
         cps.append(tempCP.busynessFactor)
         
