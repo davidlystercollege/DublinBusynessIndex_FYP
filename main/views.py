@@ -569,7 +569,7 @@ def mainBusyness(request):
         ans = str(m50Val)
         #ans = str(noiseVal) + ", " +str(m50Val)
         #ans = str(noiseVal) + ", " +str(m50Val)
-        return ans
+        return m50Val
 
     #test = dublinBikes.views.dubBikes(request)
     return HttpResponse(getBusynessValues())

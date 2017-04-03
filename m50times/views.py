@@ -198,7 +198,7 @@ def m50times(request):
         else:
             busyness = 10.34342113  # hard code in average for when dataset is not live
                                     # this will be very slow hours so the average is halved
-        return busyness
+        return m50data
     
     #return HttpResponse(getCurrTTBusyness())
     return getCurrTTBusyness()
