@@ -111,8 +111,8 @@ def home(request):
     cps = []
     cptimes = []
     
-    tmp = reversed(cpSubs)
-    tmp = tmp[:2000]
+    tmpA = reversed(cpSubs)
+    tmp = tmpA[:2000]
     
     sze = len(tmp)-1
     for i in range(2000):
