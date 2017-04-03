@@ -109,21 +109,43 @@ def home(request):
     
     ### DATASET CONTEXTS ###########################
     cps = []
+    bikes = []
+    noises = []
+    
     cptimes = []
+    biketimes = []
+    noisetimes = []
     
+    szeC = len(cpSubs)-1
+    szeB = len(bikeSubs)-1
+    szeN = len(noiseSubs)-1
     
-    sze = len(cpSubs)-1
     for i in range(2000):
-        indx = sze-(i)
+        indxC = szeC-(i)
+        indxB = szeB-(i)
+        indxN = szeN-(i)
         
-        tempCP = cpSubs[indx]
+        tempCP = cpSubs[indxC]
+        tempBk = bikeSubs[indxB]
+        tempNse = noiseSubs[indxN]
             
         cps.append(tempCP.busynessFactor)
+        bikes.append(tempBk.busynessFactor)
+        noises.append(tempNse.busynessFactor)
         
-        a = datetime.datetime.strptime(str(tempCP.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
-        d_in_ms = int(a)*1000
+        c = datetime.datetime.strptime(str(tempCP.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        b = datetime.datetime.strptime(str(tempBk.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        n = datetime.datetime.strptime(str(tempNse.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        
+        d_in_msC = int(c)*1000
+        d_in_msB = int(b)*1000
+        d_in_msN = int(n)*1000
+        
         #a = a.timestamp() * 1000
-        cptimes.append(d_in_ms)
+        
+        cptimes.append(d_in_msC)
+        biketimes.append(d_in_msB)
+        noisetimes.append(d_in_msN)
     ################################################
     
     ### Pass Required Data to our Context ##########
@@ -139,6 +161,12 @@ def home(request):
         
         "cps" : cps,
         "cptimes" : cptimes, 
+        
+        "bikes" : bikes,
+        "biketimes" : biketimes, 
+        
+        "noises" : noises,
+        "noisetimes" : noisetimes, 
     }
     
     ## render html page on request with respect to context ##
