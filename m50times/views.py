@@ -47,6 +47,7 @@ def m50times(request):
         rec.save()
         return
     
+    '''
     def getCurrTT():
         
                 
@@ -118,6 +119,7 @@ def m50times(request):
         #return ans
         return busyness
     
+    '''
     def getCurrTTBusyness():
         busyness = 0.0
         
@@ -192,6 +194,7 @@ def m50times(request):
             #return ans
             data=data + "Busyness = " +str(busyness)
             busyness=(busyness*100)
+        
         else:
             busyness = 10.34342113  # hard code in average for when dataset is not live
                                     # this will be very slow hours so the average is halved
