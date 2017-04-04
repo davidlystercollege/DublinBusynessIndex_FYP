@@ -193,7 +193,7 @@ def home(request):
     ################################################
     
     ### Pass Required Data to our Context ##########
-    bizys3 = bizys3.reverse()[:2000]
+    bizys3 = bizys3[:2000]
     context = {
         "busyIndNow": bizness,
         "donutData": dat,
