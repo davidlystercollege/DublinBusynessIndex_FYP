@@ -107,12 +107,11 @@ def home(request):
         
         tempBiz3 = allBusynessz.get(id = (indx))
             
-        if(i >= 1940):
-            bizys3.append(tempBiz3.busyness)
-            a = datetime.datetime.strptime(str(tempBiz3.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
-            d_in_ms = int(a)*1000
-            #a = a.timestamp() * 1000
-            time3.append(d_in_ms)
+        bizys3.append(tempBiz3.busyness)
+        a = datetime.datetime.strptime(str(tempBiz3.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        d_in_ms = int(a)*1000
+        #a = a.timestamp() * 1000
+        time3.append(d_in_ms)
         
         day = tempBiz3.dateTaken.weekday()
         
@@ -195,7 +194,7 @@ def home(request):
     
     ### Pass Required Data to our Context ##########
     
-    
+    bizys3 = bizys3[:3000]
     context = {
         "busyIndNow": bizness,
         "donutData": dat,
