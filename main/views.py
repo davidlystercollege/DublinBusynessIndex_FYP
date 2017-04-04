@@ -98,7 +98,7 @@ def home(request):
     saturdays=[]
     sundays=[]
     
-    for i in range(3000):
+    for i in range(3950):
         indx = sze-(i-1)
         
         if (indx == 1780) or (indx == 1680) :
@@ -107,6 +107,7 @@ def home(request):
         
         tempBiz3 = allBusynessz.get(id = (indx))
             
+        
         bizys3.append(tempBiz3.busyness)
         
         day = tempBiz3.dateTaken.weekday()
