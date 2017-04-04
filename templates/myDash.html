@@ -44,8 +44,6 @@ crossorigin="anonymous"></script>
 <div id="myMorLine2" style="height: 250px;"></div>
 </div>
 
-
-</div>
 <div class="row">
 <div class="col-md-6">
 <h3>Dataset Results</h3>
@@ -215,7 +213,7 @@ vals3 = {{ line3bizs }}
 timz3 = {{ line3times }}
 x=0
 res3=[]
-for(total=3000; x<total; x++){
+for(total=3940; x<total; x++){
 	res3.push( { no: timz3[x], value : vals3[x] } )
 }
 new Morris.Line({

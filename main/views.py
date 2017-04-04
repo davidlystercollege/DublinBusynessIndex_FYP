@@ -194,7 +194,7 @@ def home(request):
     
     ### Pass Required Data to our Context ##########
     
-    bizys3 = bizys3[:3000]
+    #bizys3 = bizys3[:3000]
     context = {
         "busyIndNow": bizness,
         "donutData": dat,
