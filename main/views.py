@@ -98,7 +98,7 @@ def home(request):
     saturdays=[]
     sundays=[]
     
-    for i in range(3950):
+    for i in range(3940):
         indx = sze-(i-1)
         
         if (indx == 1780) or (indx == 1680) :
@@ -193,6 +193,7 @@ def home(request):
     ################################################
     
     ### Pass Required Data to our Context ##########
+    bizys3 = bizys3.reverse()[:2000]
     context = {
         "busyIndNow": bizness,
         "donutData": dat,
