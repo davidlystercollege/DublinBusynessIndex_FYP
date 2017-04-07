@@ -434,17 +434,17 @@ def testDash(request):
         tmpN = tempNse.dateTaken
         
         if((tmpC > d1) and (tmpC < d2)):
-            c = datetime.datetime.strptime(str(), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+            c = datetime.datetime.strptime(str(tmpC), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
             d_in_msC = int(c)*1000
             cptimes.append(d_in_msC)
         
         if((tmpB > d1) and (tmpB < d2)):
-            b = datetime.datetime.strptime(str(), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+            b = datetime.datetime.strptime(str(tmpB), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
             d_in_msB = int(b)*1000
             biketimes.append(d_in_msB)
         
         if((tmpN > d1) and (tmpN < d2)):
-            n = datetime.datetime.strptime(str(), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+            n = datetime.datetime.strptime(str(tmpN), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
             d_in_msN = int(n)*1000
             noisetimes.append(d_in_msN)
     ################################################
