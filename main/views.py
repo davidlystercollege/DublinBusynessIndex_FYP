@@ -21,7 +21,7 @@ import dublinBikes.views
 import carParks.views
 from boto.dynamodb.condition import NULL
 
-def home(request):
+def fulldash(request):
     
     allBusynessz = BusynessIndex.objects.all()
     
@@ -206,6 +206,148 @@ def home(request):
         
         "noises" : noises,
         "noisetimes" : noisetimes, 
+        
+        "means" : means,
+    }
+    
+    ## render html page on request with respect to context ##
+    return render(request, 'fullDash.html', context)
+
+def home(request):
+    
+    allBusynessz = BusynessIndex.objects.all()
+    
+    ########### Donut Data ################################
+    bikeSubs = BusynessSub.objects.filter(name = "DublinBikes")
+    cpSubs = BusynessSub.objects.filter(name = "CarPark")
+    m50Subs = BusynessSub.objects.filter(name = "M50")
+    noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
+    
+    bikeVal = round(bikeSubs.last().busynessFactor, 3)
+    cpVal = round(cpSubs.last().busynessFactor, 3)
+    m50Val = round(m50Subs.last().busynessFactor, 3)
+    nseVal = round(noiseSubs.last().busynessFactor, 3)
+    
+    dat = [cpVal, m50Val, bikeVal, nseVal] 
+    #########################################################
+    
+    ########### Busyness Index #####################
+    bizness = BusynessIndex.objects.last().busyness#
+    bizness = round(bizness, 3)
+    ################################################
+    
+    ########### Line Graph 1 Data #####################
+    bizys1 = []
+    bizys2 = []
+    bizys3 = []
+    time1 = []
+    time2 = []
+    time3 = []
+    sze = len(allBusynessz)
+    
+    for i in range(13):
+        tempBiz1 = allBusynessz.get(id = (sze-(i-1)))
+        bizys1.append(tempBiz1.busyness)
+        
+        dt = datetime.datetime.strptime(str(tempBiz1.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        dt_in_ms = int(dt)*1000
+        
+        time1.append(dt_in_ms)
+    ################################################
+    
+    ########### Line Graph 2 Data #####################
+    for i in range(2000):
+        indx = sze-(i-1)
+        
+        if (indx == 1780) or (indx == 1680) :
+            i=i+1   
+            indx = sze-(i-1)
+        
+        tempBiz2 = allBusynessz.get(id = (indx))
+            
+        bizys2.append(tempBiz2.busyness)
+        
+        a = datetime.datetime.strptime(str(tempBiz2.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        d_in_ms = int(a)*1000
+        #a = a.timestamp() * 1000
+        time2.append(d_in_ms)
+    ################################################
+    
+    ########### Bar Chart Data #####################
+    ################################################
+    
+    ########### Line Graph 3 Data #####################
+    mondays=[]
+    tuesdays=[]
+    wednesdays=[]
+    thursdays=[]
+    fridays=[]
+    saturdays=[]
+    sundays=[]
+    
+    for i in range(3940):
+        indx = sze-(i-1)
+        
+        if (indx == 1780) or (indx == 1680) :
+            i=i+1   
+            indx = sze-(i-1)
+        
+        tempBiz3 = allBusynessz.get(id = (indx))
+            
+        bizys3.append(tempBiz3.busyness)
+        a = datetime.datetime.strptime(str(tempBiz3.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        d_in_ms = int(a)*1000
+        #a = a.timestamp() * 1000
+        time3.append(d_in_ms)
+        
+        day = tempBiz3.dateTaken.weekday()
+        
+        if(day == 0):
+            mondays.append(tempBiz3.busyness)
+        elif(day == 1):    
+            tuesdays.append(tempBiz3.busyness)
+        elif(day == 2):    
+            wednesdays.append(tempBiz3.busyness)
+        elif(day == 3):    
+            thursdays.append(tempBiz3.busyness)
+        elif(day == 4):    
+            fridays.append(tempBiz3.busyness)    
+        elif(day == 5):    
+            saturdays.append(tempBiz3.busyness)    
+        else:    
+            sundays.append(tempBiz3.busyness)
+                
+        
+    
+    sumMon = sum(mondays)
+    sumTue = sum(tuesdays)
+    sumWed = sum(wednesdays)
+    sumThu = sum(thursdays)
+    sumFri = sum(fridays)
+    sumSat = sum(saturdays)
+    sumSun = sum(sundays)
+    
+    mMon = sumMon/len(mondays)
+    mTue = sumTue/len(tuesdays)
+    mWed = sumWed/len(wednesdays)
+    mThu = sumThu/len(thursdays)
+    mFri = sumFri/len(fridays)
+    mSat = sumSat/len(saturdays)
+    mSun = sumSun/len(sundays)
+    
+    means = [mMon, mTue, mWed, mThu, mFri, mSat, mSun]
+    ################################################
+    
+    ### Pass Required Data to our Context ##########
+    context = {
+        "busyIndNow": bizness,
+        "donutData": dat,
+        "line1bizs" : bizys1,
+        "line2bizs" : bizys2,
+        "line3bizs" : bizys3,
+        "line1times" : time1,
+        "line2times" : time2,
+        "line3times" : time3,
         
         "means" : means,
     }

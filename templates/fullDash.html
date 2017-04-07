@@ -65,6 +65,27 @@ crossorigin="anonymous"></script>
 </div>
 
 </div>
+<div class="row">
+<div class="col-md-12">
+<h3>Car Parks Movement</h3>
+<div id="carparksLine" style="height: 250px;"></div>
+</div>
+
+</div>
+<div class="row">
+<div class="col-md-12">
+<h3>DublinBikes Movement</h3>
+<div id="bikeLine" style="height: 250px;"></div>
+</div>
+
+</div>
+<div class="row">
+<div class="col-md-12">
+<h3>Noise Level Movement</h3>
+<div id="noiseLine" style="height: 250px;"></div>
+</div>
+
+</div>
 
 </font>
 <script>
@@ -207,6 +228,72 @@ xkey: 'no',
 ykeys: ['value'],
 labels: ['Busyness Index']
 });
+
+///////////////////////////////////////
+vals4 = {{ cps}}
+timz4 = {{ cptimes }}
+x=0
+res4=[]
+for(total=3000; x<total; x++){
+	res4.push( { no: timz4[x], value : vals4[x] } )
+}
+new Morris.Line({
+element: 'carparksLine',
+data: res4,
+
+ymin: 0,
+ymax: 80,
+
+xkey: 'no',
+
+ykeys: ['value'],
+labels: ['PercentFull']
+});
+//////////////////////////////////////////
+
+///////////////////////////////////////
+vals5 = {{ bikes }}
+timz5 = {{ biketimes }}
+x=0
+res5=[]
+for(total=3000; x<total; x++){
+	res5.push( { no: timz5[x], value : vals5[x] } )
+}
+new Morris.Line({
+element: 'bikeLine',
+data: res5,
+
+ymin: 20,
+ymax: 80,
+
+xkey: 'no',
+
+ykeys: ['value'],
+labels: ['PercentEmpty']
+});
+//////////////////////////////////////////
+
+///////////////////////////////////////
+vals6 = {{ noises }}
+timz6 = {{ noisetimes }}
+x=0
+res6=[]
+for(total=3000; x<total; x++){
+	res6.push( { no: timz6[x], value : vals6[x] } )
+}
+new Morris.Line({
+element: 'noiseLine',
+data: res6,
+
+ymin: 20,
+ymax: 80,
+
+xkey: 'no',
+
+ykeys: ['value'],
+labels: ['PercentBusy']
+});
+//////////////////////////////////////////
 
 </script>
 </body>
