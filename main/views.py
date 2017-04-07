@@ -359,8 +359,8 @@ def testDash(request):
 
     # 2017, 3, 20 -> 2017, 3, 26
     
-    d1 = datetime(2017, 3, 20)
-    d2 = datetime(2017, 3, 26)
+    d1 = datetime.datetime(2017, 3, 20)
+    d2 = datetime.datetime(2017, 3, 26)
     
     allBusynessz = BusynessIndex.objects.all()
     
