@@ -597,10 +597,7 @@ def mainBusyness(request):
         
         m50Val = 10.34342113
         
-        try:
-            m50Val = m50times.views.m50times(request)
-        except:
-            m50Val = 10.34342113
+        m50Val = m50times.views.m50times(request)#
         createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
