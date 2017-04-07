@@ -596,8 +596,8 @@ def mainBusyness(request):
         createBusynessSub(request, nl_dso, noiseVal)
         
         
-        m50Val = m50times.views.m50times(request)
-        createBusynessSub(request, m50_dso, m50Val)
+        #m50Val = m50times.views.m50times(request)
+        #createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
         createBusynessSub(request, cp_dso, cpVal)
