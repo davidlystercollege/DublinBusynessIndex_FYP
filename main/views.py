@@ -388,9 +388,10 @@ def testDash(request):
             indx = sze-(i-1)
         
         tempBiz3 = allBusynessz.get(id = (indx))
-        a = datetime.datetime.strptime(str(tempBiz3.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
         
-        if((a > d1) and (a < d2)):
+        temptime = tempBiz3.dateTaken
+        if((temptime > d1) and (temptime < d2)):
+            a = datetime.datetime.strptime(str(temptime), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
             
             bizys3.append(tempBiz3.busyness)
             d_in_ms = int(a)*1000
@@ -424,19 +425,23 @@ def testDash(request):
         bikes.append(tempBk.busynessFactor)
         noises.append(tempNse.busynessFactor)
         
-        c = datetime.datetime.strptime(str(tempCP.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
-        b = datetime.datetime.strptime(str(tempBk.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
-        n = datetime.datetime.strptime(str(tempNse.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
         
-        if((c > d1) and (c < d2)):
+        tmpC = tempCP.dateTaken 
+        tmpB = tempBk.dateTaken
+        tmpN = tempNse.dateTaken
+        
+        if((tmpC > d1) and (tmpC < d2)):
+            c = datetime.datetime.strptime(str(), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
             d_in_msC = int(c)*1000
             cptimes.append(d_in_msC)
         
-        if((b > d1) and (b < d2)):
+        if((tmpB > d1) and (tmpB < d2)):
+            b = datetime.datetime.strptime(str(), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
             d_in_msB = int(b)*1000
             biketimes.append(d_in_msB)
         
-        if((n > d1) and (n < d2)):
+        if((tmpN > d1) and (tmpN < d2)):
+            n = datetime.datetime.strptime(str(), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
             d_in_msN = int(n)*1000
             noisetimes.append(d_in_msN)
     ################################################
