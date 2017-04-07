@@ -11,6 +11,13 @@ from docutils.parsers import null
 def home(request):
     return HttpResponse("This'll be the m50 homepage")
 
+def M50dataset(request):
+    m50_url = 'http://dataproxy.mtcc.ie/v1.5/api/traveltimes.json'
+    m50data = requests.get(m50_url)
+    decoded_content = m50data.content.decode('utf-8')
+    z = json.loads(decoded_content)
+
+    return(HttpResponse(str(z)))
 def m50times(request):
     
     fail = 0
