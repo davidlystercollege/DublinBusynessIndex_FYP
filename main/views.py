@@ -606,7 +606,7 @@ def mainBusyness(request):
         bikeVal = dublinBikes.views.dubBikes(request)
         createBusynessSub(request, db_dso, bikeVal)
         
-        if((now > today10am) or (now < today10pm)):
+        if((now > today10am) and (now < today10pm)):
             m50Val = m50times.views.m50times(request)
         else:
             m50Val = 10.34342113
