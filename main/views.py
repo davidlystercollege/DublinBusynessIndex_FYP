@@ -423,27 +423,25 @@ def testDash(request):
         tempCP = cpSubs[indxC]
         tempBk = bikeSubs[indxB]
         tempNse = noiseSubs[indxN]
-            
-        cps.append(tempCP.busynessFactor)
-        bikes.append(tempBk.busynessFactor)
-        noises.append(tempNse.busynessFactor)
-        
         
         tmpC = tempCP.dateTaken 
         tmpB = tempBk.dateTaken
         tmpN = tempNse.dateTaken
         
         if((tmpC > d1) and (tmpC < d2)):
+            cps.append(tempCP.busynessFactor)
             c = datetime.datetime.strptime(str(tmpC), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
             d_in_msC = int(c)*1000
             cptimes.append(d_in_msC)
         
         if((tmpB > d1) and (tmpB < d2)):
+            bikes.append(tempBk.busynessFactor)
             b = datetime.datetime.strptime(str(tmpB), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
             d_in_msB = int(b)*1000
             biketimes.append(d_in_msB)
         
         if((tmpN > d1) and (tmpN < d2)):
+            noises.append(tempNse.busynessFactor)
             n = datetime.datetime.strptime(str(tmpN), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
             d_in_msN = int(n)*1000
             noisetimes.append(d_in_msN)
