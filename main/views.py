@@ -12,6 +12,7 @@ from django.utils import timezone
 from django.template import Context, loader
 from datetime import datetime
 
+import eventlet.timeout.Timeout
 import datetime
 import math
 import noiseLevels.views
@@ -19,6 +20,7 @@ import m50times.views
 import dublinBikes.views
 import carParks.views
 from boto.dynamodb.condition import NULL
+from eventlet.timeout import Timeout
 
 def home(request):
     
@@ -595,9 +597,11 @@ def mainBusyness(request):
         noiseVal = noiseLevels.views.noiseLevels(request)
         createBusynessSub(request, nl_dso, noiseVal)
         
-        m50Val = 10.34342113
-        
-        m50Val = m50times.views.m50times(request)#
+        m50Val = None
+        with Timeout(10, False):
+            m50Val = m50times.views.m50times(request)#
+        if(m50Val = None):
+            m50Val = 10.34342113
         createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
