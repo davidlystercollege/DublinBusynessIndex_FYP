@@ -360,7 +360,10 @@ def testDash(request):
     # 2017, 3, 20 -> 2017, 3, 26
     
     d1 = datetime.datetime(2017, 3, 20)
+    d1 = d1.replace(tzinfo=timezone.now())
+    
     d2 = datetime.datetime(2017, 3, 26)
+    d2 = d2.replace(tzinfo=timezone.now())
     
     allBusynessz = BusynessIndex.objects.all()
     
