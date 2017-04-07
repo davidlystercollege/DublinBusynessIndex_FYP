@@ -605,8 +605,8 @@ def mainBusyness(request):
         
         m50Val = None
         with Timeout(10, False):
-            m50Val = m50times.views.m50times(request)#
-        if(m50Val = None):
+            m50Val = m50times.views.m50times(request)
+        if (m50Val = None):
             m50Val = 10.34342113
         createBusynessSub(request, m50_dso, m50Val)
         
