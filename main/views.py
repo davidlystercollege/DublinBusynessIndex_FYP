@@ -593,6 +593,10 @@ def mainBusyness(request):
         cpVal=0
         bikeVal=0        
         
+        now = datetime.datetime.now()
+        today10pm = now.replace(hour=22, minute=0, second=0, microsecond=0)
+        today10am = now.replace(hour=10, minute=0, second=0, microsecond=0)
+        
         noiseVal = noiseLevels.views.noiseLevels(request)
         createBusynessSub(request, nl_dso, noiseVal)
         
@@ -602,9 +606,9 @@ def mainBusyness(request):
         bikeVal = dublinBikes.views.dubBikes(request)
         createBusynessSub(request, db_dso, bikeVal)
         
-        m50Val = None
-        m50Val = m50times.views.m50times(request)
-        if (m50Val == None):
+        if((now > today10am) or (now < today10pm)):
+            m50Val = m50times.views.m50times(request)
+        else:
             m50Val = 10.34342113
         createBusynessSub(request, m50_dso, m50Val)
         
