@@ -602,8 +602,8 @@ def mainBusyness(request):
         cpVal = carParks.views.carParks(request)
         createBusynessSub(request, cp_dso, cpVal)
         
-        #bikeVal = dublinBikes.views.dubBikes(request)
-        #createBusynessSub(request, db_dso, bikeVal)
+        bikeVal = dublinBikes.views.dubBikes(request)
+        createBusynessSub(request, db_dso, bikeVal)
         
         #busynessIndex = ( (noiseVal*weigths[0]) + (bikeVal*weigths[1]) + (cpVal*weigths[2]) + (m50Val*weigths[3]) )
         
