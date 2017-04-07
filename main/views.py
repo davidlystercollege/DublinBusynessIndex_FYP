@@ -1,3 +1,4 @@
+
 from __future__ import division
 
 from django.shortcuts import render
@@ -5,7 +6,7 @@ from django.http import HttpResponse
 
 from dublinBikes.models import BikeStation, Availability
 from carParks.models import CP, CapacityLevel
-from m50times.models import Route, Recording
+from m50times.models import Recording, Route
 from noiseLevels.models import Meter, Reading
 from main.models import DatasetObject, BusynessSub, BusynessIndex
 from django.utils import timezone
@@ -606,7 +607,7 @@ def mainBusyness(request):
         m50Val = None
         with Timeout(10, False):
             m50Val = m50times.views.m50times(request)
-        if (m50Val = None):
+        if (m50Val == None):
             m50Val = 10.34342113
         createBusynessSub(request, m50_dso, m50Val)
         
