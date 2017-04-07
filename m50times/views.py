@@ -35,7 +35,6 @@ def m50times(request):
             False      
     
     def createRoute(request, routename, routefrom, routeto):
-        # probably will not need to be used again
         ru = Route()
         ru.name = routename
         ru.rfrom = routefrom
@@ -48,79 +47,6 @@ def m50times(request):
         rec.save()
         return
     
-    '''
-    def getCurrTT():
-        
-                
-        decoded_content = m50data.content.decode('utf-8')
-        z = json.loads(decoded_content)
-            
-        i=0
-        data = ''
-        while(i < 11):
-            
-            if(i < len(z["M50_northBound"]['data'])):
-                
-                routename = str(z["M50_northBound"]['data'][i]["from_name"] + ' -> ' + z["M50_northBound"]['data'][i]['to_name'])
-                routenum = routes.index(routename)
-                routetime = z["M50_northBound"]['data'][i]['current_travel_time']
-                
-                data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + '<br><br/>'
-                 
-                ruRef = Route.objects.get(name = routename)
-                createRecording(request, ruRef, routetime)
-                        
-                i=i+1
-            else:    
-                data = data + 'Fail at index '+str(i) + ' where data size = '+str(len(z["M50_northBound"]['data'])) + '<br><br/>'
-                i=i+1
-               
-        return data
-        
-    def getCurrTTBusyness_Avg():
-        busyness = 0.0
-        busyness2 = 0.0
-        
-        decoded_content = m50data.content.decode('utf-8')
-        z = json.loads(decoded_content)
-            
-        i=0
-        data = ''
-        tempAverage = 178.0655
-        tempAverage2 = 1609.894
-        
-        ans =''
-        
-        while(i < 11):
-            
-            if(i < len(z["M50_northBound"]['data'])):
-                
-                routename = str(z["M50_northBound"]['data'][i]["from_name"] + ' -> ' + z["M50_northBound"]['data'][i]['to_name'])
-                routenum = routes.index(routename)
-                routetime = z["M50_northBound"]['data'][i]['current_travel_time']
-                
-                data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + '<br><br/>'
-                
-                if(routename != 'J17 Shankill -> J3 M1/N32/DPT'):
-                    busyness = busyness + (float(routetime) - tempAverage)
-                else:
-                    busyness2 = busyness2 + (float(routetime) - tempAverage2)
-                     
-                ruRef = Route.objects.get(name = routename)
-                createRecording(request, ruRef, routetime)
-                
-                ans = ans + str(routetime) + ': ' + str(busyness) + ': ' + str(busyness2) + '<br><br/>'
-                        
-                i=i+1
-            else:    
-                data = data + 'Fail at index '+str(i) + ' where data size = '+str(len(z["M50_northBound"]['data'])) + '<br><br/>'
-                i=i+1
-               
-        #return str(busyness) + ': ' + str(busyness2)   
-        #return ans
-        return busyness
-    
-    '''
     def getCurrTTBusyness():
         busyness = 0.0
         fail = 0
@@ -155,13 +81,6 @@ def m50times(request):
                     rngeMax=rangeMaxs[routenum]
                     rngeSize=rangeSizes[routenum]
                     
-                    #data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + '<br><br/>'
-                    
-                    '''if(routename != 'J17 Shankill -> J3 M1/N32/DPT'):
-                        continue
-                    
-                    '''
-                    #data = data + str(z["M50_northBound"]['data'][i]) + "<br><br/>"
                     if(routenum!=10):
                         
                         if(routetime>rngeMax):
@@ -180,26 +99,10 @@ def m50times(request):
                         data = data + "r(w,s,l) = " + str(rngeMax) + ", " + str(rngeSize) + ", " + str(rngeLocation)
                         data = data + 'Route ' + str(routenum) + ': ' + str(routename + ': ' + str(routetime)) + " - busynw = " +str(busy_nw)+ " - B: " + str(busy*100) + '<br><br/>'
                         
-                        #data = data + "size, max, num := " + str(rngeSize) + ", "  + str(rngeMax) + ", " + str(rangeWeight) + "<br><br/>"
-                        
-                    '''
-                    1: top =      rng(size) - ( rng(max) - routeTime )
-                    2: busyness = top / rng(size)                
-                    '''
-                    
-                    ruRef = Route.objects.get(name = routename)
-                    createRecording(request, ruRef, routetime)
-                    
-                    #ans = ans + str(routetime) + ': ' + str(busyness) + ': ' + str(busyness2) + '<br><br/>'
-                            
                     i=i+1
                 else:   
                     data = data + 'Fail at index '+str(i) + ' where data size = '+str(len(z["M50_northBound"]['data'])) + '<br><br/>'
-                    #i=i+1
-                   
-            #return str(busyness) + ': ' + str(busyness2)   
-            #return ans
-
+                    
             if(fail == 0):
                 data=data + "Busyness = " +str(busyness)
                 busyness=(busyness*100)
@@ -210,5 +113,4 @@ def m50times(request):
                                     # this will be very slow hours so the average is halved
         return busyness
     
-    #return HttpResponse(getCurrTTBusyness())
     return getCurrTTBusyness()

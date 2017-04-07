@@ -60,12 +60,6 @@ def home(request):
         dt_in_ms = int(dt)*1000
         
         time1.append(dt_in_ms)
-        #tmptym = (tempBiz.dateTaken).time()
-        #tmptym = datetime.datetime.now() - datetime.timedelta(minutes=(i * 5))
-        #tmptym = ((tempBiz.dateTaken) - datetime(1970, 1, 1)).total_seconds() 
-        
-        
-        #times1.append(tmptym)
     ################################################
     
     ########### Line Graph 2 Data #####################
@@ -193,8 +187,6 @@ def home(request):
     ################################################
     
     ### Pass Required Data to our Context ##########
-    
-    #bizys3 = bizys3[:3000]
     context = {
         "busyIndNow": bizness,
         "donutData": dat,
@@ -264,7 +256,7 @@ def testing(request):
             tempCP = CapacityLevel.objects.all().filter(name = cp.name)
             
             for tcp in tempCP:
-                # THOMASST has recorded only 0 values so I will exlude it for now
+                # THOMASST has recorded only 0 values so I I'll exlude it
                 if(tcp.name != 'THOMASST'):
                     data = data + tcp.name + ': ' + str(tcp.percentFull) + '<br><br/>'
                     subtotal = subtotal + tcp.percentFull
@@ -285,17 +277,6 @@ def testing(request):
         for noise in data:
             allNoises.append(noise.aleq)
         
-        '''for mt in Meter.objects.all():
-            tempmt = Reading.objects.all().filter(name = mt.name)
-            
-            for tmt in tempmt:
-                data = data + tmt.name + ': ' + str(tmt.aleq) + '<br><br/>'
-                subtotal = subtotal + tmt.aleq
-                i=i+1
-        
-        average = (subtotal/i)
-        data = data + 'Average: ' + str(average)'''
-           
         ans = ans + str(max(allNoises)) + " <- Max, Min -> " + str(min(allNoises))     
         return ans
     
@@ -379,12 +360,8 @@ def testing(request):
             bizFact_1 = ( ( bikeVal* .25) + ( cpVal* .20) + ( m50Val* .05) + ( nseVal* .50) ) 
             bizFact_2 = ( ( bikeVal* .30) + ( cpVal* .25) + ( m50Val* .05) + ( nseVal* .40) ) 
             bizFact_3 = bizVal
-            #bizFact_3 = ( ( bikeVal* .30) + ( cpVal* .25) + ( m50Val* .05) + ( nseVal* .40) ) 
-            
-            #rnge = max(bizFact_1, bizFact_2, bizFact_3) - min(bizFact_1, bizFact_2, bizFact_3)
             
             bizArr_1.append(bizFact_1)
-            #totl = totl + bizFact_1
             
             bizArr_2.append(bizFact_2)
             bizArr_3.append(bizFact_3)
@@ -392,9 +369,6 @@ def testing(request):
             data = data + "Busy 1: " +str(bizFact_1) + "<br>"
             data = data + "Busy 2: " +str(bizFact_2) + "<br>"
             data = data + "Busy 3 real: " +str(bizFact_3) + "<br>"
-            #data = data + "Busy 3: " +str(bizFact_3) + "<br>"
-            #data = data + "RANGE SIZE: " +str(rnge) + "<br>"
-            #data = data + "bk, cp, m50, noise := " + str(bikeVal) + ", "+ str(cpVal) + ", "+ str(m50Val) + ", "+ str(nseVal) + "<br>"
             data = data + "Time: " +str(time) +"<br><br/>"
         
         data = data + "Series 1" + "<br>"
@@ -425,11 +399,6 @@ def testing(request):
         std_2 = math.sqrt( m2s / len(bizArr_1) )
         std_3 = math.sqrt( m3s / len(bizArr_1) )
         
-        
-        #data = data + "Series 3" + "<br>"
-        #data = data + "MAX : " + str(max(bizArr_3)) + "<br>"
-        #data = data + "MIN : " + str(min(bizArr_3)) + "<br><br/>"
-        
         data = data + "S1 Sd: " + str(std_1) + "<br>"
         data = data + "S2 Sd: " + str(std_2) + "<br>"
         data = data + "S3 Sd: " + str(std_3) + "<br>"
@@ -456,7 +425,6 @@ def testing(request):
         cpS = 0.0
         m5S = 0.0
         for i in range(1, 1300):
-            #time = bikeSubs[len(bikeSubs) - i].dateTaken
             bikeVal = bikeSubs[len(bikeSubs) - i].busynessFactor
             cpVal = cpSubs[len(cpSubs) - i].busynessFactor
             m50Val = m50Subs[len(m50Subs) - i].busynessFactor
@@ -499,35 +467,8 @@ def testing(request):
         
         data = data + "STD m50: " + str(std_m50) + "<br>"
         data = data + "Min, Max: " + str(min(m50arr)) + ", " + str(max(m50arr)) + "<br></br>"
-        
-        '''
-        noiseVal = noiseLevels.views.noiseLevels(request)
-        #createBusynessSub(request, nl_dso, noiseVal)
-        
-        #if m50times.views.m50times(request) != NULL:
-        m50Val = m50times.views.m50times(request)
-        #else:
-        #   m50Val = 25    
-        #createBusynessSub(request, m50_dso, m50Val)
-        
-        cpVal = carParks.views.carParks(request)
-        #createBusynessSub(request, cp_dso, cpVal)
-        
-        bikeVal = dublinBikes.views.dubBikes(request)
-        #createBusynessSub(request, db_dso, bikeVal)
-        
-        #data = data + "n,m,c,b:= " + noiseVal + ", " + m50Val + ", " + cpVal + ", " + bikeVal
-        
-        data=data + "N: " + str(noiseVal) + "<br>"
-        data=data + "M50: " + str(m50Val) + "<br>"
-        data=data + "cp: " + str(cpVal) + "<br>"
-        data=data + "b: " + str(bikeVal) + "<br>"
-        '''
+
         return data
-    
-    
-    #template = loader.get_template("myDash.html")
-    #return HttpResponse(template.render())
     return HttpResponse(tests2())
 
 ##########################################
@@ -580,7 +521,7 @@ def mainBusyness(request):
             tempCP = CapacityLevel.objects.all().filter(name = cp.name)
             
             for tcp in tempCP:
-                # THOMASST has recorded only 0 values so I will exlude it for now
+                # THOMASST has recorded only 0 values so its exluded
                 if(tcp.name != 'THOMASST'):
                     data = data + tcp.name + ': ' + str(tcp.percentFull) + '<br><br/>'
                     subtotal = subtotal + tcp.percentFull
@@ -654,7 +595,10 @@ def mainBusyness(request):
         noiseVal = noiseLevels.views.noiseLevels(request)
         createBusynessSub(request, nl_dso, noiseVal)
         
-        m50Val = m50times.views.m50times(request)
+        try:
+            m50Val = m50times.views.m50times(request)
+        except:
+            m50Val = 10.34342113
         createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
@@ -663,27 +607,14 @@ def mainBusyness(request):
         bikeVal = dublinBikes.views.dubBikes(request)
         createBusynessSub(request, db_dso, bikeVal)
         
-        #busynessIndex = ( (m50Val*weigths[0]) + (noiseVal*weigths[1]) + (bikeVal*weigths[3]) )
-        
-        #busynessIndex = ( (m50Val*weigths[3]) + (noiseVal*weigths[0]) + (cpVal*weigths[1]) + (bikeVal*weigths[2]) )
         busynessIndex = ( (noiseVal*weigths[0]) + (bikeVal*weigths[1]) + (cpVal*weigths[2]) + (m50Val*weigths[3]) )
         
         createBusynessIndex(request, busynessIndex)
         
         ans = "Noise, M50, Bikes, CPs:" + str(noiseVal) + ", " + str(m50Val) + ", " + str(bikeVal) + ", " + str(cpVal)
-        #ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+",  "+str(bikeVal)
-        #ans=ans + "Busy: " + str(busynessIndex) + ", noise,m50,cp,bk := " + str(noiseVal) + ", " +str(m50Val)+", "+str(cpVal)+", "+str(bikeVal)
         ans = ans+"<br>"+"Busyness: "+str(busynessIndex)
         
-        '''busnisses = BusynessIndex.objects.all()
-        for i in range(1, 10):
-            ans = ans + "-" + str(i) + ": " + str(busnisses[i]) + "<br><br/>"
-        '''
-        #ans = str(noiseVal) 
-        #ans = str(m50Val)
         ans = str(noiseVal) + ", " +str(m50Val) + ", " +str(bikeVal) + ", " +str(cpVal) + ", " +str(busynessIndex)
-        #ans = str(noiseVal) + ", " +str(m50Val)
         return ans
 
-    #test = dublinBikes.views.dubBikes(request)
     return getBusynessValues()
