@@ -595,6 +595,8 @@ def mainBusyness(request):
         noiseVal = noiseLevels.views.noiseLevels(request)
         createBusynessSub(request, nl_dso, noiseVal)
         
+        m50Val = 10.34342113
+        
         try:
             m50Val = m50times.views.m50times(request)
         except:
