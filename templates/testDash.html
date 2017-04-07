@@ -62,7 +62,7 @@ vals3 = {{ line3bizs }}
 timz3 = {{ line3times }}
 x=0
 res3=[]
-for(total=3940; x<total; x++){
+for(total=vals3.length ; x<total; x++){
 	res3.push( { no: timz3[x], value : vals3[x] } )
 }
 new Morris.Line({
@@ -83,7 +83,7 @@ vals4 = {{ cps}}
 timz4 = {{ cptimes }}
 x=0
 res4=[]
-for(total=3000; x<total; x++){
+for(total=vals4.length ; x<total; x++){
 	res4.push( { no: timz4[x], value : vals4[x] } )
 }
 new Morris.Line({
@@ -105,7 +105,7 @@ vals5 = {{ bikes }}
 timz5 = {{ biketimes }}
 x=0
 res5=[]
-for(total=3000; x<total; x++){
+for(total=vals5.length; x<total; x++){
 	res5.push( { no: timz5[x], value : vals5[x] } )
 }
 new Morris.Line({
@@ -127,7 +127,7 @@ vals6 = {{ noises }}
 timz6 = {{ noisetimes }}
 x=0
 res6=[]
-for(total=3000; x<total; x++){
+for(total=vals6.length; x<total; x++){
 	res6.push( { no: timz6[x], value : vals6[x] } )
 }
 new Morris.Line({
