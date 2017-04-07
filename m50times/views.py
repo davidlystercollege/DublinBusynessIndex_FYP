@@ -18,6 +18,7 @@ def M50dataset(request):
     z = json.loads(decoded_content)
 
     return(HttpResponse(str(z)))
+
 def m50times(request):
     
     fail = 0
