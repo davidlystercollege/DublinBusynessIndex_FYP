@@ -102,8 +102,9 @@ def m50times(request):
                     i=i+1
                 else:   
                     data = data + 'Fail at index '+str(i) + ' where data size = '+str(len(z["M50_northBound"]['data'])) + '<br><br/>'
+            
                     
-            if(fail == 0):
+            if(fail < 1):
                 data=data + "Busyness = " +str(busyness)
                 busyness=(busyness*100)
             else:
