@@ -20,7 +20,7 @@ import m50times.views
 import dublinBikes.views
 import carParks.views
 from boto.dynamodb.condition import NULL
-#from eventlet.timeout import Timeout
+from eventlet.timeout import Timeout
 
 def home(request):
     
@@ -604,10 +604,10 @@ def mainBusyness(request):
         createBusynessSub(request, db_dso, bikeVal)
         
         m50Val = None
-        #with Timeout(10, False):
-        #    m50Val = m50times.views.m50times(request)
-        #if (m50Val == None):
-        m50Val = 10.34342113
+        with Timeout(10, False):
+            m50Val = m50times.views.m50times(request)
+        if (m50Val == None):
+            m50Val = 10.34342113
         createBusynessSub(request, m50_dso, m50Val)
         
         busynessIndex = ( (noiseVal*weigths[0]) + (bikeVal*weigths[1]) + (cpVal*weigths[2]) + (m50Val*weigths[3]) )
