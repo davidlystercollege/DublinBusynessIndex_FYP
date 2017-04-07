@@ -355,6 +355,110 @@ def home(request):
     ## render html page on request with respect to context ##
     return render(request, 'myDash.html', context)
 
+def testDash(request):
+
+    # 2017, 3, 20 -> 2017, 3, 26
+    
+    d1 = datetime(2017, 3, 20)
+    d2 = datetime(2017, 3, 26)
+    
+    allBusynessz = BusynessIndex.objects.all()
+    
+    ########### Donut Data ################################
+    bikeSubs = BusynessSub.objects.filter(name = "DublinBikes")
+    cpSubs = BusynessSub.objects.filter(name = "CarPark")
+    noiseSubs = BusynessSub.objects.filter(name = "NoiseLevel")
+    
+    #########################################################
+    
+    ########### Busyness Index #####################
+    bizness = BusynessIndex.objects.last().busyness#
+    bizness = round(bizness, 3)
+    ################################################
+    
+    bizys3 = []
+    time3 = []
+    sze = len(allBusynessz)
+    
+    for i in range(5000):
+        indx = sze-(i-1)
+        
+        if (indx == 1780) or (indx == 1680) :
+            i=i+1   
+            indx = sze-(i-1)
+        
+        tempBiz3 = allBusynessz.get(id = (indx))
+        a = datetime.datetime.strptime(str(tempBiz3.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        
+        if((a > d1) and (a < d2)):
+            
+            bizys3.append(tempBiz3.busyness)
+            d_in_ms = int(a)*1000
+            time3.append(d_in_ms)
+                
+    ################################################
+    
+    ### DATASET CONTEXTS ###########################
+    cps = []
+    bikes = []
+    noises = []
+    
+    cptimes = []
+    biketimes = []
+    noisetimes = []
+    
+    szeC = len(cpSubs)-1
+    szeB = len(bikeSubs)-1
+    szeN = len(noiseSubs)-1
+    
+    for i in range(5000):
+        indxC = szeC-(i)
+        indxB = szeB-(i)
+        indxN = szeN-(i)
+        
+        tempCP = cpSubs[indxC]
+        tempBk = bikeSubs[indxB]
+        tempNse = noiseSubs[indxN]
+            
+        cps.append(tempCP.busynessFactor)
+        bikes.append(tempBk.busynessFactor)
+        noises.append(tempNse.busynessFactor)
+        
+        c = datetime.datetime.strptime(str(tempCP.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        b = datetime.datetime.strptime(str(tempBk.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        n = datetime.datetime.strptime(str(tempNse.dateTaken), '%Y-%m-%d %H:%M:%S.%f+00:00').strftime('%s')
+        
+        if((c > d1) and (c < d2)):
+            d_in_msC = int(c)*1000
+            cptimes.append(d_in_msC)
+        
+        if((b > d1) and (b < d2)):
+            d_in_msB = int(b)*1000
+            biketimes.append(d_in_msB)
+        
+        if((n > d1) and (n < d2)):
+            d_in_msN = int(n)*1000
+            noisetimes.append(d_in_msN)
+    ################################################
+    
+    ### Pass Required Data to our Context ##########
+    context = {
+        "line3bizs" : bizys3,
+        "line3times" : time3,
+        
+        "cps" : cps,
+        "cptimes" : cptimes, 
+        
+        "bikes" : bikes,
+        "biketimes" : biketimes, 
+        
+        "noises" : noises,
+        "noisetimes" : noisetimes, 
+    }
+    
+    ## render html page on request with respect to context ##
+    return render(request, 'testDash.html', context)
+
 def testing(request):
     
     def createBusynessSub(request, DatasetObject, busynessArg):
