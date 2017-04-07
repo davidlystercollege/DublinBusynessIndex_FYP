@@ -595,9 +595,11 @@ def mainBusyness(request):
         noiseVal = noiseLevels.views.noiseLevels(request)
         createBusynessSub(request, nl_dso, noiseVal)
         
-        
-        #m50Val = m50times.views.m50times(request)
-        #createBusynessSub(request, m50_dso, m50Val)
+        try:
+            m50Val = m50times.views.m50times(request)
+        except:
+            m50Val = 10.34342113
+        createBusynessSub(request, m50_dso, m50Val)
         
         cpVal = carParks.views.carParks(request)
         createBusynessSub(request, cp_dso, cpVal)
@@ -605,9 +607,9 @@ def mainBusyness(request):
         bikeVal = dublinBikes.views.dubBikes(request)
         createBusynessSub(request, db_dso, bikeVal)
         
-        #busynessIndex = ( (noiseVal*weigths[0]) + (bikeVal*weigths[1]) + (cpVal*weigths[2]) + (m50Val*weigths[3]) )
+        busynessIndex = ( (noiseVal*weigths[0]) + (bikeVal*weigths[1]) + (cpVal*weigths[2]) + (m50Val*weigths[3]) )
         
-        #createBusynessIndex(request, busynessIndex)
+        createBusynessIndex(request, busynessIndex)
         
         ans = "Noise, M50, Bikes, CPs:" + str(noiseVal) + ", " + str(m50Val) + ", " + str(bikeVal) + ", " + str(cpVal)
         ans = ans+"<br>"+"Busyness: "+str(busynessIndex)
